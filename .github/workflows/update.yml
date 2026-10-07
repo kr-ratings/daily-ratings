@@ -56,6 +56,8 @@ jobs:
             echo "변경 없음"
           else
             git commit -m "data: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M') KST"
+            # 수집 중에 저장소가 바뀌었을 수 있으므로 최신본 위에 얹어서 올린다
+            git pull --rebase --autostash origin main
             git push
           fi
 
