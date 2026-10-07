@@ -162,7 +162,7 @@ def parse_nice(t: str) -> dict:
     m2 = re.search(r"주요\s?평가근거는\s?아래와\s?같다\.(.+?)\n\s*\n\s*\n", t, re.S)
     if m2:
         sup_lines += [ln for ln in m2.group(1).splitlines() if ln.strip().startswith(("▪", "•", "-"))]
-    return {"schedule": sched, "arranger": _field(t, "주관회사"), "supports": _supports_from_lines(sup_lines),
+    return {"schedule": sched, "arranger": _field(t, "주관회사"), "asset_manager": _field(t, "자산관리자"), "supports": _supports_from_lines(sup_lines),
             "deal_type": _field(t, "유동화구조"), "asset": _field(t, "기초자산"), "obligor": None}
 
 
@@ -175,7 +175,7 @@ def parse_kr(t: str) -> dict:
     m = re.search(r"주요\s?평정요인(.+?)(?:\n\s*\n\s*\n|■)", t, re.S)
     if m:
         sup_lines = m.group(1).splitlines()
-    return {"schedule": sched, "arranger": _field(t, "주관회사"), "supports": _supports_from_lines(sup_lines),
+    return {"schedule": sched, "arranger": _field(t, "주관회사"), "asset_manager": _field(t, "자산관리자"), "supports": _supports_from_lines(sup_lines),
             "deal_type": _field(t, "거래유형"), "asset": _field(t, "자산유형"), "obligor": _field(t, "차주")}
 
 
@@ -200,7 +200,7 @@ def parse_kis(t: str) -> dict:
     m = re.search(r"주요\s?평가요소(.+?)(?:유동화\s?개요|위험요인과\s?통제방안)", t, re.S)
     if m:
         sup_lines = [ln for ln in m.group(1).splitlines() if any(b in ln for b in ("•", "\uf0a7", "▪"))]
-    return {"schedule": sched, "arranger": _field(t, "주관회사"), "supports": _supports_from_lines(sup_lines),
+    return {"schedule": sched, "arranger": _field(t, "주관회사"), "asset_manager": _field(t, "자산관리자"), "supports": _supports_from_lines(sup_lines),
             "deal_type": _field(t, r"유동화[ ]?유형"), "asset": _field(t, "기초자산"), "obligor": None}
 
 
@@ -230,7 +230,8 @@ def load_all(docs: list[dict], workers: int = 4, log=print) -> dict:
     todo = {}
     for d in docs:
         k = doc_key(d)
-        if k not in cache and k not in todo:
+        # asset_manager 키가 없는 예전 파싱 결과는 다시 받아 자산관리자를 채운다(실패 시 예전 결과 유지)
+        if (k not in cache or "asset_manager" not in cache[k]) and k not in todo:
             todo[k] = d
     kr = [(k, d) for k, d in todo.items() if d["agency"] == "한기평"]
     rest = [(k, d) for k, d in todo.items() if d["agency"] != "한기평"]

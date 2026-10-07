@@ -293,6 +293,7 @@ def main() -> int:
         nd = nice_detail.get(e["ref"] or "", {}) if e["agency"] == "NICE" else {}
         km = mcache.get(m["ck"], {})
         arranger = p.get("arranger") or nd.get("주관사")
+        manager = p.get("asset_manager")
         asset = p.get("asset") or nd.get("기초자산")
         supports = p.get("supports") or ([{"company": nd["신용공여기관"], "detail": "신용공여기관"}] if nd.get("신용공여기관") else [])
         pf = is_pf(p.get("deal_type"), asset) or bool(km.get("pf"))
@@ -306,6 +307,7 @@ def main() -> int:
             "agencies": agencies, "issue_date": m["issue"], "maturity": m["maturity"],
             "days": (mat - issue).days if issue and mat else None, "amount": m["amount"],
             "arranger": re.sub(r"㈜|\(주\)", "", arranger).strip() if arranger else None,
+            "asset_manager": re.sub(r"㈜|\(주\)", "", manager).strip() if manager else None,
             "supports": [{"company": s["company"], "summary": summarize_support(s["detail"]), "detail": s["detail"]}
                          for s in supports],
             "pf": "PF" if pf else "일반", "deal_type": p.get("deal_type"), "asset": asset,
