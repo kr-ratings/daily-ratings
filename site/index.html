@@ -192,7 +192,7 @@ footer a:hover{text-decoration:underline}
         <button type="button" data-v="PF" aria-pressed="false">PF</button>
         <button type="button" data-v="일반" aria-pressed="false">일반</button>
       </div>
-      <label class="f search" for="f-q"><input type="search" id="f-q" placeholder="SPC·자산관리자·신용보강 검색"></label>
+      <label class="f search" for="f-q"><input type="search" id="f-q" placeholder="SPC·신용보강 주체 등 검색"></label>
       <span class="count" id="count"></span>
     </div>
     <div class="table-box">
@@ -204,7 +204,7 @@ footer a:hover{text-decoration:underline}
           <th data-k="spc"><button type="button">SPC명 · 회차</button></th>
           <th data-k="pf"><button type="button">PF</button></th>
           <th data-k="grade"><button type="button">등급</button></th>
-          <th data-k="mgr"><button type="button">자산관리자</button></th>
+          <th data-k="arranger"><button type="button">발행주관사</button></th>
           <th>신용보강 주체</th>
           <th class="num" data-k="amount"><button type="button">발행액(억)</button></th>
           <th class="num" data-k="rate"><button type="button">거래금리</button></th>
@@ -338,7 +338,7 @@ function rowHTML(e){
     <td class="spc" title="${esc([e.deal_type,e.asset].filter(Boolean).join(" · "))}">${esc(e.spc)}<small>${esc(series)}</small></td>
     <td><span class="pfc ${e.pf==="PF"?"on":""}">${esc(e.pf)}</span></td>
     <td><span class="grade ${gcls(e.grade)}">${esc(e.grade)}</span></td>
-    <td class="arr">${e.asset_manager?esc(e.asset_manager):(e.arranger?`<span class="dim" title="평가서에서 자산관리자 확인 전 · 주관회사 표기">${esc(e.arranger)}</span>`:"-")}</td>
+    <td class="arr">${esc(e.arranger||"-")}</td>
     <td class="sup">${sup}</td>
     <td class="num">${e.amount?Number(e.amount).toLocaleString("ko-KR",{maximumFractionDigits:1}):"-"}</td>
     <td class="num">${rate}</td>
@@ -379,7 +379,7 @@ $("#f-agency").addEventListener("change",e=>{state.agency=e.target.value;render(
 $("#f-q").addEventListener("input",e=>{state.q=e.target.value;render()});
 document.querySelectorAll("#thead th[data-k] button").forEach(b=>b.addEventListener("click",()=>{
   const k=b.parentElement.dataset.k;
-  if(state.sort===k) state.dir*=-1; else {state.sort=k; state.dir=["spc","kind","grade","pf","mgr"].includes(k)?1:-1;}
+  if(state.sort===k) state.dir*=-1; else {state.sort=k; state.dir=["spc","kind","grade","pf","arranger"].includes(k)?1:-1;}
   render();
 }));
 
