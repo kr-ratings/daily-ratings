@@ -1,0 +1,71 @@
+name: 수집 및 배포
+
+on:
+  schedule:
+    # UTC 기준. 03:05·09:05 UTC = 12:05·18:05 KST, 평일만
+    - cron: "5 3,9 * * 1-5"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["site/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-ratings
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 의존성 설치
+        run: |
+          sudo apt-get update -y && sudo apt-get install -y poppler-utils
+          pip install -r requirements.txt
+
+      - name: 데이터 수집
+        if: github.event_name != 'push'
+        env:
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+          EVAL_LOOKBACK_DAYS: "120"
+          ISSUE_WINDOW_DAYS: "30"
+        run: python -m collector.build
+
+      - name: 수집 결과 커밋
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "daily-ratings-bot"
+          git config user.email "daily-ratings-bot@users.noreply.github.com"
+          git add site/data cache
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "data: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M') KST"
+            git push
+          fi
+
+      # GitHub Pages 배포(선택). Cloudflare Pages만 쓰는 경우 Pages를 켜지 않아도 되도록 실패해도 넘어간다.
+      - uses: actions/configure-pages@v5
+        continue-on-error: true
+      - uses: actions/upload-pages-artifact@v3
+        continue-on-error: true
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true

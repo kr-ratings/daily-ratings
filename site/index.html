@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>유동화증권 등급 · 금리 현황 대시보드</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 단일 컬럼 대시보드 — 상단 시장금리 3칸 패널, 수집 상태, 필터 바 + 등급공시 표 */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --line:#dfe2e8; --fg:#1b2230; --muted:#5d6678;
+  --accent:#2747a8; --accent-soft:#e8edf9;
+  --up:#c8302f; --down:#2453c4; --flat:#6b7383;
+  --spark:#2747a8; --spark-fill:rgba(39,71,168,.10);
+  --g-a1:#1f7a4d; --g-a2:#4c7a1f; --g-a3:#a26a00; --g-b:#b3401f;
+  --ok:#1f7a4d; --bad:#b3401f; --pf:#7a3fa8; --pf-bg:#f3ebfa;
+  --f-sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11151d; --surface:#181e29; --line:#2a3242; --fg:#e6e9ef; --muted:#97a0b2;
+  --accent:#8ea8ff; --accent-soft:#1f2a45;
+  --up:#ff7a72; --down:#7aa2ff; --flat:#8b93a3;
+  --spark:#8ea8ff; --spark-fill:rgba(142,168,255,.14);
+  --g-a1:#5fd19a; --g-a2:#a6d16a; --g-a3:#f0bb4a; --g-b:#ff8a63;
+  --ok:#5fd19a; --bad:#ff8a63; --pf:#d2a6ff; --pf-bg:#2c2140; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11151d; --surface:#181e29; --line:#2a3242; --fg:#e6e9ef; --muted:#97a0b2;
+  --accent:#8ea8ff; --accent-soft:#1f2a45;
+  --up:#ff7a72; --down:#7aa2ff; --flat:#8b93a3;
+  --spark:#8ea8ff; --spark-fill:rgba(142,168,255,.14);
+  --g-a1:#5fd19a; --g-a2:#a6d16a; --g-a3:#f0bb4a; --g-b:#ff8a63;
+  --ok:#5fd19a; --bad:#ff8a63; --pf:#d2a6ff; --pf-bg:#2c2140; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-sans);font-size:14px;line-height:1.5}
+.wrap{max-width:1680px;margin:0 auto;padding-inline:16px;padding-block:24px 40px;display:flex;flex-direction:column;gap:20px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 16px}
+h1{font-size:1.45rem;font-weight:700;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);font-size:.85rem;margin:2px 0 0}
+.updated{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);text-align:right}
+
+h2{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--muted);margin:0}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.sec-head .note{font-size:.78rem;color:var(--muted)}
+
+.rates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.rate{padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.rate + .rate{border-left:1px solid var(--line)}
+.rate .name{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.rate .name b{font-weight:600;font-size:.95rem}
+.rate .name span{font-size:.72rem;color:var(--muted)}
+.rate .val{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.rate .num{font-family:var(--f-mono);font-size:1.9rem;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.rate .num small{font-size:.9rem;color:var(--muted);margin-left:2px}
+.chg{font-family:var(--f-mono);font-size:.85rem;font-variant-numeric:tabular-nums}
+.chg.up{color:var(--up)} .chg.down{color:var(--down)} .chg.flat{color:var(--flat)}
+.spark{width:100%;height:46px;display:block}
+.rate .meta{display:flex;justify-content:space-between;gap:6px;font-size:.72rem;color:var(--muted);font-family:var(--f-mono)}
+.spreads{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:10px;font-size:.8rem;color:var(--muted)}
+.spreads b{font-family:var(--f-mono);font-weight:500;color:var(--fg)}
+.placeholder{padding:22px;color:var(--muted);grid-column:1/-1}
+
+.status{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.76rem;color:var(--muted);align-items:center}
+.status .src{display:inline-flex;align-items:center;gap:5px}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.status .src.bad .dot{background:var(--bad)}
+
+.filters{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-bottom:10px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{all:unset;cursor:pointer;padding:6px 13px;font-size:.85rem;color:var(--muted)}
+.seg button + button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.seg button:focus-visible,select:focus-visible,input:focus-visible,th button:focus-visible,.info summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+label.f{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted)}
+select,input[type=search]{font:inherit;font-size:.85rem;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+input[type=search]{min-width:0;width:210px}
+input[type=checkbox]{accent-color:var(--accent)}
+.count{margin-left:auto;font-size:.82rem;color:var(--muted)}
+
+.table-box{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:auto;max-height:78vh}
+table{width:100%;border-collapse:collapse;min-width:1120px;font-size:.84rem}
+th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
+th{font-size:.74rem;font-weight:600;color:var(--muted);background:var(--surface);position:sticky;top:0;z-index:1}
+th button{all:unset;cursor:pointer}
+th button::after{content:"";margin-left:4px}
+th[aria-sort="ascending"] button::after{content:"▲"}
+th[aria-sort="descending"] button::after{content:"▼"}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:var(--accent-soft)}
+td.num,th.num{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+td.date{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--muted)}
+td.spc{font-weight:600}
+td.spc small{font-weight:400;color:var(--muted);font-family:var(--f-mono);font-size:.74rem;margin-left:6px}
+td.mat small{color:var(--muted);margin-left:5px;font-size:.74rem}
+td.asset{white-space:normal;color:var(--muted);font-size:.8rem;min-width:180px;max-width:260px}
+td.asset span{display:block}
+td.sup{min-width:0}
+.sp{display:grid;grid-template-columns:auto 1fr;column-gap:10px;row-gap:2px;align-items:baseline}
+.sp b{font-weight:600;white-space:nowrap}
+.sp span{color:var(--muted);font-size:.76rem;white-space:nowrap}
+.pfc{font-size:.72rem;font-weight:600;padding:2px 7px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
+td.rep{white-space:nowrap}
+td.rep a{display:inline-block;margin:1px 4px 1px 0;font-size:.74rem;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:2px 7px}
+td.rep a:hover{background:var(--accent-soft)}
+td.rep i{font-style:normal;font-family:var(--f-mono);font-weight:500;margin-left:2px}
+td.rep .noreport{display:inline-block;margin:1px 4px 1px 0;font-size:.74rem;color:var(--muted);padding:2px 7px;border:1px dashed var(--line);border-radius:4px}
+td.rep a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.pfc.on{color:var(--pf);background:var(--pf-bg);border-color:transparent}
+.kind{font-family:var(--f-mono);font-size:.72rem;font-weight:500;padding:2px 7px;border-radius:4px;border:1px solid var(--line)}
+.pf{display:inline-block;margin-left:6px;font-size:.68rem;font-weight:600;color:var(--pf);background:var(--pf-bg);padding:1px 6px;border-radius:4px;vertical-align:1px}
+.grade{font-family:var(--f-mono);font-weight:600;font-size:.82rem}
+.g-a1{color:var(--g-a1)} .g-a2{color:var(--g-a2)} .g-a3{color:var(--g-a3)} .g-b{color:var(--g-b)}
+.ag{font-size:.8rem;display:block}
+.ag i{font-style:normal;color:var(--muted);font-family:var(--f-mono);font-size:.74rem;margin-left:4px}
+.inf{color:var(--muted);font-size:.7rem;margin-left:3px}
+.dim{color:var(--muted)}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+
+.info{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;font-size:.84rem}
+.info summary{cursor:pointer;font-weight:600}
+.info p{margin:8px 0 0;color:var(--muted);max-width:78ch}
+footer{font-size:.76rem;color:var(--muted);line-height:1.65;max-width:92ch}
+footer p{margin:0 0 6px}
+footer .contact{margin-top:10px}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media (max-width:760px){
+  .rates{grid-template-columns:1fr}
+  .rate + .rate{border-left:0;border-top:1px solid var(--line)}
+  .count{margin-left:0;width:100%}
+  input[type=search]{width:100%}
+  label.f.search{flex:1 1 100%}
+  .updated{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>유동화증권 등급 · 금리 현황 대시보드</h1>
+      <p class="sub">신용평가 본평가 회차별 발행 현황과 단기 시장금리 · 영업일 기준 하루 2회(12:05·18:05) 자동 갱신</p>
+    </div>
+    <div class="updated" id="updated">데이터 불러오는 중…</div>
+  </header>
+
+  <section aria-labelledby="h-rates">
+    <div class="sec-head">
+      <h2 id="h-rates">시장금리 · 일별</h2>
+      <span class="note" id="rates-note">한국은행 ECOS 시장금리(일별) · 최근 30영업일 · 전일 대비 bp</span>
+    </div>
+    <div class="rates" id="rates"><div class="placeholder">금리 불러오는 중…</div></div>
+    <div class="spreads" id="spreads"></div>
+  </section>
+
+  <section aria-labelledby="h-abs">
+    <div class="sec-head">
+      <h2 id="h-abs">유동화증권 발행 회차 · 본평가 기준</h2>
+      <div class="status" id="status"></div>
+    </div>
+    <div class="filters">
+      <div class="seg" role="group" aria-label="종류" id="seg-kind">
+        <button type="button" data-v="all" aria-pressed="true">전체</button>
+        <button type="button" data-v="ABSTB" aria-pressed="false">ABSTB</button>
+        <button type="button" data-v="ABCP" aria-pressed="false">ABCP</button>
+      </div>
+      <div class="seg" role="group" aria-label="기간" id="seg-days">
+        <button type="button" data-v="7" aria-pressed="false">1주</button>
+        <button type="button" data-v="14" aria-pressed="false">2주</button>
+        <button type="button" data-v="all" aria-pressed="true">전체</button>
+      </div>
+      <label class="f" for="f-grade">현재등급 <select id="f-grade"><option value="all">전체</option></select></label>
+      <label class="f" for="f-agency">평가사
+        <select id="f-agency"><option value="all">전체</option><option>NICE</option><option>한신평</option><option>한기평</option></select>
+      </label>
+      <div class="seg" role="group" aria-label="PF구분" id="seg-pf">
+        <button type="button" data-v="all" aria-pressed="true">전체</button>
+        <button type="button" data-v="PF" aria-pressed="false">PF</button>
+        <button type="button" data-v="일반" aria-pressed="false">일반</button>
+      </div>
+      <label class="f search" for="f-q"><input type="search" id="f-q" placeholder="SPC·주관사·신용보강 검색"></label>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="table-box">
+      <table>
+        <thead><tr id="thead">
+          <th data-k="issue_date" aria-sort="descending"><button type="button">발행일</button></th>
+          <th data-k="maturity"><button type="button">만기 (기간)</button></th>
+          <th data-k="kind"><button type="button">종류</button></th>
+          <th data-k="spc"><button type="button">SPC명 · 회차</button></th>
+          <th data-k="pf"><button type="button">PF</button></th>
+          <th data-k="grade"><button type="button">등급</button></th>
+          <th data-k="arranger"><button type="button">주관사</button></th>
+          <th>신용보강 주체</th>
+          <th class="num" data-k="amount"><button type="button">발행액(억)</button></th>
+          <th class="num" data-k="rate"><button type="button">거래금리</button></th>
+          <th>평가사 · 평가서</th>
+        </tr></thead>
+        <tbody id="tbody"><tr><td colspan="11" class="empty">불러오는 중…</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>이 화면은 신용평가사 공시, 금융투자협회 채권정보센터, 한국은행 경제통계시스템에 공개된 자료를 자동으로 모아 정리한 개인 참고용 자료입니다. 수집과 가공 과정에서 지연·누락·오기가 생길 수 있고 원문과 다를 수 있습니다.</p>
+    <p>거래금리는 장외 거래 공시값일 뿐 실제 발행조건이나 조달비용을 뜻하지 않습니다. 이 화면의 어떤 내용도 투자 권유나 의사결정의 근거가 아니며, 이를 이용해 생긴 결과에 대해 작성자는 책임지지 않습니다. 정확한 내용은 각 기관의 원문 공시에서 확인하시기 바랍니다.</p>
+      <p class="contact">문의: <a href="mailto:name@koreainvestment.com">name@koreainvestment.com</a></p>
+  </footer>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const getJSON = async p => { try { const r = await fetch(p, {cache:"no-store"}); return r.ok ? r.json() : null; } catch { return null; } };
+
+// ---------------- 시장금리 ----------------
+function spark(vals){
+  const W=240,H=46,p=3, mn=Math.min(...vals), mx=Math.max(...vals), rg=(mx-mn)||1;
+  const x=i=>p+i*(W-2*p)/Math.max(1,vals.length-1), y=v=>H-p-(v-mn)/rg*(H-2*p);
+  const pts=vals.map((v,i)=>`${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+  const lx=x(vals.length-1), ly=y(vals[vals.length-1]);
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+    <polygon points="${p},${H} ${pts} ${lx},${H}" fill="var(--spark-fill)"/>
+    <polyline points="${pts}" fill="none" stroke="var(--spark)" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+    <circle cx="${lx}" cy="${ly}" r="2.6" fill="var(--spark)"/></svg>`;
+}
+function renderRates(R){
+  const el=$("#rates");
+  if(!R||!R.series){ el.innerHTML='<div class="placeholder">금리 데이터를 불러오지 못했습니다. 다음 수집 때 다시 표시됩니다.</div>'; return; }
+  const order=["CP91","CD91","KTB3"], dp={CP91:2,CD91:2,KTB3:3}, last={};
+  el.innerHTML="";
+  for(const k of order){
+    const s=R.series[k]; if(!s||!s.points.length) continue;
+    const pts=s.points.slice(-30), vals=pts.map(p=>p.v), n=vals.length;
+    const cur=vals[n-1], prev=n>1?vals[n-2]:cur, bp=Math.round((cur-prev)*1000)/10;
+    last[k]=cur;
+    const cls=bp>0?"up":bp<0?"down":"flat", sign=bp>0?"▲ +":bp<0?"▼ ":"– ";
+    const md=d=>d.slice(5).replace("-","/");
+    el.insertAdjacentHTML("beforeend",`<div class="rate">
+      <div class="name"><b>${esc(s.name)}</b><span>${esc(s.tag)}</span></div>
+      <div class="val"><span class="num">${cur.toFixed(dp[k])}<small>%</small></span>
+        <span class="chg ${cls}">${sign}${Math.abs(bp).toFixed(1)}bp</span></div>
+      ${spark(vals)}
+      <div class="meta"><span>${md(pts[0].d)}</span><span>고 ${Math.max(...vals).toFixed(dp[k])} · 저 ${Math.min(...vals).toFixed(dp[k])}</span><span>${md(pts[n-1].d)}</span></div>
+    </div>`);
+  }
+  const bp=(a,b)=>a!=null&&b!=null?((a-b)*100).toFixed(1)+"bp":"-";
+  $("#spreads").innerHTML=`<span>CP–CD <b>${bp(last.CP91,last.CD91)}</b></span>
+    <span>CP–국고3년 <b>${bp(last.CP91,last.KTB3)}</b></span>
+    <span>CD–국고3년 <b>${bp(last.CD91,last.KTB3)}</b></span>
+    <span>기준일 <b>${esc(R.asof||"-")}</b></span>`;
+}
+
+// ---------------- 수집 상태 ----------------
+function renderStatus(S){
+  if(!S||!S.sources){ $("#status").innerHTML=""; return; }
+  const names={ECOS:"ECOS",NICE:"NICE",한신평:"한신평",한기평:"한기평",KOFIA:"KOFIA",평가의견서:"평가서"};
+  $("#status").innerHTML=Object.entries(S.sources).map(([k,v])=>
+    `<span class="src ${v.ok?"":"bad"}" title="${esc(v.ok?"정상":v.error||(v.missing?`${v.missing}건 다음 수집 때 이어서 받음`:"오류"))}"><span class="dot"></span>${esc(names[k]||k)}${v.ok?"":(v.missing?` ${v.missing}건 대기`:" 미수집")}</span>`).join("");
+}
+
+// ---------------- 등급공시 표 ----------------
+let EV=[], state={kind:"all",days:"all",grade:"all",agency:"all",pf:"all",q:"",sort:"issue_date",dir:-1}, ASOF=null;
+const gcls=g=>/^A1/.test(g)?"g-a1":/^A2/.test(g)?"g-a2":/^A3/.test(g)?"g-a3":"g-b";
+const rateOf=e=>e.kofia&&e.kofia.rate!=null?e.kofia.rate:null;
+const GRADE_ORDER=["A1","A2+","A2","A2-","A3+","A3","A3-","B+","B","B-","C","D"];
+
+const ymd=d=>d?d.replace(/-/g,"."):"-";
+function rowHTML(e){
+  const same=new Set(e.ratings.map(r=>r.grade)).size<=1;
+  const url=Object.fromEntries((e.reports||[]).map(r=>[r.agency,r.url]));
+  const ag=e.ratings.map(r=>{
+    const label=esc(r.agency)+(same?"":` <i>${esc(r.grade)}</i>`), tip=`${r.agency} ${r.grade} · 평가일 ${r.eval_date}`;
+    return url[r.agency]
+      ? `<a href="${esc(url[r.agency])}" target="_blank" rel="noopener" title="${esc(tip)} · 평가서 PDF 열기">${label}</a>`
+      : `<span class="noreport" title="${esc(tip)}">${label}</span>`;
+  }).join("");
+  const sup=e.supports&&e.supports.length
+    ? `<div class="sp">${e.supports.map(x=>`<b title="${esc(x.detail)}">${esc(x.company)}</b><span title="${esc(x.detail)}">${esc(x.summary||"")}</span>`).join("")}</div>`
+    : '<span class="dim">-</span>';
+  let rate;
+  if(rateOf(e)!=null) rate=`<span title="${esc(e.kofia.source)} · 거래일 ${esc(e.kofia.trade_date)}">${rateOf(e).toFixed(2)}%</span>`;
+  else rate=e.kofia&&e.kofia.status==="pending"?'<span class="dim">대기</span>':"-";
+  const series=(e.series||"").replace(/^제/,"");
+  return `<tr>
+    <td class="date">${ymd(e.issue_date)}</td>
+    <td class="date mat">${ymd(e.maturity)}${e.days!=null?`<small>(${e.days}일)</small>`:""}</td>
+    <td><span class="kind">${esc(e.kind)}</span></td>
+    <td class="spc" title="${esc([e.deal_type,e.asset].filter(Boolean).join(" · "))}">${esc(e.spc)}<small>${esc(series)}</small></td>
+    <td><span class="pfc ${e.pf==="PF"?"on":""}">${esc(e.pf)}</span></td>
+    <td><span class="grade ${gcls(e.grade)}">${esc(e.grade)}</span></td>
+    <td>${esc(e.arranger||"-")}</td>
+    <td class="sup">${sup}</td>
+    <td class="num">${e.amount?Number(e.amount).toLocaleString("ko-KR",{maximumFractionDigits:1}):"-"}</td>
+    <td class="num">${rate}</td>
+    <td class="rep">${ag||'<span class="dim">-</span>'}</td></tr>`;
+}
+function cmp(a,b){
+  const k=state.sort; let va,vb;
+  if(k==="rate"){va=rateOf(a);vb=rateOf(b);}
+  else if(k==="grade"){va=GRADE_ORDER.indexOf(a.grade.replace(/[↑↓]/g,"").split("/")[0]);vb=GRADE_ORDER.indexOf(b.grade.replace(/[↑↓]/g,"").split("/")[0]);}
+  else {va=a[k];vb=b[k];}
+  if(va==null&&vb==null) return 0; if(va==null) return 1; if(vb==null) return -1;
+  return (va>vb?1:va<vb?-1:0)*state.dir;
+}
+function render(){
+  const q=state.q.trim().toLowerCase();
+  let cut=null;
+  if(state.days!=="all"&&ASOF){ const d=new Date(ASOF); d.setDate(d.getDate()-Number(state.days)); cut=d.toISOString().slice(0,10); }
+  const rows=EV.filter(e=>(state.kind==="all"||e.kind===state.kind)
+    &&(!cut||e.issue_date>=cut)
+    &&(state.grade==="all"||e.grade===state.grade)
+    &&(state.agency==="all"||e.agencies.includes(state.agency))
+    &&(state.pf==="all"||e.pf===state.pf)
+    &&(!q||[e.spc,e.asset,e.arranger,e.deal_type,...(e.supports||[]).map(x=>x.company+" "+x.detail+" "+(x.summary||""))].join(" ").toLowerCase().includes(q))).sort(cmp);
+  $("#count").textContent=`${rows.length}건 / 전체 ${EV.length}건`;
+  $("#tbody").innerHTML=rows.length?rows.map(rowHTML).join(""):'<tr><td colspan="11" class="empty">조건에 맞는 SPC가 없습니다. 필터를 바꿔 보세요.</td></tr>';
+  document.querySelectorAll("#thead th[data-k]").forEach(th=>th.setAttribute("aria-sort",th.dataset.k===state.sort?(state.dir>0?"ascending":"descending"):"none"));
+}
+function bindSeg(id,key){
+  document.querySelectorAll(`#${id} button`).forEach(b=>b.addEventListener("click",()=>{
+    document.querySelectorAll(`#${id} button`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+    state[key]=b.dataset.v; render();
+  }));
+}
+bindSeg("seg-kind","kind"); bindSeg("seg-days","days"); bindSeg("seg-pf","pf");
+$("#f-grade").addEventListener("change",e=>{state.grade=e.target.value;render()});
+$("#f-agency").addEventListener("change",e=>{state.agency=e.target.value;render()});
+$("#f-q").addEventListener("input",e=>{state.q=e.target.value;render()});
+document.querySelectorAll("#thead th[data-k] button").forEach(b=>b.addEventListener("click",()=>{
+  const k=b.parentElement.dataset.k;
+  if(state.sort===k) state.dir*=-1; else {state.sort=k; state.dir=["spc","kind","grade","pf","arranger"].includes(k)?1:-1;}
+  render();
+}));
+
+(async()=>{
+  const [R,A,S]=await Promise.all([getJSON("data/rates.json"),getJSON("data/abs.json"),getJSON("data/status.json")]);
+  renderRates(R); renderStatus(S);
+  $("#updated").textContent=S?.generated?`최종 수집 ${S.generated} KST`:"수집 정보 없음";
+  if(!A||!A.rows){ $("#tbody").innerHTML='<tr><td colspan="11" class="empty">등급공시 데이터를 불러오지 못했습니다.</td></tr>'; return; }
+  EV=A.rows; ASOF=A.issue_window?.[1]||null;
+  const grades=[...new Set(EV.map(e=>e.grade))].sort((a,b)=>{
+    const ia=GRADE_ORDER.indexOf(a), ib=GRADE_ORDER.indexOf(b); return (ia<0?99:ia)-(ib<0?99:ib)||a.localeCompare(b);});
+  $("#f-grade").insertAdjacentHTML("beforeend",grades.map(g=>`<option>${esc(g)}</option>`).join(""));
+  render();
+})();
+</script>
+</body>
+</html>
