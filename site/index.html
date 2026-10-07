@@ -102,6 +102,9 @@ td.arr{white-space:normal;word-break:keep-all;min-width:6em}
 .fx1{left:0}
 .fx2{left:var(--fx1w,240px);box-shadow:inset -1px 0 0 var(--line),6px 0 8px -6px rgba(0,0,0,.18)}
 th.fx1,th.fx2{z-index:3}
+/* 두 고정열이 화면 폭의 60%를 넘으면(폰 세로 등) SPC명·회차만 고정 */
+.nofx2 .fx2{position:static;box-shadow:none}
+.nofx2 .fx1{box-shadow:inset -1px 0 0 var(--line),6px 0 8px -6px rgba(0,0,0,.18)}
 th{font-size:.74rem;font-weight:600;color:var(--muted);background:var(--surface);position:sticky;top:0;z-index:1}
 th button{all:unset;cursor:pointer}
 th button::after{content:"";margin-left:4px}
@@ -155,6 +158,9 @@ footer a:hover{text-decoration:underline}
   label.f.search{flex:1 1 100%}
   .updated{text-align:left}
   .hright{align-items:flex-start}
+  /* 폰: SPC명은 줄바꿈, 회차는 아랫줄 → 고정열 폭을 좁게 */
+  td.spc.fx1{white-space:normal;min-width:7em;max-width:8.5em;word-break:break-all}
+  td.spc small{display:block;margin:2px 0 0}
 }
 </style>
 </head>
@@ -383,7 +389,15 @@ function render(){
   document.querySelectorAll("#thead th[data-k]").forEach(th=>th.setAttribute("aria-sort",th.dataset.k===state.sort?(state.dir>0?"ascending":"descending"):"none"));
 }
 // 고정 열: 둘째 열의 left를 첫째 열 실제 폭으로 맞춤
-function fixCols(){ const f=document.querySelector("#thead th.fx1"); if(f) document.querySelector(".table-box table").style.setProperty("--fx1w", f.getBoundingClientRect().width+"px"); }
+function fixCols(){
+  const box=document.querySelector(".table-box"), t=box&&box.querySelector("table");
+  const f=document.querySelector("#thead th.fx1"), g=document.querySelector("#thead th.fx2");
+  if(!t||!f) return;
+  const w1=f.getBoundingClientRect().width, w2=g?g.getBoundingClientRect().width:0;
+  t.style.setProperty("--fx1w", w1+"px");
+  t.classList.toggle("nofx2", w1+w2 > box.clientWidth*0.6);
+}
+if(window.ResizeObserver){ const ro=new ResizeObserver(fixCols); ro.observe(document.querySelector(".table-box")); const f0=document.querySelector("#thead th.fx1"); if(f0) ro.observe(f0); }
 window.addEventListener("resize", fixCols);
 document.fonts&&document.fonts.ready.then(fixCols);
 function bindSeg(id,key){
