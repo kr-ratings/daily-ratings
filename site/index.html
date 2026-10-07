@@ -41,6 +41,10 @@ header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-be
 h1{font-size:1.45rem;font-weight:700;margin:0;letter-spacing:-.01em;text-wrap:balance}
 .sub{color:var(--muted);font-size:.85rem;margin:2px 0 0}
 .updated{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);text-align:right}
+.hright{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.sister{font-size:.76rem;font-weight:600;color:var(--accent);text-decoration:none;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:3px 9px}
+.sister:hover{background:var(--accent-soft)}
+.sister:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 h2{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--muted);margin:0}
 .sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px}
@@ -150,6 +154,7 @@ footer a:hover{text-decoration:underline}
   input[type=search]{width:100%}
   label.f.search{flex:1 1 100%}
   .updated{text-align:left}
+  .hright{align-items:flex-start}
 }
 </style>
 </head>
@@ -160,7 +165,10 @@ footer a:hover{text-decoration:underline}
       <h1>유동화시장 등급 · 금리 현황 대시보드</h1>
       <p class="sub">단기 유동화증권(ABSTB·ABCP) 본평가 회차별 발행 현황과 단기 시장금리 · 영업일 기준 하루 2회(12:05·18:05) 자동 갱신</p>
     </div>
-    <div class="updated" id="updated">데이터 불러오는 중…</div>
+    <div class="hright">
+      <a class="sister" href="https://cons-ratings.pages.dev/" target="_blank" rel="noopener">시공사 시공능력평가 · 신용등급 현황 →</a>
+      <div class="updated" id="updated">데이터 불러오는 중…</div>
+    </div>
   </header>
 
   <section aria-labelledby="h-rates">
@@ -224,6 +232,7 @@ footer a:hover{text-decoration:underline}
   <footer>
     <p>이 화면은 신용평가사 공시, 금융투자협회 채권정보센터, 한국은행 경제통계시스템에 공개된 자료를 자동으로 모아 정리한 개인 참고용 자료입니다. 수집과 가공 과정에서 지연·누락·오기가 생길 수 있고 원문과 다를 수 있습니다.</p>
     <p>거래금리는 장외 거래 공시값일 뿐 실제 발행조건이나 조달비용을 뜻하지 않습니다. 이 화면의 어떤 내용도 투자 권유나 의사결정의 근거가 아니며, 이를 이용해 생긴 결과에 대해 작성자는 책임지지 않습니다. 정확한 내용은 각 기관의 원문 공시에서 확인하시기 바랍니다.</p>
+      <p>함께 보기: <a href="https://cons-ratings.pages.dev/" target="_blank" rel="noopener">시공사 시공능력평가 · 신용등급 현황 대시보드</a></p>
       <p class="contact">문의: 한국투자증권 최이름 차장(<a href="mailto:name@koreainvestment.com">name@koreainvestment.com</a>)</p>
   </footer>
 </div>
