@@ -87,8 +87,12 @@ input[type=checkbox]{accent-color:var(--accent)}
 .count{margin-left:auto;font-size:.82rem;color:var(--muted)}
 
 .table-box{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:auto;max-height:78vh}
-table{width:100%;border-collapse:collapse;min-width:1120px;font-size:.84rem}
+table{width:100%;border-collapse:collapse;font-size:.84rem}
 th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
+/* 남는 폭은 마지막 열(평가사·평가서)이 흡수 → 나머지 열은 내용 폭에 맞춤 */
+th:last-child,td:last-child{width:100%}
+th:first-child,td:first-child{padding-left:12px}
+td.arr{white-space:normal;min-width:6em;max-width:9.5em}
 th{font-size:.74rem;font-weight:600;color:var(--muted);background:var(--surface);position:sticky;top:0;z-index:1}
 th button{all:unset;cursor:pointer}
 th button::after{content:"";margin-left:4px}
@@ -157,7 +161,7 @@ footer a:hover{text-decoration:underline}
   <section aria-labelledby="h-rates">
     <div class="sec-head">
       <h2 id="h-rates">시장금리 · 일별</h2>
-      <span class="note" id="rates-note">한국은행 ECOS 시장금리(일별) · 최근 30영업일 · 전일 대비 bp</span>
+      <span class="note" id="rates-note">한국은행(ECOS) 시장금리(일별) · 최근 30영업일 · 전일 대비 bp</span>
     </div>
     <div class="rates" id="rates"><div class="placeholder">금리 불러오는 중…</div></div>
     <div class="spreads" id="spreads"></div>
@@ -292,16 +296,14 @@ function renderRates(R){
     </div>`);
   }
   const bp=(a,b)=>a!=null&&b!=null?((a-b)*100).toFixed(1)+"bp":"-";
-  $("#spreads").innerHTML=`<span>CP–CD <b>${bp(last.CP91,last.CD91)}</b></span>
-    <span>CP–국고3년 <b>${bp(last.CP91,last.KTB3)}</b></span>
-    <span>CD–국고3년 <b>${bp(last.CD91,last.KTB3)}</b></span>
+  $("#spreads").innerHTML=`<span>CP–CD(단기 신용·유동성 스프레드) <b>${bp(last.CP91,last.CD91)}</b></span>
     <span>기준일 <b>${esc(R.asof||"-")}</b></span>`;
 }
 
 // ---------------- 수집 상태 ----------------
 function renderStatus(S){
   if(!S||!S.sources){ $("#status").innerHTML=""; return; }
-  const names={ECOS:"ECOS",NICE:"NICE",한신평:"한신평",한기평:"한기평",KOFIA:"KOFIA",평가의견서:"평가서"};
+  const names={ECOS:"한국은행(ECOS)",NICE:"NICE",한신평:"한신평",한기평:"한기평",KOFIA:"KOFIA",평가의견서:"평가서"};
   $("#status").innerHTML=Object.entries(S.sources).map(([k,v])=>
     `<span class="src ${v.ok?"":"bad"}" title="${esc(v.ok?"정상":v.error||(v.missing?`${v.missing}건 다음 수집 때 이어서 받음`:"오류"))}"><span class="dot"></span>${esc(names[k]||k)}${v.ok?"":(v.missing?` ${v.missing}건 대기`:" 미수집")}</span>`).join("");
 }
@@ -336,7 +338,7 @@ function rowHTML(e){
     <td class="spc" title="${esc([e.deal_type,e.asset].filter(Boolean).join(" · "))}">${esc(e.spc)}<small>${esc(series)}</small></td>
     <td><span class="pfc ${e.pf==="PF"?"on":""}">${esc(e.pf)}</span></td>
     <td><span class="grade ${gcls(e.grade)}">${esc(e.grade)}</span></td>
-    <td>${esc(e.arranger||"-")}</td>
+    <td class="arr">${esc(e.arranger||"-")}</td>
     <td class="sup">${sup}</td>
     <td class="num">${e.amount?Number(e.amount).toLocaleString("ko-KR",{maximumFractionDigits:1}):"-"}</td>
     <td class="num">${rate}</td>
