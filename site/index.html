@@ -92,7 +92,7 @@ th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line);white-
 /* 남는 폭은 마지막 열(평가사·평가서)이 흡수 → 나머지 열은 내용 폭에 맞춤 */
 th:last-child,td:last-child{width:100%}
 th:first-child,td:first-child{padding-left:12px}
-td.arr{white-space:normal;min-width:6em;max-width:9.5em}
+td.arr{white-space:normal;word-break:keep-all;min-width:6em;max-width:9.5em}
 th{font-size:.74rem;font-weight:600;color:var(--muted);background:var(--surface);position:sticky;top:0;z-index:1}
 th button{all:unset;cursor:pointer}
 th button::after{content:"";margin-left:4px}
