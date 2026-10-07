@@ -58,6 +58,12 @@ h2{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--muted);marg
 .chg{font-family:var(--f-mono);font-size:.85rem;font-variant-numeric:tabular-nums}
 .chg.up{color:var(--up)} .chg.down{color:var(--down)} .chg.flat{color:var(--flat)}
 .spark{width:100%;height:46px;display:block}
+.sparkbox{position:relative;touch-action:pan-y;cursor:crosshair;outline:none;border-radius:4px}
+.sparkbox:focus-visible{box-shadow:0 0 0 2px var(--accent)}
+.spark-guide,.spark-dot,.spark-tip{position:absolute;pointer-events:none}
+.spark-guide{top:0;bottom:0;width:1px;background:var(--muted);opacity:.45}
+.spark-dot{width:9px;height:9px;border-radius:50%;background:var(--spark);border:2px solid var(--surface);transform:translate(-50%,-50%)}
+.spark-tip{top:-26px;transform:translateX(-50%);background:var(--fg);color:var(--bg);font-family:var(--f-mono);font-size:.72rem;line-height:1;padding:5px 7px;border-radius:5px;white-space:nowrap;font-variant-numeric:tabular-nums}
 .rate .meta{display:flex;justify-content:space-between;gap:6px;font-size:.72rem;color:var(--muted);font-family:var(--f-mono)}
 .spreads{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:10px;font-size:.8rem;color:var(--muted)}
 .spreads b{font-family:var(--f-mono);font-weight:500;color:var(--fg)}
@@ -219,6 +225,41 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const getJSON = async p => { try { const r = await fetch(p, {cache:"no-store"}); return r.ok ? r.json() : null; } catch { return null; } };
 
 // ---------------- 시장금리 ----------------
+const SER={};
+const SW=240, SH=46, SP=3;
+function sparkAt(box, i){
+  const s=SER[box.dataset.k]; if(!s) return;
+  const n=s.vals.length; i=Math.max(0,Math.min(n-1,i)); box.dataset.i=i;
+  const mn=Math.min(...s.vals), mx=Math.max(...s.vals), rg=(mx-mn)||1;
+  const w=box.clientWidth, h=box.querySelector("svg").clientHeight;
+  const px=(SP+i*(SW-2*SP)/Math.max(1,n-1))/SW*w, py=(SH-SP-(s.vals[i]-mn)/rg*(SH-2*SP))/SH*h;
+  const [g,dot,tip]=[".spark-guide",".spark-dot",".spark-tip"].map(c=>box.querySelector(c));
+  g.style.left=px+"px"; dot.style.left=px+"px"; dot.style.top=py+"px";
+  tip.textContent=`'${s.pts[i].d.slice(2).replace(/-/g,".")}  ${s.vals[i].toFixed(s.dp)}%`;
+  g.hidden=dot.hidden=tip.hidden=false;
+  const tw=tip.offsetWidth/2; tip.style.left=Math.max(tw,Math.min(w-tw,px))+"px";
+}
+function sparkHide(box){ box.querySelectorAll(".spark-guide,.spark-dot,.spark-tip").forEach(e=>e.hidden=true); delete box.dataset.i; }
+function sparkIdx(box, clientX){
+  const s=SER[box.dataset.k], r=box.getBoundingClientRect(), n=s.vals.length;
+  const x=(clientX-r.left)/r.width*SW;
+  return Math.round((x-SP)/(SW-2*SP)*(n-1));
+}
+document.addEventListener("pointermove",e=>{ const b=e.target.closest&&e.target.closest(".sparkbox"); if(b) sparkAt(b,sparkIdx(b,e.clientX)); });
+document.addEventListener("pointerdown",e=>{
+  const b=e.target.closest&&e.target.closest(".sparkbox");
+  document.querySelectorAll(".sparkbox").forEach(x=>{ if(x!==b) sparkHide(x); });
+  if(b) sparkAt(b,sparkIdx(b,e.clientX));
+});
+document.addEventListener("pointerout",e=>{ const b=e.target.closest&&e.target.closest(".sparkbox"); if(b&&e.pointerType==="mouse"&&!b.contains(e.relatedTarget)) sparkHide(b); });
+document.addEventListener("keydown",e=>{
+  const b=document.activeElement; if(!b||!b.classList||!b.classList.contains("sparkbox")) return;
+  const n=SER[b.dataset.k].vals.length, cur=b.dataset.i!=null?+b.dataset.i:n-1;
+  if(e.key==="ArrowLeft"){ sparkAt(b,cur-1); e.preventDefault(); }
+  else if(e.key==="ArrowRight"){ sparkAt(b,cur+1); e.preventDefault(); }
+  else if(e.key==="Escape"){ sparkHide(b); }
+});
+document.addEventListener("focusout",e=>{ if(e.target.classList&&e.target.classList.contains("sparkbox")) sparkHide(e.target); });
 function spark(vals){
   const W=240,H=46,p=3, mn=Math.min(...vals), mx=Math.max(...vals), rg=(mx-mn)||1;
   const x=i=>p+i*(W-2*p)/Math.max(1,vals.length-1), y=v=>H-p-(v-mn)/rg*(H-2*p);
@@ -238,15 +279,16 @@ function renderRates(R){
     const s=R.series[k]; if(!s||!s.points.length) continue;
     const pts=s.points.slice(-30), vals=pts.map(p=>p.v), n=vals.length;
     const cur=vals[n-1], prev=n>1?vals[n-2]:cur, bp=Math.round((cur-prev)*1000)/10;
-    last[k]=cur;
+    last[k]=cur; SER[k]={pts,vals,dp:dp[k]};
     const cls=bp>0?"up":bp<0?"down":"flat", sign=bp>0?"▲ +":bp<0?"▼ ":"– ";
     const md=d=>d.slice(5).replace("-","/");
     el.insertAdjacentHTML("beforeend",`<div class="rate">
       <div class="name"><b>${esc(s.name)}</b><span>${esc(s.tag)}</span></div>
       <div class="val"><span class="num">${cur.toFixed(dp[k])}<small>%</small></span>
         <span class="chg ${cls}">${sign}${Math.abs(bp).toFixed(1)}bp</span></div>
-      ${spark(vals)}
-      <div class="meta"><span>${md(pts[0].d)}</span><span>고 ${Math.max(...vals).toFixed(dp[k])} · 저 ${Math.min(...vals).toFixed(dp[k])}</span><span>${md(pts[n-1].d)}</span></div>
+      <div class="sparkbox" data-k="${k}" tabindex="0" aria-label="${esc(s.name)} 추이: 마우스를 올리거나 터치하면 일자별 금리가 보입니다">${spark(vals)}
+        <div class="spark-guide" hidden></div><div class="spark-dot" hidden></div><div class="spark-tip" hidden></div></div>
+      <div class="meta"><span>${md(pts[0].d)}</span><span>${md(pts[n-1].d)}</span></div>
     </div>`);
   }
   const bp=(a,b)=>a!=null&&b!=null?((a-b)*100).toFixed(1)+"bp":"-";
