@@ -89,10 +89,15 @@ input[type=checkbox]{accent-color:var(--accent)}
 .table-box{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:auto;max-height:78vh}
 table{width:100%;border-collapse:collapse;font-size:.84rem}
 th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
-/* 남는 폭은 마지막 열(평가사·평가서)이 흡수 → 나머지 열은 내용 폭에 맞춤 */
+/* 남는 폭은 마지막 열(발행주관사)이 흡수 → 나머지 열은 내용 폭에 맞춤 */
 th:last-child,td:last-child{width:100%}
 th:first-child,td:first-child{padding-left:12px}
-td.arr{white-space:normal;word-break:keep-all;min-width:6em;max-width:9.5em}
+td.arr{white-space:normal;word-break:keep-all;min-width:6em}
+/* SPC명·회차, 신용보강 주체는 가로 스크롤해도 고정 */
+.fx1,.fx2{position:sticky;background:var(--surface);z-index:2}
+.fx1{left:0}
+.fx2{left:var(--fx1w,240px);box-shadow:inset -1px 0 0 var(--line),6px 0 8px -6px rgba(0,0,0,.18)}
+th.fx1,th.fx2{z-index:3}
 th{font-size:.74rem;font-weight:600;color:var(--muted);background:var(--surface);position:sticky;top:0;z-index:1}
 th button{all:unset;cursor:pointer}
 th button::after{content:"";margin-left:4px}
@@ -198,17 +203,17 @@ footer a:hover{text-decoration:underline}
     <div class="table-box">
       <table>
         <thead><tr id="thead">
+          <th class="fx1" data-k="spc"><button type="button">SPC명 · 회차</button></th>
+          <th class="fx2">신용보강 주체</th>
+          <th data-k="grade"><button type="button">등급</button></th>
+          <th class="num" data-k="rate"><button type="button">거래금리</button></th>
+          <th class="num" data-k="amount"><button type="button">발행액(억)</button></th>
           <th data-k="issue_date" aria-sort="descending"><button type="button">발행일</button></th>
           <th data-k="maturity"><button type="button">만기 (기간)</button></th>
+          <th>평가서 다운로드</th>
+          <th data-k="pf"><button type="button">PF구분</button></th>
           <th data-k="kind"><button type="button">종류</button></th>
-          <th data-k="spc"><button type="button">SPC명 · 회차</button></th>
-          <th data-k="pf"><button type="button">PF</button></th>
-          <th data-k="grade"><button type="button">등급</button></th>
           <th data-k="arranger"><button type="button">발행주관사</button></th>
-          <th>신용보강 주체</th>
-          <th class="num" data-k="amount"><button type="button">발행액(억)</button></th>
-          <th class="num" data-k="rate"><button type="button">거래금리</button></th>
-          <th>평가사 · 평가서</th>
         </tr></thead>
         <tbody id="tbody"><tr><td colspan="11" class="empty">불러오는 중…</td></tr></tbody>
       </table>
@@ -332,17 +337,17 @@ function rowHTML(e){
   else rate=e.kofia&&e.kofia.status==="pending"?'<span class="dim">대기</span>':"-";
   const series=(e.series||"").replace(/^제/,"");
   return `<tr>
+    <td class="spc fx1" title="${esc([e.deal_type,e.asset].filter(Boolean).join(" · "))}">${esc(e.spc)}<small>${esc(series)}</small></td>
+    <td class="sup fx2">${sup}</td>
+    <td><span class="grade ${gcls(e.grade)}">${esc(e.grade)}</span></td>
+    <td class="num">${rate}</td>
+    <td class="num">${e.amount?Number(e.amount).toLocaleString("ko-KR",{maximumFractionDigits:1}):"-"}</td>
     <td class="date">${ymd(e.issue_date)}</td>
     <td class="date mat">${ymd(e.maturity)}${e.days!=null?`<small>(${e.days}일)</small>`:""}</td>
-    <td><span class="kind">${esc(e.kind)}</span></td>
-    <td class="spc" title="${esc([e.deal_type,e.asset].filter(Boolean).join(" · "))}">${esc(e.spc)}<small>${esc(series)}</small></td>
+    <td class="rep">${ag||'<span class="dim">-</span>'}</td>
     <td><span class="pfc ${e.pf==="PF"?"on":""}">${esc(e.pf)}</span></td>
-    <td><span class="grade ${gcls(e.grade)}">${esc(e.grade)}</span></td>
-    <td class="arr">${esc(e.arranger||"-")}</td>
-    <td class="sup">${sup}</td>
-    <td class="num">${e.amount?Number(e.amount).toLocaleString("ko-KR",{maximumFractionDigits:1}):"-"}</td>
-    <td class="num">${rate}</td>
-    <td class="rep">${ag||'<span class="dim">-</span>'}</td></tr>`;
+    <td><span class="kind">${esc(e.kind)}</span></td>
+    <td class="arr">${esc(e.arranger||"-")}</td></tr>`;
 }
 function cmp(a,b){
   const k=state.sort; let va,vb;
@@ -364,6 +369,7 @@ function render(){
     &&(state.pf==="all"||e.pf===state.pf)
     &&(!q||[e.spc,e.asset,e.asset_manager,e.arranger,e.deal_type,...(e.supports||[]).map(x=>x.company+" "+x.detail+" "+(x.summary||""))].join(" ").toLowerCase().includes(q))).sort(cmp);
   $("#count").textContent=`${rows.length}건 / 전체 ${EV.length}건`;
+  requestAnimationFrame(()=>{ const f=document.querySelector("#thead th.fx1"); if(f) document.querySelector(".table-box table").style.setProperty("--fx1w", f.offsetWidth+"px"); });
   $("#tbody").innerHTML=rows.length?rows.map(rowHTML).join(""):'<tr><td colspan="11" class="empty">조건에 맞는 SPC가 없습니다. 필터를 바꿔 보세요.</td></tr>';
   document.querySelectorAll("#thead th[data-k]").forEach(th=>th.setAttribute("aria-sort",th.dataset.k===state.sort?(state.dir>0?"ascending":"descending"):"none"));
 }
