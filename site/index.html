@@ -369,10 +369,14 @@ function render(){
     &&(state.pf==="all"||e.pf===state.pf)
     &&(!q||[e.spc,e.asset,e.asset_manager,e.arranger,e.deal_type,...(e.supports||[]).map(x=>x.company+" "+x.detail+" "+(x.summary||""))].join(" ").toLowerCase().includes(q))).sort(cmp);
   $("#count").textContent=`${rows.length}건 / 전체 ${EV.length}건`;
-  requestAnimationFrame(()=>{ const f=document.querySelector("#thead th.fx1"); if(f) document.querySelector(".table-box table").style.setProperty("--fx1w", f.offsetWidth+"px"); });
   $("#tbody").innerHTML=rows.length?rows.map(rowHTML).join(""):'<tr><td colspan="11" class="empty">조건에 맞는 SPC가 없습니다. 필터를 바꿔 보세요.</td></tr>';
+  fixCols();
   document.querySelectorAll("#thead th[data-k]").forEach(th=>th.setAttribute("aria-sort",th.dataset.k===state.sort?(state.dir>0?"ascending":"descending"):"none"));
 }
+// 고정 열: 둘째 열의 left를 첫째 열 실제 폭으로 맞춤
+function fixCols(){ const f=document.querySelector("#thead th.fx1"); if(f) document.querySelector(".table-box table").style.setProperty("--fx1w", f.getBoundingClientRect().width+"px"); }
+window.addEventListener("resize", fixCols);
+document.fonts&&document.fonts.ready.then(fixCols);
 function bindSeg(id,key){
   document.querySelectorAll(`#${id} button`).forEach(b=>b.addEventListener("click",()=>{
     document.querySelectorAll(`#${id} button`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
