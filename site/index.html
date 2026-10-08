@@ -89,7 +89,13 @@ label.f{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--mut
 select,input[type=search]{font:inherit;font-size:.85rem;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
 input[type=search]{min-width:0;width:210px}
 input[type=checkbox]{accent-color:var(--accent)}
-.count{margin-left:auto;font-size:.82rem;color:var(--muted)}
+.count{font-size:.82rem;color:var(--muted);white-space:nowrap}
+.tail{margin-left:auto;display:flex;align-items:center;gap:10px}
+.dl{font:inherit;font-size:.82rem;font-weight:600;color:var(--accent);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.dl:hover{background:var(--accent-soft)}
+.dl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.dl:disabled{opacity:.6;cursor:progress}
+.dl svg{width:14px;height:14px}
 
 .table-box{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:auto;max-height:78vh}
 table{width:100%;border-collapse:collapse;font-size:.84rem}
@@ -154,7 +160,7 @@ footer a:hover{text-decoration:underline}
 @media (max-width:760px){
   .rates{grid-template-columns:1fr}
   .rate + .rate{border-left:0;border-top:1px solid var(--line)}
-  .count{margin-left:0;width:100%}
+  .tail{margin-left:0;width:100%;justify-content:space-between}
   input[type=search]{width:100%}
   label.f.search{flex:1 1 100%}
   .updated{text-align:left}
@@ -213,7 +219,8 @@ footer a:hover{text-decoration:underline}
         <button type="button" data-v="일반" aria-pressed="false">일반</button>
       </div>
       <label class="f search" for="f-q"><input type="search" id="f-q" placeholder="SPC·신용보강 주체 등 검색"></label>
-      <span class="count" id="count"></span>
+      <div class="tail"><span class="count" id="count"></span>
+      <button type="button" class="dl" id="dl" title="지금 표에 보이는 필터·정렬 그대로 엑셀 파일로 받습니다"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11"/></svg>엑셀 다운로드</button></div>
     </div>
     <div class="table-box">
       <table>
@@ -330,7 +337,7 @@ function renderStatus(S){
 }
 
 // ---------------- 등급공시 표 ----------------
-let EV=[], state={kind:"all",days:"all",grade:"all",agency:"all",pf:"all",q:"",sort:"issue_date",dir:-1}, ASOF=null;
+let VIEW=[], STAT=null, EV=[], state={kind:"all",days:"all",grade:"all",agency:"all",pf:"all",q:"",sort:"issue_date",dir:-1}, ASOF=null;
 const gcls=g=>/^A1/.test(g)?"g-a1":/^A2/.test(g)?"g-a2":/^A3/.test(g)?"g-a3":"g-b";
 const rateOf=e=>e.kofia&&e.kofia.rate!=null?e.kofia.rate:null;
 const GRADE_ORDER=["A1","A2+","A2","A2-","A3+","A3","A3-","B+","B","B-","C","D"];
@@ -384,6 +391,7 @@ function render(){
     &&(state.agency==="all"||e.agencies.includes(state.agency))
     &&(state.pf==="all"||e.pf===state.pf)
     &&(!q||[e.spc,e.asset,e.asset_manager,e.arranger,e.deal_type,...(e.supports||[]).map(x=>x.company+" "+x.detail+" "+(x.summary||""))].join(" ").toLowerCase().includes(q))).sort(cmp);
+  VIEW=rows;
   $("#count").textContent=`${rows.length}건 / 전체 ${EV.length}건`;
   $("#tbody").innerHTML=rows.length?rows.map(rowHTML).join(""):'<tr><td colspan="11" class="empty">조건에 맞는 SPC가 없습니다. 필터를 바꿔 보세요.</td></tr>';
   fixCols();
@@ -401,6 +409,79 @@ function fixCols(){
 if(window.ResizeObserver){ const ro=new ResizeObserver(fixCols); ro.observe(document.querySelector(".table-box")); const f0=document.querySelector("#thead th.fx1"); if(f0) ro.observe(f0); }
 window.addEventListener("resize", fixCols);
 document.fonts&&document.fonts.ready.then(fixCols);
+// ---------------- 엑셀 다운로드 ----------------
+function loadXLSX(){
+  if(window.XLSX) return Promise.resolve();
+  return new Promise((ok,fail)=>{ const s=document.createElement("script");
+    s.src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"; s.onload=ok; s.onerror=fail; document.head.appendChild(s); });
+}
+function filterText(){
+  const f=[], seg=id=>document.querySelector(`#${id} button[aria-pressed="true"]`)?.innerText;
+  if(state.kind!=="all") f.push(`종류 ${state.kind}`);
+  if(state.days!=="all") f.push(`기간 ${seg("seg-days")}`);
+  if(state.grade!=="all") f.push(`현재등급 ${state.grade}`);
+  if(state.agency!=="all") f.push(`평가사 ${state.agency}`);
+  if(state.pf!=="all") f.push(`PF구분 ${state.pf}`);
+  if(state.q.trim()) f.push(`검색어 "${state.q.trim()}"`);
+  return f.length?f.join(" · "):"전체(필터 없음)";
+}
+async function downloadXLSX(){
+  const btn=$("#dl"), label=btn.lastChild.textContent;
+  btn.disabled=true; btn.lastChild.textContent="만드는 중…";
+  try{
+    await loadXLSX();
+    const AG=["NICE","한신평","한기평"];
+    const head=["SPC명","회차","신용보강 주체","신용보강 내용","등급",...AG.map(a=>`${a} 등급`),"거래금리(%)","금리 기준","금리 거래일","발행액(억원)","발행일","만기일","기간(일)",...AG.map(a=>`${a} 평가서`),"PF구분","종류","발행주관사","거래유형","기초자산"];
+    const sup=e=>e.supports||[];
+    const links=[];
+    const body=VIEW.map((e,i)=>{
+      const rt=Object.fromEntries(e.ratings.map(r=>[r.agency,r])), url=Object.fromEntries((e.reports||[]).map(r=>[r.agency,r.url]));
+      const k=e.kofia||{};
+      AG.forEach((a,j)=>{ if(url[a]) links.push([i+1,head.indexOf(`${a} 평가서`),url[a]]); });
+      return [e.spc,(e.series||"").replace(/^제/,""),sup(e).map(x=>x.company).join(" / "),sup(e).map(x=>x.summary||x.detail||"").join(" / "),e.grade,
+        ...AG.map(a=>rt[a]?rt[a].grade:""),
+        k.rate!=null?k.rate:(k.status==="pending"?"대기":""), k.rate!=null?(k.source||""):"", k.rate!=null?(k.trade_date||""):"",
+        e.amount!=null&&e.amount!==""?Number(e.amount):null, e.issue_date||"", e.maturity||"", e.days??null,
+        ...AG.map(a=>url[a]?`${a} 평가서`:""),
+        e.pf||"",e.kind||"",e.arranger||"",e.deal_type||"",e.asset||""];
+    });
+    const ws=XLSX.utils.aoa_to_sheet([head,...body]);
+    const W={"SPC명":18,"회차":10,"신용보강 주체":22,"신용보강 내용":30,"금리 기준":14,"금리 거래일":11,"발행일":11,"만기일":11,"발행주관사":14,"거래유형":22,"기초자산":28};
+    ws["!cols"]=head.map(h=>({wch:W[h]||(/평가서/.test(h)?11:/등급/.test(h)?8:10)}));
+    ws["!autofilter"]={ref:XLSX.utils.encode_range({s:{r:0,c:0},e:{r:body.length,c:head.length-1}})};
+    const cR=head.indexOf("거래금리(%)"), cA=head.indexOf("발행액(억원)");
+    for(let i=1;i<=body.length;i++){
+      const a=ws[XLSX.utils.encode_cell({r:i,c:cR})]; if(a&&typeof a.v==="number") a.z="0.00";
+      const b=ws[XLSX.utils.encode_cell({r:i,c:cA})]; if(b&&typeof b.v==="number") b.z="#,##0.0";
+    }
+    for(const [r,c,u] of links){ const cell=ws[XLSX.utils.encode_cell({r,c})]; if(cell) cell.l={Target:u,Tooltip:"평가서 PDF 열기"}; }
+    const info=[
+      ["유동화시장 등급 · 금리 현황"],[],
+      ["대상","단기 유동화증권(ABSTB·ABCP) 본평가 회차별 발행 현황"],
+      ["최종 수집", STAT?.generated?`${STAT.generated} KST`:""],
+      ["내려받은 시각", new Date().toLocaleString("ko-KR",{timeZone:"Asia/Seoul"})],
+      ["적용된 화면 조건", filterText()],
+      ["행 수", `${VIEW.length}건 / 전체 ${EV.length}건`],[],
+      ["등급","평가사별 등급이 다르면 '/'로 함께 표시합니다. 평가사별 등급 열에서 각각 확인할 수 있습니다."],
+      ["거래금리","ABCP는 발행일 직접매입(할인) 최고금리, ABSTB는 발행일~2영업일 매출 최고금리(금융투자협회). '대기'는 아직 거래 확인 기간 중"],
+      ["평가서","평가서 열을 누르면 각 평가사의 평가의견서 PDF가 열립니다."],
+      ["출처","나이스신용평가(NICE), 한국신용평가(한신평), 한국기업평가(한기평), 금융투자협회 채권정보센터, 한국은행(ECOS)"],
+      ["사이트", location.origin+location.pathname],
+      ["제작","한국투자증권 PF그룹 부동산금융1부 최이름"],
+      ["유의사항","공개 자료를 모아 정리한 참고용 자료이며 원문과 다를 수 있습니다. 투자 권유나 의사결정의 근거가 아닙니다."]
+    ];
+    const ws2=XLSX.utils.aoa_to_sheet(info); ws2["!cols"]=[{wch:18},{wch:90}];
+    const wb=XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb,ws,"발행 회차");
+    XLSX.utils.book_append_sheet(wb,ws2,"정보");
+    const d=new Date(Date.now()+9*3600e3).toISOString().slice(0,10).replace(/-/g,"");
+    XLSX.writeFile(wb,`daily-ratings_${d}.xlsx`);
+  }catch(e){
+    console.error(e); btn.lastChild.textContent="다운로드 실패 · 다시 시도"; setTimeout(()=>{btn.lastChild.textContent=label;},2500); btn.disabled=false; return;
+  }
+  btn.disabled=false; btn.lastChild.textContent=label;
+}
+$("#dl").addEventListener("click",downloadXLSX);
 function bindSeg(id,key){
   document.querySelectorAll(`#${id} button`).forEach(b=>b.addEventListener("click",()=>{
     document.querySelectorAll(`#${id} button`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
@@ -419,7 +500,7 @@ document.querySelectorAll("#thead th[data-k] button").forEach(b=>b.addEventListe
 
 (async()=>{
   const [R,A,S]=await Promise.all([getJSON("data/rates.json"),getJSON("data/abs.json"),getJSON("data/status.json")]);
-  renderRates(R); renderStatus(S);
+  renderRates(R); renderStatus(S); STAT=S;
   $("#updated").textContent=S?.generated?`최종 수집 ${S.generated} KST`:"수집 정보 없음";
   if(!A||!A.rows){ $("#tbody").innerHTML='<tr><td colspan="11" class="empty">등급공시 데이터를 불러오지 못했습니다.</td></tr>'; return; }
   EV=A.rows; ASOF=A.issue_window?.[1]||null;
