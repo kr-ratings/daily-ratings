@@ -136,7 +136,7 @@ def main() -> int:
 
     # 1) 시장금리 ----------------------------------------------------------
     try:
-        rates = rates_mod.collect(days=60)
+        rates = rates_mod.collect(days=190)  # 차트 6개월 + 여유
         rates["generated"] = status["generated"]
         write_json(DATA_DIR / "rates.json", rates)
         status["sources"]["ECOS"] = {"ok": True, "asof": rates["asof"], "key": rates["key"]}
