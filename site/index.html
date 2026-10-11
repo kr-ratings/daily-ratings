@@ -194,7 +194,7 @@ footer .ct{white-space:nowrap}
   <section aria-labelledby="h-rates">
     <div class="sec-head">
       <h2 id="h-rates">시장금리 · 일별</h2>
-      <span class="note" id="rates-note">한국은행(ECOS) 시장금리(일별) · 최근 30영업일 · 전일 대비 bp</span>
+      <span class="note" id="rates-note">한국은행(ECOS) 시장금리(일별) · 최근 6개월 · 전일 대비 bp</span>
     </div>
     <div class="rates" id="rates"><div class="placeholder">금리 불러오는 중…</div></div>
     <div class="spreads" id="spreads"></div>
@@ -316,7 +316,10 @@ function renderRates(R){
   el.innerHTML="";
   for(const k of order){
     const s=R.series[k]; if(!s||!s.points.length) continue;
-    const pts=s.points.slice(-30), vals=pts.map(p=>p.v), n=vals.length;
+    // 최근 6개월(마지막 자료일 기준 달력 6개월)
+    const c6=new Date(s.points[s.points.length-1].d+"T00:00:00Z"); c6.setUTCMonth(c6.getUTCMonth()-6);
+    const cut6=c6.toISOString().slice(0,10);
+    const pts=s.points.filter(p=>p.d>=cut6), vals=pts.map(p=>p.v), n=vals.length;
     const cur=vals[n-1], prev=n>1?vals[n-2]:cur, bp=Math.round((cur-prev)*1000)/10;
     last[k]=cur; SER[k]={pts,vals,dp:dp[k]};
     const cls=bp>0?"up":bp<0?"down":"flat", sign=bp>0?"▲ +":bp<0?"▼ ":"– ";
