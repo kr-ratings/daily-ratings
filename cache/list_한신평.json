@@ -1,6 +1,27 @@
 [
  {
   "agency": "한신평",
+  "spc": "골든포레스트제일차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-12",
+  "series": "1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 100.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261013-4.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "골든포레스트제일차",
+   "writedate": "20261012"
+  }
+ },
+ {
+  "agency": "한신평",
   "spc": "에이치씨원큐제삼차",
   "kind": "ABCP",
   "eval_type": "정기",
@@ -85,22 +106,22 @@
  },
  {
   "agency": "한신평",
-  "spc": "엠에스제이지제이차",
+  "spc": "엘씨글로리제일차",
   "kind": "ABSTB",
-  "eval_type": "수시",
-  "grade": "WR",
+  "eval_type": "정기",
+  "grade": "A1",
   "eval_date": "2026-10-12",
-  "series": "9",
+  "series": "20",
   "issue_date": null,
   "maturity": null,
-  "amount": 427.5,
+  "amount": 305.0,
   "ref": null,
   "doc": {
    "agency": "한신평",
-   "id": "rs20261012-27.pdf",
+   "id": "rs20261012-49.pdf",
    "menuCd": "R8",
    "gubun": "2",
-   "title": "엠에스제이지제이차",
+   "title": "엘씨글로리제일차",
    "writedate": "20261012"
   }
  },
@@ -206,6 +227,48 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "케이더블씨제일차",
+   "writedate": "20261012"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "코르티스제십사차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-12",
+  "series": "1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 100.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261013-3.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "코르티스제십사차",
+   "writedate": "20261012"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "코르티스제십삼차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-12",
+  "series": "1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 100.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261013-2.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "코르티스제십삼차",
    "writedate": "20261012"
   }
  },
@@ -6051,27 +6114,6 @@
   "agency": "한신평",
   "spc": "파시온황금제사차",
   "kind": "ABSTB",
-  "eval_type": "수시",
-  "grade": "A1",
-  "eval_date": "2026-09-10",
-  "series": "6",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 130.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260910-8.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "파시온황금제사차",
-   "writedate": "20260910"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "파시온황금제사차",
-  "kind": "ABSTB",
   "eval_type": "본",
   "grade": "A1",
   "eval_date": "2026-09-10",
@@ -10522,27 +10564,6 @@
  },
  {
   "agency": "한신평",
-  "spc": "아이엠히어로제사차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2+",
-  "eval_date": "2026-08-11",
-  "series": "7",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 1578.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260811-2.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "아이엠히어로제사차",
-   "writedate": "20260811"
-  }
- },
- {
-  "agency": "한신평",
   "spc": "한솔제오십삼차",
   "kind": "ABCP",
   "eval_type": "본",
@@ -10937,27 +10958,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "케이에이치엘제십팔차",
-   "writedate": "20260810"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "프라임미니트",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2",
-  "eval_date": "2026-08-10",
-  "series": "1-2",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 140.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260810-10.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "프라임미니트",
    "writedate": "20260810"
   }
  },
@@ -12827,27 +12827,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "신한희망제1차",
-   "writedate": "20260728"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "아이엠히어로제사차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2+",
-  "eval_date": "2026-07-28",
-  "series": "6",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 276.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260728-21.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "아이엠히어로제사차",
    "writedate": "20260728"
   }
  },
@@ -14843,27 +14822,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "더블에스파트너쉽2022",
-   "writedate": "20260713"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "에이치와이에너지제일차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2-",
-  "eval_date": "2026-07-13",
-  "series": "22",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 175.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260713-4.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "에이치와이에너지제일차",
    "writedate": "20260713"
   }
  },
