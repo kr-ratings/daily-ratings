@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13 12:20",
+ "generated": "2026-10-13 18:22",
  "eval_window": [
   "2026-06-15",
   "2026-10-13"
@@ -11,31 +11,31 @@
  "sources": {
   "ECOS": {
    "ok": true,
-   "asof": "2026-10-12",
+   "asof": "2026-10-13",
    "key": "sample"
   },
   "NICE": {
    "ok": true,
-   "rows": 5915
+   "rows": 5947
   },
   "한신평": {
    "ok": true,
-   "rows": 866
+   "rows": 883
   },
   "한기평": {
    "ok": true,
-   "rows": 1428
+   "rows": 1444
   },
   "평가의견서": {
    "ok": true,
-   "docs": 1751,
+   "docs": 1782,
    "missing": 0,
    "kr_blocked": false
   },
   "KOFIA": {
    "ok": true,
    "errors": [],
-   "matched": 579
+   "matched": 593
   }
  }
 }
