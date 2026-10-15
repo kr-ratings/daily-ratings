@@ -1,6 +1,405 @@
 [
  {
   "agency": "한신평",
+  "spc": "글로리고덕제삼차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A2",
+  "eval_date": "2026-10-15",
+  "series": "2",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 1850.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-27.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "글로리고덕제삼차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "글로리고덕제이차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A2",
+  "eval_date": "2026-10-15",
+  "series": "4-1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 795.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-30.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "글로리고덕제이차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "글로리고덕제이차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A2",
+  "eval_date": "2026-10-15",
+  "series": "4-2",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 650.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-29.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "글로리고덕제이차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "농협베스트제1차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "5-3",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 5.77,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-42.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "농협베스트제1차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "뉴스타임팩트제일차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "22",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 218.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-28.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "뉴스타임팩트제일차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "마이트한남제일차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "22",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 200.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-6.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "마이트한남제일차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "스카이포트폴리오일호",
+  "kind": "ABSTB",
+  "eval_type": "수시",
+  "grade": "A2-",
+  "eval_date": "2026-10-15",
+  "series": "33",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 70.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-38.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "스카이포트폴리오일호",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "스카이포트폴리오일호",
+  "kind": "ABSTB",
+  "eval_type": "수시",
+  "grade": "WR",
+  "eval_date": "2026-10-15",
+  "series": "34",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 70.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-39.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "스카이포트폴리오일호",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "스카이포트폴리오일호",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A2-",
+  "eval_date": "2026-10-15",
+  "series": "34",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 70.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-40.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "스카이포트폴리오일호",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "신한챔피온제팔차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "5-3",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 5.4,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-37.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "신한챔피온제팔차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "에이블넥스트제일차",
+  "kind": "ABSTB",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "20",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 210.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-36.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "에이블넥스트제일차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "에이치엠서면제이차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "9",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 150.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-10.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "에이치엠서면제이차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "위드지엠제삼십이차",
+  "kind": "ABSTB",
+  "eval_type": "정기",
+  "grade": "A2",
+  "eval_date": "2026-10-15",
+  "series": "9",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 75.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-21.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "위드지엠제삼십이차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "제이와이제이제오차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A2",
+  "eval_date": "2026-10-15",
+  "series": "5",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 65.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-25.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "제이와이제이제오차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "컬티베이션십삼차",
+  "kind": "ABSTB",
+  "eval_type": "수시",
+  "grade": "WR",
+  "eval_date": "2026-10-15",
+  "series": "9",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 95.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-15.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "컬티베이션십삼차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "포르투나제팔차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "3-4",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 0.89,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-46.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "포르투나제팔차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "프로젝트의왕제삼차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "3-2",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 3.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-5.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "프로젝트의왕제삼차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "한솔제사십팔차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "5-1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 2450.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-20.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "한솔제사십팔차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "한솔제육십삼차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-15",
+  "series": "2-5",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 2.17,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261015-17.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "한솔제육십삼차",
+   "writedate": "20261015"
+  }
+ },
+ {
+  "agency": "한신평",
   "spc": "골든포레스트제오차",
   "kind": "ABSTB",
   "eval_type": "본",
@@ -17,6 +416,27 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "골든포레스트제오차",
+   "writedate": "20261014"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "디비엠비피제팔차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A2-",
+  "eval_date": "2026-10-14",
+  "series": "12",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 135.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261014-35.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "디비엠비피제팔차",
    "writedate": "20261014"
   }
  },
