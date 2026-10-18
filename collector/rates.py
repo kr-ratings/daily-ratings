@@ -1,10 +1,19 @@
-"""한국은행 ECOS: 시장금리(일별) 817Y002 → CP 91일, CD 91일, 국고채 3년."""
+"""한국은행 ECOS: 시장금리(일별) 817Y002 → CP 91일, CD 91일, 국고채 3년.
+
+당일분은 ECOS보다 먼저 나오는 금융투자협회 최종호가수익률로 보강한다(kofia_topup).
+"""
 from __future__ import annotations
 
 import datetime as dt
 import os
+import re
+import sys
 
-from .util import request, session, today_kst
+from .util import is_bday, request, session, today_kst
+
+
+def log(*a):
+    print(*a, file=sys.stderr, flush=True)
 
 STAT = "817Y002"
 ITEMS = {
@@ -39,6 +48,85 @@ def _fetch_item(sess, key: str, code: str, start: str, end: str) -> list[dict]:
     return out
 
 
+# ------------------------------------------------------------------ KOFIA 당일 보강
+# ECOS는 당일 금리를 저녁(대략 17~18시대)에야 올린다. 같은 값의 원천인 금융투자협회
+# 최종호가수익률은 장 마감(15:30) 직후 고시되므로, 당일분이 ECOS에 아직 없으면 KOFIA 값으로
+# 먼저 채운다. 응답 열 구성이 문서화돼 있지 않아, ECOS에 이미 있는 최근 2영업일 값과 정확히
+# 일치하는 열을 찾아 그 열을 '15:30 최종호가'로 쓴다(맞는 열이 없으면 보강하지 않음).
+KOFIA_URL = "https://www.kofiabond.or.kr/proframeWeb/XMLSERVICES/"
+KOFIA_NAMES = {"KTB3": re.compile(r"국고채?권?\(?3년"), "CD91": re.compile(r"CD\(?91일"), "CP91": re.compile(r"CP\(?91일")}
+_ROW = re.compile(r"<BISComDspDatDTO>(.*?)</BISComDspDatDTO>", re.S)
+_VAL = re.compile(r"<(val\d+)>([^<]*)</\1>")
+
+
+def _num(s):
+    try:
+        return float(str(s).replace(",", "").strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def _kofia_day(sess, day: dt.date) -> dict[str, dict[str, float]]:
+    xml = (
+        '<?xml version="1.0" encoding="utf-8"?>\n<message><proframeHeader>'
+        "<pfmAppName>BIS-KOFIABOND</pfmAppName><pfmSvcName>BISLastAskPrcROPSrchSO</pfmSvcName>"
+        "<pfmFnName>listDay</pfmFnName></proframeHeader><systemHeader></systemHeader>"
+        f"<BISComDspDatDTO><val1>{day:%Y%m%d}</val1></BISComDspDatDTO></message>"
+    )
+    r = request(sess, "POST", KOFIA_URL, data=xml.encode("utf-8"), timeout=60,
+                headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
+    out: dict[str, dict[str, float]] = {}
+    for m in _ROW.findall(r.content.decode("utf-8", errors="replace")):
+        vals = dict(_VAL.findall(m))
+        for k, pat in KOFIA_NAMES.items():
+            if k in out:
+                continue
+            if any(pat.search(re.sub(r"\s", "", v)) for v in vals.values()):
+                nums = {f: _num(v) for f, v in vals.items()}
+                out[k] = {f: v for f, v in nums.items() if v is not None}
+    return out
+
+
+def kofia_topup(sess, series: dict, today: dt.date) -> dict | None:
+    """당일분이 ECOS에 없으면 KOFIA 최종호가(15:30)로 하루치를 덧붙인다. 붙였으면 정보 dict 반환."""
+    if not is_bday(today):
+        return None
+    pts = {k: {p["d"]: p["v"] for p in s["points"]} for k, s in series.items()}
+    last = min(s["points"][-1]["d"] for s in series.values() if s["points"])
+    if last >= today.isoformat():
+        return None
+    # 기준일 2개: ECOS에 세 금리가 모두 있는 최근 2일
+    common = sorted(set.intersection(*(set(v) for v in pts.values())))[-2:]
+    if len(common) < 2:
+        return None
+    cand = None
+    for d in common:
+        got = _kofia_day(sess, dt.date.fromisoformat(d))
+        if set(got) != set(series):
+            log(f"KOFIA 최종호가: {d} 행을 찾지 못함 {sorted(got)}")
+            return None
+        ok = {f for f in set.intersection(*(set(got[k]) for k in series))
+              if all(abs(got[k][f] - pts[k][d]) < 0.0005 for k in series)}
+        cand = ok if cand is None else cand & ok
+    if not cand or len(cand) != 1:
+        log(f"KOFIA 최종호가: 열 판별 실패 {sorted(cand or [])}")
+        return None
+    col = cand.pop()
+    got = _kofia_day(sess, today)
+    vals = {k: got.get(k, {}).get(col) for k in series}
+    if any(v is None for v in vals.values()):
+        log("KOFIA 최종호가: 당일 고시 전")
+        return None
+    for k, v in vals.items():
+        prev = series[k]["points"][-1]["v"]
+        if abs(v - prev) > 0.5:  # 비정상값 방어
+            log(f"KOFIA 최종호가: {k} {prev}→{v} 변동이 커서 사용 안 함")
+            return None
+    for k, v in vals.items():
+        series[k]["points"].append({"d": today.isoformat(), "v": v})
+    return {"date": today.isoformat(), "source": "금융투자협회 최종호가수익률(15:30)", "col": col}
+
+
 def collect(days: int = 40) -> dict:
     key = os.environ.get("ECOS_API_KEY") or "sample"
     sess = session()
@@ -48,5 +136,13 @@ def collect(days: int = 40) -> dict:
     for k, (code, name, tag) in ITEMS.items():
         pts = _fetch_item(sess, key, code, start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
         series[k] = {"name": name, "tag": tag, "points": pts}
+    prelim = None
+    try:
+        prelim = kofia_topup(sess, series, end)
+    except Exception as e:  # noqa: BLE001  보강 실패는 ECOS 값만으로 진행
+        log(f"KOFIA 최종호가 보강 실패: {e}")
     asof = max((s["points"][-1]["d"] for s in series.values() if s["points"]), default=None)
-    return {"asof": asof, "source": "한국은행 ECOS 시장금리(일별)", "key": "sample" if key == "sample" else "user", "series": series}
+    out = {"asof": asof, "source": "한국은행 ECOS 시장금리(일별)", "key": "sample" if key == "sample" else "user", "series": series}
+    if prelim:
+        out["prelim"] = prelim
+    return out

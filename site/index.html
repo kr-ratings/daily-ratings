@@ -326,6 +326,10 @@ function spark(vals){
 function renderRates(R){
   const el=$("#rates");
   if(!R||!R.series){ el.innerHTML='<div class="placeholder">금리 데이터를 불러오지 못했습니다. 다음 수집 때 다시 표시됩니다.</div>'; return; }
+  // 당일분이 ECOS보다 먼저 금융투자협회 최종호가로 채워졌으면 출처를 함께 적는다
+  $("#rates-note").textContent=R.prelim&&R.prelim.date===R.asof
+    ?"한국은행(ECOS) 시장금리(일별) · 당일분은 금융투자협회 최종호가(15:30) · 최근 6개월 · 전일 대비 bp"
+    :"한국은행(ECOS) 시장금리(일별) · 최근 6개월 · 전일 대비 bp";
   const order=["CP91","CD91","KTB3"], dp={CP91:2,CD91:2,KTB3:3}, last={};
   el.innerHTML="";
   for(const k of order){
