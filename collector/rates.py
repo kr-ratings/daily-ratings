@@ -88,43 +88,49 @@ def _kofia_day(sess, day: dt.date) -> dict[str, dict[str, float]]:
 
 
 def kofia_topup(sess, series: dict, today: dt.date) -> dict | None:
-    """당일분이 ECOS에 없으면 KOFIA 최종호가(15:30)로 하루치를 덧붙인다. 붙였으면 정보 dict 반환."""
+    """당일분이 ECOS에 없는 금리마다 KOFIA 최종호가(15:30)로 하루치를 덧붙인다.
+    세 금리는 서로 기다리지 않고, 고시된 것부터 붙인다. 붙였으면 정보 dict 반환."""
     if not is_bday(today):
         return None
-    pts = {k: {p["d"]: p["v"] for p in s["points"]} for k, s in series.items()}
-    last = min(s["points"][-1]["d"] for s in series.values() if s["points"])
-    if last >= today.isoformat():
+    t = today.isoformat()
+    need = [k for k, s in series.items() if s["points"] and s["points"][-1]["d"] < t]
+    if not need:
         return None
-    # 기준일 2개: ECOS에 세 금리가 모두 있는 최근 2일
+    pts = {k: {p["d"]: p["v"] for p in s["points"]} for k, s in series.items()}
+    # 기준일 2개: ECOS에 세 금리가 모두 있는 최근 2일 → 그날 값과 정확히 같은 열 = 15:30 최종호가
     common = sorted(set.intersection(*(set(v) for v in pts.values())))[-2:]
     if len(common) < 2:
         return None
     cand = None
     for d in common:
         got = _kofia_day(sess, dt.date.fromisoformat(d))
-        if set(got) != set(series):
+        rows = [k for k in series if k in got]
+        if len(rows) < 2:  # 우연 일치를 막기 위해 최소 2개 금리로 판별
             log(f"KOFIA 최종호가: {d} 행을 찾지 못함 {sorted(got)}")
             return None
-        ok = {f for f in set.intersection(*(set(got[k]) for k in series))
-              if all(abs(got[k][f] - pts[k][d]) < 0.0005 for k in series)}
+        ok = {f for f in set.intersection(*(set(got[k]) for k in rows))
+              if all(abs(got[k][f] - pts[k][d]) < 0.0005 for k in rows)}
         cand = ok if cand is None else cand & ok
     if not cand or len(cand) != 1:
         log(f"KOFIA 최종호가: 열 판별 실패 {sorted(cand or [])}")
         return None
     col = cand.pop()
     got = _kofia_day(sess, today)
-    vals = {k: got.get(k, {}).get(col) for k in series}
-    if any(v is None for v in vals.values()):
-        log("KOFIA 최종호가: 당일 고시 전")
-        return None
-    for k, v in vals.items():
+    added = []
+    for k in need:
+        v = got.get(k, {}).get(col)
+        if v is None:
+            continue  # 이 금리는 아직 고시 전
         prev = series[k]["points"][-1]["v"]
         if abs(v - prev) > 0.5:  # 비정상값 방어
             log(f"KOFIA 최종호가: {k} {prev}→{v} 변동이 커서 사용 안 함")
-            return None
-    for k, v in vals.items():
-        series[k]["points"].append({"d": today.isoformat(), "v": v})
-    return {"date": today.isoformat(), "source": "금융투자협회 최종호가수익률(15:30)", "col": col}
+            continue
+        series[k]["points"].append({"d": t, "v": v})
+        added.append(k)
+    if not added:
+        log("KOFIA 최종호가: 당일 고시 전")
+        return None
+    return {"date": t, "items": added, "source": "금융투자협회 최종호가수익률(15:30)", "col": col}
 
 
 HIST_DAYS = 3 * 365 + 10  # 화면 최대 조회기간(3년) + 여유

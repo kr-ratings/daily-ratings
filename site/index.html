@@ -372,8 +372,11 @@ function renderRates(R){
       <div class="meta"><span>${md(pts[0].d)}</span><span>${md(pts[n-1].d)}</span></div>
     </div>`);
   }
-  const bp=(a,b)=>a!=null&&b!=null?((a-b)*100).toFixed(1)+"bp":"-";
-  $("#spreads").innerHTML=`<span>CP–CD(단기 신용·유동성 스프레드) <b>${bp(last.CP91,last.CD91)}</b></span>
+  // CP–CD는 두 금리가 모두 있는 가장 최근 날짜로 계산(당일분이 한쪽만 먼저 붙은 경우 대비)
+  const cpM=Object.fromEntries((R.series.CP91?.points||[]).map(p=>[p.d,p.v])), cdP=R.series.CD91?.points||[];
+  const sd=[...cdP].reverse().find(p=>p.d in cpM);
+  const spr=sd?((cpM[sd.d]-sd.v)*100).toFixed(1)+"bp":"-", sdl=sd&&sd.d!==R.asof?` <small>('${sd.d.slice(2).replace(/-/g,".")} 기준)</small>`:"";
+  $("#spreads").innerHTML=`<span>CP–CD(단기 신용·유동성 스프레드) <b>${spr}</b>${sdl}</span>
     <span>기준일 <b>${esc(R.asof||"-")}</b></span>`;
 }
 
