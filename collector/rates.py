@@ -127,14 +127,29 @@ def kofia_topup(sess, series: dict, today: dt.date) -> dict | None:
     return {"date": today.isoformat(), "source": "금융투자협회 최종호가수익률(15:30)", "col": col}
 
 
-def collect(days: int = 40) -> dict:
+HIST_DAYS = 3 * 365 + 10  # 화면 최대 조회기간(3년) + 여유
+
+
+def collect(days: int = 40, base: dict | None = None) -> dict:
+    """ECOS 금리. base(직전 rates.json)가 있으면 최근 days일만 새로 받아 덧쓰고 3년치를 유지한다.
+    base가 없거나 3년치가 모자라면 3년치를 한 번에 받는다(체험용 키는 10건씩이라 이때만 오래 걸림)."""
     key = os.environ.get("ECOS_API_KEY") or "sample"
     sess = session()
     end = today_kst()
-    start = end - dt.timedelta(days=days)
+    keep_from = (end - dt.timedelta(days=HIST_DAYS)).isoformat()
+    old = (base or {}).get("series") or {}
+    full = any(not old.get(k, {}).get("points") or old[k]["points"][0]["d"] > (end - dt.timedelta(days=HIST_DAYS - 40)).isoformat()
+               for k in ITEMS)
+    start = end - dt.timedelta(days=HIST_DAYS if full else days)
     series = {}
     for k, (code, name, tag) in ITEMS.items():
-        pts = _fetch_item(sess, key, code, start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
+        fresh = _fetch_item(sess, key, code, start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
+        merged = {}
+        if fresh and not full:
+            # 직전 파일의 값 중 이번 ECOS 최신일 이후분(지난번 KOFIA 보강분)은 버리고 다시 판단한다
+            merged = {p["d"]: p["v"] for p in old.get(k, {}).get("points", []) if p["d"] <= fresh[-1]["d"]}
+        merged.update({p["d"]: p["v"] for p in fresh})
+        pts = [{"d": d, "v": v} for d, v in sorted(merged.items()) if d >= keep_from]
         series[k] = {"name": name, "tag": tag, "points": pts}
     prelim = None
     try:

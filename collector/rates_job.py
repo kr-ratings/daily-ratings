@@ -17,10 +17,14 @@ def main() -> int:
         print("영업일 아님 → 건너뜀", file=sys.stderr)
         return 0
     old = read_json(DATA_DIR / "rates.json", {})
-    new = rates_mod.collect(days=190)
-    # 최신일·최신값·보강 여부가 같으면 그대로 둔다(조회 시작일만 하루 밀린 경우 등은 무시)
+    try:
+        new = rates_mod.collect(days=40, base=old)
+    except Exception as e:  # noqa: BLE001  일시 장애면 다음 실행에서 다시 시도
+        print("금리 수집 실패:", e, file=sys.stderr)
+        return 0
+    # 기간·최신값·보강 여부가 같으면 그대로 둔다
     sig = lambda d: (d.get("asof"), d.get("prelim"),  # noqa: E731
-                     {k: s["points"][-1] for k, s in d.get("series", {}).items() if s.get("points")})
+                     {k: (s["points"][0]["d"], len(s["points"]), s["points"][-1]) for k, s in d.get("series", {}).items() if s.get("points")})
     if sig(new) == sig(old):
         print("금리 변동 없음", new.get("asof"), file=sys.stderr)
         return 0

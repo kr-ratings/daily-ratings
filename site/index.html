@@ -63,6 +63,9 @@ h1{font-size:1.45rem;font-weight:700;margin:0;letter-spacing:-.01em;text-wrap:ba
 h2{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--muted);margin:0}
 .sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px}
 .sec-head .note{font-size:.78rem;color:var(--muted)}
+.rhead{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;justify-content:flex-end}
+.seg.sm button{padding:4px 10px;font-size:.78rem}
+.pchg{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);font-variant-numeric:tabular-nums}
 
 .rates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--surface);border:1px solid var(--line);border-radius:10px}
 .rate{padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
@@ -178,6 +181,7 @@ footer a:hover{text-decoration:underline}
   label.f.search{flex:1 1 100%}
   .updated{text-align:left}
   .hright{align-items:flex-start}
+  .rhead{justify-content:flex-start}
   /* 폰: SPC명은 줄바꿈, 회차는 아랫줄 → 고정열 폭을 좁게 */
   td.spc.fx1{white-space:normal;min-width:7em;max-width:8.5em;word-break:break-all}
   td.spc small{display:block;margin:2px 0 0}
@@ -208,7 +212,16 @@ footer .ct{white-space:nowrap}
   <section aria-labelledby="h-rates">
     <div class="sec-head">
       <h2 id="h-rates">시장금리 · 일별</h2>
-      <span class="note" id="rates-note">한국은행(ECOS) 시장금리(일별) · 최근 6개월 · 전일 대비 bp</span>
+      <div class="rhead">
+        <span class="note" id="rates-note">한국은행(ECOS) 시장금리(일별) · 전일 대비 bp</span>
+        <div class="seg sm" role="group" aria-label="금리 조회기간" id="seg-rp">
+          <button type="button" data-v="1" aria-pressed="false">1개월</button>
+          <button type="button" data-v="3" aria-pressed="false">3개월</button>
+          <button type="button" data-v="6" aria-pressed="false">6개월</button>
+          <button type="button" data-v="12" aria-pressed="true">1년</button>
+          <button type="button" data-v="36" aria-pressed="false">3년</button>
+        </div>
+      </div>
     </div>
     <div class="rates" id="rates"><div class="placeholder">금리 불러오는 중…</div></div>
     <div class="spreads" id="spreads"></div>
@@ -279,6 +292,11 @@ const getJSON = async p => { try { const r = await fetch(p, {cache:"no-store"});
 
 // ---------------- 시장금리 ----------------
 const SER={};
+let RP=12, RDATA=null;  // 금리 조회기간(개월), 기본 1년
+document.querySelectorAll("#seg-rp button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("#seg-rp button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  RP=+b.dataset.v; if(RDATA) renderRates(RDATA);
+}));
 const SW=240, SH=46, SP=3;
 function sparkAt(box, i){
   const s=SER[box.dataset.k]; if(!s) return;
@@ -328,24 +346,27 @@ function renderRates(R){
   if(!R||!R.series){ el.innerHTML='<div class="placeholder">금리 데이터를 불러오지 못했습니다. 다음 수집 때 다시 표시됩니다.</div>'; return; }
   // 당일분이 ECOS보다 먼저 금융투자협회 최종호가로 채워졌으면 출처를 함께 적는다
   $("#rates-note").textContent=R.prelim&&R.prelim.date===R.asof
-    ?"한국은행(ECOS) 시장금리(일별) · 당일분은 금융투자협회 최종호가(15:30) · 최근 6개월 · 전일 대비 bp"
-    :"한국은행(ECOS) 시장금리(일별) · 최근 6개월 · 전일 대비 bp";
+    ?"한국은행(ECOS) 시장금리(일별) · 당일분은 금융투자협회 최종호가(15:30) · 전일 대비 bp"
+    :"한국은행(ECOS) 시장금리(일별) · 전일 대비 bp";
+  const RPL={1:"1개월",3:"3개월",6:"6개월",12:"1년",36:"3년"}[RP]||`${RP}개월`;
   const order=["CP91","CD91","KTB3"], dp={CP91:2,CD91:2,KTB3:3}, last={};
   el.innerHTML="";
   for(const k of order){
     const s=R.series[k]; if(!s||!s.points.length) continue;
-    // 최근 6개월(마지막 자료일 기준 달력 6개월)
-    const c6=new Date(s.points[s.points.length-1].d+"T00:00:00Z"); c6.setUTCMonth(c6.getUTCMonth()-6);
-    const cut6=c6.toISOString().slice(0,10);
-    const pts=s.points.filter(p=>p.d>=cut6), vals=pts.map(p=>p.v), n=vals.length;
+    // 선택한 기간(마지막 자료일 기준 달력 RP개월)
+    const c0=new Date(s.points[s.points.length-1].d+"T00:00:00Z"); c0.setUTCMonth(c0.getUTCMonth()-RP);
+    const cut=c0.toISOString().slice(0,10);
+    const pts=s.points.filter(p=>p.d>=cut), vals=pts.map(p=>p.v), n=vals.length;
+    const pbp=Math.round((vals[n-1]-vals[0])*1000)/10;
     const cur=vals[n-1], prev=n>1?vals[n-2]:cur, bp=Math.round((cur-prev)*1000)/10;
     last[k]=cur; SER[k]={pts,vals,dp:dp[k]};
     const cls=bp>0?"up":bp<0?"down":"flat", sign=bp>0?"▲ +":bp<0?"▼ ":"– ";
-    const md=d=>d.slice(5).replace("-","/");
+    const md=d=>RP>=12?"'"+d.slice(2).replace(/-/g,"."):d.slice(5).replace("-","/");
     el.insertAdjacentHTML("beforeend",`<div class="rate">
       <div class="name"><b>${esc(s.name)}</b><span>${esc(s.tag)}</span></div>
       <div class="val"><span class="num">${cur.toFixed(dp[k])}<small>%</small></span>
-        <span class="chg ${cls}">${sign}${Math.abs(bp).toFixed(1)}bp</span></div>
+        <span class="chg ${cls}">${sign}${Math.abs(bp).toFixed(1)}bp</span>
+        <span class="pchg" title="${esc(pts[0].d)} 대비">${RPL} ${pbp>0?"+":pbp<0?"−":"±"}${Math.abs(pbp).toFixed(1)}bp</span></div>
       <div class="sparkbox" data-k="${k}" tabindex="0" aria-label="${esc(s.name)} 추이: 마우스를 올리거나 터치하면 일자별 금리가 보입니다">${spark(vals)}
         <div class="spark-guide" hidden></div><div class="spark-dot" hidden></div><div class="spark-tip" hidden></div></div>
       <div class="meta"><span>${md(pts[0].d)}</span><span>${md(pts[n-1].d)}</span></div>
@@ -528,7 +549,7 @@ document.querySelectorAll("#thead th[data-k] button").forEach(b=>b.addEventListe
 
 (async()=>{
   const [R,A,S]=await Promise.all([getJSON("data/rates.json"),getJSON("data/abs.json"),getJSON("data/status.json")]);
-  renderRates(R); renderStatus(S); STAT=S;
+  RDATA=R; renderRates(R); renderStatus(S); STAT=S;
   $("#updated").textContent=S?.generated?`최종 수집 ${S.generated} KST`:"수집 정보 없음";
   if(!A||!A.rows){ $("#tbody").innerHTML='<tr><td colspan="11" class="empty">등급공시 데이터를 불러오지 못했습니다.</td></tr>'; return; }
   EV=A.rows; ASOF=A.issue_window?.[1]||null;
