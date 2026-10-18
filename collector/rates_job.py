@@ -30,7 +30,7 @@ def main() -> int:
         return 0
     now = now_kst_str()
     new["generated"] = now
-    write_json(DATA_DIR / "rates.json", new)
+    rates_mod.save(DATA_DIR / "rates.json", new)
     st = read_json(DATA_DIR / "status.json", {})
     if st:
         st.setdefault("sources", {})["ECOS"] = {"ok": True, "asof": new["asof"], "key": new["key"],

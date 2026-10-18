@@ -220,6 +220,8 @@ footer .ct{white-space:nowrap}
           <button type="button" data-v="6" aria-pressed="false">6개월</button>
           <button type="button" data-v="12" aria-pressed="true">1년</button>
           <button type="button" data-v="36" aria-pressed="false">3년</button>
+          <button type="button" data-v="60" aria-pressed="false">5년</button>
+          <button type="button" data-v="120" aria-pressed="false">10년</button>
         </div>
       </div>
     </div>
@@ -348,7 +350,7 @@ function renderRates(R){
   $("#rates-note").textContent=R.prelim&&R.prelim.date===R.asof
     ?"한국은행(ECOS) 시장금리(일별) · 당일분은 금융투자협회 최종호가(15:30) · 전일 대비 bp"
     :"한국은행(ECOS) 시장금리(일별) · 전일 대비 bp";
-  const RPL={1:"1개월",3:"3개월",6:"6개월",12:"1년",36:"3년"}[RP]||`${RP}개월`;
+  const RPL={1:"1개월",3:"3개월",6:"6개월",12:"1년",36:"3년",60:"5년",120:"10년"}[RP]||`${RP}개월`;
   const order=["CP91","CD91","KTB3"], dp={CP91:2,CD91:2,KTB3:3}, last={};
   el.innerHTML="";
   for(const k of order){

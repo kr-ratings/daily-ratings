@@ -5,6 +5,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import json
 import os
 import re
 import sys
@@ -133,12 +134,18 @@ def kofia_topup(sess, series: dict, today: dt.date) -> dict | None:
     return {"date": t, "items": added, "source": "금융투자협회 최종호가수익률(15:30)", "col": col}
 
 
-HIST_DAYS = 3 * 365 + 10  # 화면 최대 조회기간(3년) + 여유
+HIST_DAYS = 10 * 366 + 10  # 화면 최대 조회기간(10년) + 여유
+
+
+def save(path, obj) -> None:
+    """rates.json은 10년치(약 7,500점)라 줄바꿈 없이 압축해 저장(약 200KB)."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(obj, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
 
 def collect(days: int = 40, base: dict | None = None) -> dict:
-    """ECOS 금리. base(직전 rates.json)가 있으면 최근 days일만 새로 받아 덧쓰고 3년치를 유지한다.
-    base가 없거나 3년치가 모자라면 3년치를 한 번에 받는다(체험용 키는 10건씩이라 이때만 오래 걸림)."""
+    """ECOS 금리. base(직전 rates.json)가 있으면 최근 days일만 새로 받아 덧쓰고 10년치를 유지한다.
+    base가 없거나 10년치가 모자라면 10년치를 한 번에 받는다(체험용 키는 10건씩이라 이때만 오래 걸림)."""
     key = os.environ.get("ECOS_API_KEY") or "sample"
     sess = session()
     end = today_kst()
