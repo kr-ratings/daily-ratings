@@ -1,6 +1,237 @@
 [
  {
   "agency": "한신평",
+  "spc": "비엔케이청라제일차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "9",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 300.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-12.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "비엔케이청라제일차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "아산탕정인피니티제이차",
+  "kind": "ABSTB",
+  "eval_type": "수시",
+  "grade": "WR",
+  "eval_date": "2026-10-19",
+  "series": "9",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 500.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-10.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "아산탕정인피니티제이차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "아이엠인베스트제일차",
+  "kind": "ABSTB",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "9",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 200.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-6.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "아이엠인베스트제일차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "에스에프어브로드제사차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 100.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-8.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "에스에프어브로드제사차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "에스에프어브로드제오차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 100.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-11.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "에스에프어브로드제오차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "오시리아파크제삼차",
+  "kind": "ABSTB",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "16",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 328.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-16.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "오시리아파크제삼차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "케이에스에프제칠차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 100.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-14.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "케이에스에프제칠차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "케이에스에프제팔차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 100.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-15.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "케이에스에프제팔차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "쿼드비에스제일차",
+  "kind": "ABSTB",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "9",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 100.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-7.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "쿼드비에스제일차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "하나하모니제1차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "1",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 700.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-20.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "하나하모니제1차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "하나하모니제1차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-19",
+  "series": "1-3",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 2.03,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-21.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "하나하모니제1차",
+   "writedate": "20261019"
+  }
+ },
+ {
+  "agency": "한신평",
   "spc": "국민행복제4차",
   "kind": "ABCP",
   "eval_type": "본",
@@ -64,6 +295,48 @@
  },
  {
   "agency": "한신평",
+  "spc": "더퍼스트종로제일차",
+  "kind": "ABSTB",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-16",
+  "series": "20",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 40.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-1.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "더퍼스트종로제일차",
+   "writedate": "20261016"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "디에스동탄전지",
+  "kind": "ABSTB",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-16",
+  "series": "9",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 140.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261019-2.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "디에스동탄전지",
+   "writedate": "20261016"
+  }
+ },
+ {
+  "agency": "한신평",
   "spc": "롯데카드오토제일차유동화전문",
   "kind": "ABCP",
   "eval_type": "본",
@@ -80,6 +353,27 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "롯데카드오토제일차유동화전문",
+   "writedate": "20261016"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "비디케이제일차",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-16",
+  "series": "6",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 26.32,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261016-2.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "비디케이제일차",
    "writedate": "20261016"
   }
  },
