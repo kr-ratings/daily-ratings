@@ -67,6 +67,18 @@ def _num(s):
         return None
 
 
+def _kofia_raw(sess, day: dt.date) -> str:
+    xml = (
+        '<?xml version="1.0" encoding="utf-8"?>\n<message><proframeHeader>'
+        "<pfmAppName>BIS-KOFIABOND</pfmAppName><pfmSvcName>BISLastAskPrcROPSrchSO</pfmSvcName>"
+        "<pfmFnName>listDay</pfmFnName></proframeHeader><systemHeader></systemHeader>"
+        f"<BISComDspDatDTO><val1>{day:%Y%m%d}</val1></BISComDspDatDTO></message>"
+    )
+    r = request(sess, "POST", KOFIA_URL, data=xml.encode("utf-8"), timeout=60,
+                headers={"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
+    return r.content.decode("utf-8", errors="replace")
+
+
 def _kofia_day(sess, day: dt.date) -> dict[str, dict[str, float]]:
     xml = (
         '<?xml version="1.0" encoding="utf-8"?>\n<message><proframeHeader>'
@@ -111,6 +123,9 @@ def kofia_topup(sess, series: dict, today: dt.date) -> dict | None:
             return None
         ok = {f for f in set.intersection(*(set(got[k]) for k in rows))
               if all(abs(got[k][f] - pts[k][d]) < 0.0005 for k in rows)}
+        if not ok:  # 진단용: 응답 행과 ECOS 값을 남긴다
+            log(f"KOFIA 최종호가 진단 {d}: ECOS={ {k: pts[k][d] for k in rows} } KOFIA={ {k: got[k] for k in rows} }")
+            log(f"KOFIA 최종호가 원문 {d}: {_kofia_raw(sess, dt.date.fromisoformat(d))[:1500]}")
         cand = ok if cand is None else cand & ok
     if not cand or len(cand) != 1:
         log(f"KOFIA 최종호가: 열 판별 실패 {sorted(cand or [])}")
