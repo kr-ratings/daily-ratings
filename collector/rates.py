@@ -55,7 +55,7 @@ def _fetch_item(sess, key: str, code: str, start: str, end: str) -> list[dict]:
 # 먼저 채운다. 응답 열 구성이 문서화돼 있지 않아, ECOS에 이미 있는 최근 2영업일 값과 정확히
 # 일치하는 열을 찾아 그 열을 '15:30 최종호가'로 쓴다(맞는 열이 없으면 보강하지 않음).
 KOFIA_URL = "https://www.kofiabond.or.kr/proframeWeb/XMLSERVICES/"
-KOFIA_NAMES = {"KTB3": re.compile(r"국고채?권?\(?3년"), "CD91": re.compile(r"CD\(?91일"), "CP91": re.compile(r"CP\(?91일")}
+KOFIA_NAMES = {"KTB3": re.compile(r"국고채?권?\(?3년"), "CD91": re.compile(r"CD(수익률)?\(?91일"), "CP91": re.compile(r"CP\(?91일")}
 _ROW = re.compile(r"<BISComDspDatDTO>(.*?)</BISComDspDatDTO>", re.S)
 _VAL = re.compile(r"<(val\d+)>([^<]*)</\1>")
 
@@ -108,7 +108,9 @@ def kofia_rows(sess, day: dt.date) -> list[tuple]:
 
 def kofia_topup(sess, series: dict, today: dt.date) -> dict | None:
     """당일분이 ECOS에 없는 금리마다 KOFIA 최종호가(15:30)로 하루치를 덧붙인다.
-    세 금리는 서로 기다리지 않고, 고시된 것부터 붙인다. 붙였으면 정보 dict 반환."""
+    응답 행: val1 이름, val3 오전(11:30), val4 당일 최종호가(15:30), val6 전일.
+    금리마다 최근 2영업일 val4가 ECOS 값과 정확히 같을 때만 쓴다 — 국고3년·CD는 같고,
+    CP(91일)는 ECOS와 다른 계열이라(수 bp 차이) 자동으로 제외되고 ECOS를 기다린다."""
     if not is_bday(today):
         return None
     t = today.isoformat()
@@ -116,30 +118,26 @@ def kofia_topup(sess, series: dict, today: dt.date) -> dict | None:
     if not need:
         return None
     pts = {k: {p["d"]: p["v"] for p in s["points"]} for k, s in series.items()}
-    # 기준일 2개: ECOS에 세 금리가 모두 있는 최근 2일 → 그날 값과 정확히 같은 열 = 15:30 최종호가
     common = sorted(set.intersection(*(set(v) for v in pts.values())))[-2:]
     if len(common) < 2:
         return None
-    cand = None
-    for d in common:
-        got = _kofia_day(sess, dt.date.fromisoformat(d))
-        rows = [k for k in series if k in got]
-        if len(rows) < 2:  # 우연 일치를 막기 위해 최소 2개 금리로 판별
-            log(f"KOFIA 최종호가: {d} 행을 찾지 못함 {sorted(got)}")
-            return None
-        ok = {f for f in set.intersection(*(set(got[k]) for k in rows))
-              if all(abs(got[k][f] - pts[k][d]) < 0.0005 for k in rows)}
-        if not ok:  # 진단용: 응답 행과 ECOS 값을 남긴다
-            log(f"KOFIA 최종호가 진단 {d}: ECOS={ {k: pts[k][d] for k in rows} } KOFIA={ {k: got[k] for k in rows} }")
-            log(f"KOFIA 최종호가 원문 {d}: {_kofia_raw(sess, dt.date.fromisoformat(d))[:1500]}")
-        cand = ok if cand is None else cand & ok
-    if not cand or len(cand) != 1:
-        log(f"KOFIA 최종호가: 열 판별 실패 {sorted(cand or [])}")
+    ref = {d: _kofia_day(sess, dt.date.fromisoformat(d)) for d in common}
+    cols = {}
+    for k in need:
+        cand = None
+        for d in common:
+            row = ref[d].get(k)
+            ok = {f for f, v in (row or {}).items() if abs(v - pts[k][d]) < 0.0005}
+            cand = ok if cand is None else cand & ok
+        if cand and ("val4" in cand or len(cand) == 1):
+            cols[k] = "val4" if "val4" in cand else next(iter(cand))
+        else:
+            log(f"KOFIA 최종호가: {k}는 ECOS 값과 맞는 열이 없어 사용 안 함")
+    if not cols:
         return None
-    col = cand.pop()
     got = _kofia_day(sess, today)
     added = []
-    for k in need:
+    for k, col in cols.items():
         v = got.get(k, {}).get(col)
         if v is None:
             continue  # 이 금리는 아직 고시 전
@@ -152,7 +150,7 @@ def kofia_topup(sess, series: dict, today: dt.date) -> dict | None:
     if not added:
         log("KOFIA 최종호가: 당일 고시 전")
         return None
-    return {"date": t, "items": added, "source": "금융투자협회 최종호가수익률(15:30)", "col": col}
+    return {"date": t, "items": added, "source": "금융투자협회 최종호가수익률(15:30)"}
 
 
 HIST_DAYS = 10 * 366 + 10  # 화면 최대 조회기간(10년) + 여유
