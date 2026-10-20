@@ -100,6 +100,12 @@ def _kofia_day(sess, day: dt.date) -> dict[str, dict[str, float]]:
     return out
 
 
+def kofia_rows(sess, day: dt.date) -> list[tuple]:
+    """진단용: 최종호가 응답의 (이름, 당일, 코드) 목록."""
+    return [(v.get("val1"), v.get("val3"), v.get("val4"), v.get("val6"), v.get("val20"))
+            for v in (dict(_VAL.findall(m)) for m in _ROW.findall(_kofia_raw(sess, day)))]
+
+
 def kofia_topup(sess, series: dict, today: dt.date) -> dict | None:
     """당일분이 ECOS에 없는 금리마다 KOFIA 최종호가(15:30)로 하루치를 덧붙인다.
     세 금리는 서로 기다리지 않고, 고시된 것부터 붙인다. 붙였으면 정보 dict 반환."""

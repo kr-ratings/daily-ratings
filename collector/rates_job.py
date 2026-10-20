@@ -17,6 +17,13 @@ def main() -> int:
         print("영업일 아님 → 건너뜀", file=sys.stderr)
         return 0
     old = read_json(DATA_DIR / "rates.json", {})
+    if os.environ.get("FORCE"):  # 수동 실행 시 최종호가 응답 구성을 로그에 남긴다
+        try:
+            from .util import session
+            for r in rates_mod.kofia_rows(session(), today_kst()):
+                print("KOFIA 행", r, file=sys.stderr)
+        except Exception as e:  # noqa: BLE001
+            print("KOFIA 행 조회 실패", e, file=sys.stderr)
     try:
         new = rates_mod.collect(days=40, base=old)
     except Exception as e:  # noqa: BLE001  일시 장애면 다음 실행에서 다시 시도
