@@ -1,6 +1,176 @@
 [
  {
   "agency": "NICE",
+  "spc": "국민사랑제12차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제5-5회차",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-02-12",
+  "amount": 400.0,
+  "ref": "5207954",
+  "doc": {
+   "agency": "NICE",
+   "id": "69f8c7bb-a62f-4ca8-96ec-26dd286755b8"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "국민사랑제12차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제5-6회차",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-10-15",
+  "amount": 0.76,
+  "ref": "5207954",
+  "doc": {
+   "agency": "NICE",
+   "id": "69f8c7bb-a62f-4ca8-96ec-26dd286755b8"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "국민사랑제20차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제4-5회차",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-02-05",
+  "amount": 500.0,
+  "ref": "5208367",
+  "doc": {
+   "agency": "NICE",
+   "id": "1cee2d2e-afd4-4d09-982a-d32fb7425114"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "국민사랑제20차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제4-6회차",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-10-15",
+  "amount": 0.9,
+  "ref": "5208367",
+  "doc": {
+   "agency": "NICE",
+   "id": "1cee2d2e-afd4-4d09-982a-d32fb7425114"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "글로벌랜드마크제일차(주)",
+  "kind": "ABSTB",
+  "eval_type": "수시",
+  "grade": "A2-",
+  "eval_date": "2026-10-22",
+  "series": "제1-20회",
+  "issue_date": "2026-07-23",
+  "maturity": "2026-10-23",
+  "amount": 434.0,
+  "ref": "5204718",
+  "doc": {
+   "agency": "NICE",
+   "id": "d8553088-e123-4c95-80e5-097d117171b9"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "글로벌랜드마크제일차(주)",
+  "kind": "ABSTB",
+  "eval_type": "수시",
+  "grade": "취소",
+  "eval_date": "2026-10-22",
+  "series": "제1-21회",
+  "issue_date": "2026-10-23",
+  "maturity": "2026-12-02",
+  "amount": 437.0,
+  "ref": "5204718",
+  "doc": {
+   "agency": "NICE",
+   "id": "2107fc04-9094-4469-8ea5-d1bed23493d8"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "글로벌랜드마크제일차(주)",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A2-",
+  "eval_date": "2026-10-22",
+  "series": "제1-21회",
+  "issue_date": "2026-10-23",
+  "maturity": "2027-01-22",
+  "amount": 440.0,
+  "ref": "5204718",
+  "doc": {
+   "agency": "NICE",
+   "id": "02649aee-5c1c-4138-a4fa-029ac0108636"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "글로벌랜드마크제일차(주)",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A2-",
+  "eval_date": "2026-10-22",
+  "series": "제1-22회",
+  "issue_date": "2027-01-22",
+  "maturity": "2027-04-23",
+  "amount": 446.0,
+  "ref": "5204718",
+  "doc": {
+   "agency": "NICE",
+   "id": "02649aee-5c1c-4138-a4fa-029ac0108636"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "글로벌랜드마크제일차(주)",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A2-",
+  "eval_date": "2026-10-22",
+  "series": "제1-23회",
+  "issue_date": "2027-04-23",
+  "maturity": "2027-05-31",
+  "amount": 449.0,
+  "ref": "5204718",
+  "doc": {
+   "agency": "NICE",
+   "id": "02649aee-5c1c-4138-a4fa-029ac0108636"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "라트라비아타제일차(주)",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제21회",
+  "issue_date": "2026-10-23",
+  "maturity": "2027-01-22",
+  "amount": 511.0,
+  "ref": "5206070",
+  "doc": {
+   "agency": "NICE",
+   "id": "0b52e7a8-679c-4cd1-bb5e-66659639f098"
+  }
+ },
+ {
+  "agency": "NICE",
   "spc": "메인스트림제삼십일차(주)",
   "kind": "ABSTB",
   "eval_type": "본",
@@ -205,6 +375,23 @@
  },
  {
   "agency": "NICE",
+  "spc": "봉개동제이차(주)",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제1회",
+  "issue_date": "2026-10-22",
+  "maturity": "2026-10-23",
+  "amount": 100.0,
+  "ref": "5212387",
+  "doc": {
+   "agency": "NICE",
+   "id": "ebe13354-6f25-4e60-a2e7-feb68567686e"
+  }
+ },
+ {
+  "agency": "NICE",
   "spc": "에이치씨디제십일차(주)",
   "kind": "ABSTB",
   "eval_type": "본",
@@ -269,6 +456,295 @@
   "doc": {
    "agency": "NICE",
    "id": "85cd912c-597a-4ce7-acb2-8c3704c3901d"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "케이비그랑스타제이차(유)",
+  "kind": "ABCP",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제10회차",
+  "issue_date": "2027-07-26",
+  "maturity": "2027-11-01",
+  "amount": 596.0,
+  "ref": "5210055",
+  "doc": {
+   "agency": "NICE",
+   "id": "42ea1359-3178-4225-abdb-047e1162baf5"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "케이비그랑스타제이차(유)",
+  "kind": "ABCP",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제11회차",
+  "issue_date": "2027-11-01",
+  "maturity": "2028-02-01",
+  "amount": 141.0,
+  "ref": "5210055",
+  "doc": {
+   "agency": "NICE",
+   "id": "42ea1359-3178-4225-abdb-047e1162baf5"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "케이비그랑스타제이차(유)",
+  "kind": "ABCP",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제12회차",
+  "issue_date": "2028-02-01",
+  "maturity": "2028-05-15",
+  "amount": 7.0,
+  "ref": "5210055",
+  "doc": {
+   "agency": "NICE",
+   "id": "42ea1359-3178-4225-abdb-047e1162baf5"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "케이비그랑스타제이차(유)",
+  "kind": "ABCP",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제6회차",
+  "issue_date": "2026-07-27",
+  "maturity": "2026-10-27",
+  "amount": 1676.0,
+  "ref": "5210055",
+  "doc": {
+   "agency": "NICE",
+   "id": "42ea1359-3178-4225-abdb-047e1162baf5"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "케이비그랑스타제이차(유)",
+  "kind": "ABCP",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제7회차",
+  "issue_date": "2026-10-27",
+  "maturity": "2027-01-27",
+  "amount": 1553.0,
+  "ref": "5210055",
+  "doc": {
+   "agency": "NICE",
+   "id": "42ea1359-3178-4225-abdb-047e1162baf5"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "케이비그랑스타제이차(유)",
+  "kind": "ABCP",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제8회차",
+  "issue_date": "2027-01-27",
+  "maturity": "2027-04-26",
+  "amount": 1244.0,
+  "ref": "5210055",
+  "doc": {
+   "agency": "NICE",
+   "id": "42ea1359-3178-4225-abdb-047e1162baf5"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "케이비그랑스타제이차(유)",
+  "kind": "ABCP",
+  "eval_type": "정기",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제9회차",
+  "issue_date": "2027-04-26",
+  "maturity": "2027-07-26",
+  "amount": 1156.0,
+  "ref": "5210055",
+  "doc": {
+   "agency": "NICE",
+   "id": "42ea1359-3178-4225-abdb-047e1162baf5"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "케이에스한양제일차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제1회",
+  "issue_date": "2026-10-26",
+  "maturity": "2027-10-25",
+  "amount": 890.0,
+  "ref": "5212369",
+  "doc": {
+   "agency": "NICE",
+   "id": "cae99349-fbbb-48bd-8138-54c374b8afd9"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "하나베스트제1차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제5-1회차",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-03-11",
+  "amount": 1400.0,
+  "ref": "5210632",
+  "doc": {
+   "agency": "NICE",
+   "id": "5e340002-3e64-46eb-bbf3-a451dcc4a7a3"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "하나베스트제1차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제5-2회차",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-04-06",
+  "amount": 300.0,
+  "ref": "5210632",
+  "doc": {
+   "agency": "NICE",
+   "id": "5e340002-3e64-46eb-bbf3-a451dcc4a7a3"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "하나베스트제1차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제5-3회차",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-06-11",
+  "amount": 700.0,
+  "ref": "5210632",
+  "doc": {
+   "agency": "NICE",
+   "id": "5e340002-3e64-46eb-bbf3-a451dcc4a7a3"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "하나베스트제1차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제5-4회차",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-09-10",
+  "amount": 3.29,
+  "ref": "5210632",
+  "doc": {
+   "agency": "NICE",
+   "id": "5e340002-3e64-46eb-bbf3-a451dcc4a7a3"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "한솔제오십구차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제2-1회",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-01-08",
+  "amount": 1700.0,
+  "ref": "5210814",
+  "doc": {
+   "agency": "NICE",
+   "id": "802d5270-9484-4b8f-8009-359df4f99be1"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "한솔제오십구차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제2-2회",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-01-18",
+  "amount": 300.0,
+  "ref": "5210814",
+  "doc": {
+   "agency": "NICE",
+   "id": "802d5270-9484-4b8f-8009-359df4f99be1"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "한솔제오십구차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제2-3회",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-03-05",
+  "amount": 350.0,
+  "ref": "5210814",
+  "doc": {
+   "agency": "NICE",
+   "id": "802d5270-9484-4b8f-8009-359df4f99be1"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "한솔제오십구차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제2-4회",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-07-05",
+  "amount": 2.61,
+  "ref": "5210814",
+  "doc": {
+   "agency": "NICE",
+   "id": "802d5270-9484-4b8f-8009-359df4f99be1"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "한솔제오십구차(주)",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "제2-5회",
+  "issue_date": "2026-10-22",
+  "maturity": "2027-09-06",
+  "amount": 0.79,
+  "ref": "5210814",
+  "doc": {
+   "agency": "NICE",
+   "id": "802d5270-9484-4b8f-8009-359df4f99be1"
   }
  },
  {
@@ -8231,23 +8707,6 @@
   "agency": "NICE",
   "spc": "스카이포트폴리오일호(주)",
   "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2-",
-  "eval_date": "2026-10-14",
-  "series": "제34회차",
-  "issue_date": "2026-10-16",
-  "maturity": "2027-01-15",
-  "amount": 70.0,
-  "ref": "5109275",
-  "doc": {
-   "agency": "NICE",
-   "id": "2a166409-a188-42ae-ad03-41bc798344c7"
-  }
- },
- {
-  "agency": "NICE",
-  "spc": "스카이포트폴리오일호(주)",
-  "kind": "ABSTB",
   "eval_type": "수시",
   "grade": "취소",
   "eval_date": "2026-10-14",
@@ -8259,6 +8718,23 @@
   "doc": {
    "agency": "NICE",
    "id": "055bf0fd-cc84-44c7-bb19-88e12c8133aa"
+  }
+ },
+ {
+  "agency": "NICE",
+  "spc": "스카이포트폴리오일호(주)",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A2-",
+  "eval_date": "2026-10-14",
+  "series": "제34회차",
+  "issue_date": "2026-10-16",
+  "maturity": "2027-01-15",
+  "amount": 70.0,
+  "ref": "5109275",
+  "doc": {
+   "agency": "NICE",
+   "id": "2a166409-a188-42ae-ad03-41bc798344c7"
   }
  },
  {
