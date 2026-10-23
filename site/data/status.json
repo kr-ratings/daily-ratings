@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23 12:32",
+ "generated": "2026-10-23 18:33",
  "eval_window": [
   "2026-06-25",
   "2026-10-23"
@@ -16,27 +16,26 @@
   },
   "NICE": {
    "ok": true,
-   "rows": 5993
+   "rows": 6030
   },
   "한신평": {
    "ok": true,
-   "rows": 879
+   "rows": 891
   },
   "한기평": {
    "ok": true,
-   "rows": 1434
+   "rows": 1442
   },
   "평가의견서": {
    "ok": true,
-   "docs": 1741,
+   "docs": 1763,
    "missing": 0,
    "kr_blocked": false
   },
   "KOFIA": {
    "ok": true,
    "errors": [],
-   "matched": 552
+   "matched": 585
   }
- },
- "rates_updated": "2026-10-23 16:47"
+ }
 }
