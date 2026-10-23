@@ -3,27 +3,6 @@
   "agency": "한신평",
   "spc": "글로벌랜드마크제일차",
   "kind": "ABSTB",
-  "eval_type": "수시",
-  "grade": "WR",
-  "eval_date": "2026-10-22",
-  "series": "1-21",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 437.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20261022-20.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "글로벌랜드마크제일차",
-   "writedate": "20261022"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "글로벌랜드마크제일차",
-  "kind": "ABSTB",
   "eval_type": "본",
   "grade": "A2-",
   "eval_date": "2026-10-22",
@@ -38,6 +17,27 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "글로벌랜드마크제일차",
+   "writedate": "20261022"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "라트라비아타제일차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A1",
+  "eval_date": "2026-10-22",
+  "series": "21",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 511.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261022-22.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "라트라비아타제일차",
    "writedate": "20261022"
   }
  },
@@ -206,6 +206,27 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "파인셀리",
+   "writedate": "20261022"
+  }
+ },
+ {
+  "agency": "한신평",
+  "spc": "플랜업마곡",
+  "kind": "ABCP",
+  "eval_type": "본",
+  "grade": "A2",
+  "eval_date": "2026-10-22",
+  "series": "3-2",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 100.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261023-1.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "플랜업마곡",
    "writedate": "20261022"
   }
  },
@@ -458,27 +479,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "투에스제십삼차",
-   "writedate": "20261021"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "플로리스채권제사차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A1",
-  "eval_date": "2026-10-21",
-  "series": "1",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 100.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20261021-21.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "플로리스채권제사차",
    "writedate": "20261021"
   }
  },
@@ -18456,69 +18456,6 @@
    "gubun": "2",
    "title": "티아이남포제일차",
    "writedate": "20260625"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "디비크레딧제사차",
-  "kind": "ABCP",
-  "eval_type": "본",
-  "grade": "A2",
-  "eval_date": "2026-06-24",
-  "series": "1",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 286.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260625-1.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "디비크레딧제사차",
-   "writedate": "20260624"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "에스프로젝트가산",
-  "kind": "ABSTB",
-  "eval_type": "정기",
-  "grade": "A1",
-  "eval_date": "2026-06-24",
-  "series": "9",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 700.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260624-88.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "에스프로젝트가산",
-   "writedate": "20260624"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "에스프로젝트디에스제삼차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A1",
-  "eval_date": "2026-06-24",
-  "series": "9",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 600.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260624-35.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "에스프로젝트디에스제삼차",
-   "writedate": "20260624"
   }
  }
 ]
