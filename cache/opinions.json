@@ -166015,5 +166015,1527 @@
   "deal_type": "PF Loan 유동화",
   "asset": "대출채권",
   "obligor": "(주)군포복합개발피에프브이"
+ },
+ "한신평:rs20261028-4.pdf": {
+  "schedule": [
+   {
+    "series": "제2-1회",
+    "kind": "ABCP",
+    "amount": 2400.0,
+    "issue": "2026-10-27",
+    "maturity": "2027-04-02",
+    "grade": "A1"
+   },
+   {
+    "series": "제2-2회",
+    "kind": "ABCP",
+    "amount": 6.5,
+    "issue": "2026-10-27",
+    "maturity": "2027-10-01",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-2회",
+    "kind": "ABCP",
+    "amount": 3.7,
+    "issue": "2026-04-24",
+    "maturity": "2027-02-12",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한양증권(주)",
+  "asset_manager": "한양증권(주)",
+  "supports": [
+   {
+    "company": "농협은행",
+    "detail": "농협은행(주)의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:c4e9c39e-5c12-4709-8e8b-cf2f14709e52": {
+  "schedule": [
+   {
+    "series": "제4회",
+    "kind": "ABSTB",
+    "amount": 400.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국투자증권㈜",
+  "asset_manager": "한국투자증권㈜",
+  "supports": [
+   {
+    "company": "현대엔지니어링",
+    "detail": "현대엔지니어링㈜의 연대보증으로 통제"
+   },
+   {
+    "company": "한국투자증권",
+    "detail": "신탁원본의 위탁자인 한국투자증권㈜의 신용도"
+   }
+  ],
+  "deal_type": "Project Finance 유동화",
+  "asset": "PF대출채권 및 부수담보권 (차주 : ㈜베가)",
+  "obligor": null
+ },
+ "NICE:fca9ac13-c6c3-4545-9029-ed65bd455271": {
+  "schedule": [
+   {
+    "series": "제37회",
+    "kind": "ABCP",
+    "amount": 208.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제38회",
+    "kind": "ABCP",
+    "amount": 259.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제39회",
+    "kind": "ABCP",
+    "amount": 1456.0,
+    "issue": "2026-11-02",
+    "maturity": "2027-04-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "DB증권㈜",
+  "asset_manager": "DB증권㈜",
+  "supports": [
+   {
+    "company": "한화솔루션",
+    "detail": "카드이용대금 및 수수료 지급의무를 부담하는 한화솔루션㈜의 신용도, 참가대상자산에 관 하여 하자담보책임을 부담하는 현대카드㈜의 신용도 수준으로 통제"
+   },
+   {
+    "company": "현대카드",
+    "detail": "카드이용대금 및 수수료 지급의무를 부담하는 한화솔루션㈜의 신용도, 참가대상자산에 관 하여 하자담보책임을 부담하는 현대카드㈜의 신용도 수준으로 통제"
+   },
+   {
+    "company": "카드",
+    "detail": "참가계약에 따라 기초자산의 회수 및 회수금원의 지급 등을 수행하는 거래상대방인 현대 카드㈜의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "기업매출채권 유동화",
+  "asset": "현대카드㈜와의 참가계약에 따라 카드이용대금채권 관련 회수금원을 지급받을 권리",
+  "obligor": null
+ },
+ "NICE:5b303654-ff25-4964-b5d1-2edddb88d5a0": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABSTB",
+    "amount": 7.0,
+    "issue": "2026-10-28",
+    "maturity": "2026-10-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 702.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABSTB",
+    "amount": 709.0,
+    "issue": "2027-01-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABSTB",
+    "amount": 709.0,
+    "issue": "2027-04-28",
+    "maturity": "2027-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABSTB",
+    "amount": 709.0,
+    "issue": "2027-07-28",
+    "maturity": "2027-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABSTB",
+    "amount": 709.0,
+    "issue": "2027-10-28",
+    "maturity": "2028-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABSTB",
+    "amount": 709.0,
+    "issue": "2028-01-31",
+    "maturity": "2028-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABSTB",
+    "amount": 709.0,
+    "issue": "2028-04-28",
+    "maturity": "2028-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABSTB",
+    "amount": 709.0,
+    "issue": "2028-07-28",
+    "maturity": "2028-10-27",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "㈜우리투자증권",
+  "asset_manager": "㈜우리투자증권",
+  "supports": [
+   {
+    "company": "에스케이지오센트릭",
+    "detail": "기초자산 채무자인 에스케이지오센트릭㈜의 신용도로 통제"
+   },
+   {
+    "company": "우리투자증권",
+    "detail": "㈜우리투자증권의 유동화증권 매입보장약정으로 통제"
+   }
+  ],
+  "deal_type": "CDO",
+  "asset": "사모사채 (발행인 : 에스케이지오센트릭㈜)",
+  "obligor": null
+ },
+ "NICE:83b3034b-7849-40a6-8f60-6b535b7382e4": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2027-01-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2027-04-28",
+    "maturity": "2027-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2027-07-28",
+    "maturity": "2027-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2027-10-28",
+    "maturity": "2028-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABCP",
+    "amount": 92.0,
+    "issue": "2028-01-28",
+    "maturity": "2028-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABCP",
+    "amount": 84.0,
+    "issue": "2028-04-28",
+    "maturity": "2028-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABCP",
+    "amount": 76.0,
+    "issue": "2028-07-28",
+    "maturity": "2028-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABCP",
+    "amount": 68.0,
+    "issue": "2028-10-28",
+    "maturity": "2029-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회",
+    "kind": "ABCP",
+    "amount": 60.0,
+    "issue": "2029-01-28",
+    "maturity": "2029-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회",
+    "kind": "ABCP",
+    "amount": 52.0,
+    "issue": "2029-04-28",
+    "maturity": "2029-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회",
+    "kind": "ABCP",
+    "amount": 44.0,
+    "issue": "2029-07-28",
+    "maturity": "2029-10-28",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국산업은행",
+  "asset_manager": "한국산업은행",
+  "supports": [
+   {
+    "company": "한국산업은행",
+    "detail": "한국산업은행의 기업어음증권 매입보장 및 신용공여 의무로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : ㈜중앙축산농업회사법인)",
+  "obligor": null
+ },
+ "NICE:3c563e5d-f4e9-4b19-81b6-a67751edd653": {
+  "schedule": [
+   {
+    "series": "제1회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2027-01-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2027-04-28",
+    "maturity": "2027-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2027-07-28",
+    "maturity": "2027-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2027-10-28",
+    "maturity": "2028-01-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2028-01-31",
+    "maturity": "2028-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2028-04-28",
+    "maturity": "2028-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2028-07-28",
+    "maturity": "2028-10-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2028-10-30",
+    "maturity": "2029-01-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2029-01-29",
+    "maturity": "2029-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2029-04-30",
+    "maturity": "2029-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2029-07-30",
+    "maturity": "2029-10-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제13회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2029-10-29",
+    "maturity": "2030-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제14회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-01-28",
+    "maturity": "2030-04-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제15회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-04-29",
+    "maturity": "2030-05-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제16회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-05-28",
+    "maturity": "2030-06-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제17회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-06-28",
+    "maturity": "2030-07-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제18회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-07-29",
+    "maturity": "2030-08-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제19회차",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-08-28",
+    "maturity": "2030-09-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국투자증권㈜",
+  "asset_manager": "한국투자증권㈜",
+  "supports": [
+   {
+    "company": "한국투자증권",
+    "detail": "한국투자증권㈜의 사모사채 인수 및 자금보충 의무로 통제"
+   }
+  ],
+  "deal_type": "Project Finance 유동화",
+  "asset": "PF대출채권 및 부수담보권 (차주 : ㈜에스피종합건설)",
+  "obligor": null
+ },
+ "NICE:151cdb91-e831-4cfd-99f9-532a6034c988": {
+  "schedule": [
+   {
+    "series": "제1-1회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-2회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2027-01-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-3회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2027-04-28",
+    "maturity": "2027-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-4회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2027-07-28",
+    "maturity": "2027-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-5회",
+    "kind": "ABCP",
+    "amount": 160.0,
+    "issue": "2027-10-28",
+    "maturity": "2028-01-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-6회",
+    "kind": "ABCP",
+    "amount": 120.0,
+    "issue": "2028-01-31",
+    "maturity": "2028-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-7회",
+    "kind": "ABCP",
+    "amount": 80.0,
+    "issue": "2028-04-28",
+    "maturity": "2028-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-8회",
+    "kind": "ABCP",
+    "amount": 40.0,
+    "issue": "2028-07-28",
+    "maturity": "2028-10-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "㈜하나은행",
+  "asset_manager": "㈜하나은행",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "㈜하나은행의 유동화증권 매입보장 및 신용공여 의무로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : 에스케이에코플랜트㈜)",
+  "obligor": null
+ },
+ "NICE:1dba157d-0e98-45b3-9508-046ea834770e": {
+  "schedule": [
+   {
+    "series": "제11회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2025-04-28",
+    "maturity": "2025-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2025-07-28",
+    "maturity": "2025-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제13회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2025-10-28",
+    "maturity": "2026-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제14회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2026-01-28",
+    "maturity": "2026-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제15회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2026-04-28",
+    "maturity": "2026-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제16회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2026-07-28",
+    "maturity": "2026-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제17회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제18회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2027-01-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제19회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2027-04-28",
+    "maturity": "2027-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제20회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2027-07-28",
+    "maturity": "2027-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제21회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2027-10-28",
+    "maturity": "2028-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제22회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2028-01-28",
+    "maturity": "2028-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제23회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2028-04-28",
+    "maturity": "2028-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제24회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2028-07-28",
+    "maturity": "2028-10-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제25회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2028-10-27",
+    "maturity": "2029-01-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제26회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2029-01-26",
+    "maturity": "2029-04-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제27회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2029-04-26",
+    "maturity": "2029-07-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제28회차",
+    "kind": "ABSTB",
+    "amount": 37.356375,
+    "issue": "2029-07-26",
+    "maturity": "2029-08-02",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "신한투자증권㈜",
+  "asset_manager": "신한투자증권㈜",
+  "supports": [
+   {
+    "company": "신한투자증권",
+    "detail": "자금보충약정서를 체결하는 신한투자증권㈜의 신용도에 연계"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : BPG Holdings IV Corp, BPG International Finance Co. LLC, BPG",
+  "obligor": null
+ },
+ "NICE:2eed695f-4fe1-4fe2-b969-879cdcba8e21": {
+  "schedule": [
+   {
+    "series": "13회차",
+    "kind": "ABSTB",
+    "amount": 500.0,
+    "issue": "2026-07-28",
+    "maturity": "2026-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "14회차",
+    "kind": "ABSTB",
+    "amount": 500.0,
+    "issue": "2026-10-28",
+    "maturity": "2026-11-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국투자증권㈜",
+  "asset_manager": "한국투자증권㈜",
+  "supports": [
+   {
+    "company": "한국투자증권",
+    "detail": "한국투자증권㈜의 대출채권 매입확약 등으로 통제"
+   }
+  ],
+  "deal_type": "Project Finance 유동화",
+  "asset": "PF대출채권 및 부수담보권 (차주 : 본촌2단지현대지역주택조합)",
+  "obligor": null
+ },
+ "NICE:29956c20-4bd8-4b12-8d2f-922854106329": {
+  "schedule": [
+   {
+    "series": "제11회차",
+    "kind": "ABSTB",
+    "amount": 375.0,
+    "issue": "2026-07-28",
+    "maturity": "2026-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회차",
+    "kind": "ABSTB",
+    "amount": 250.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제13회차",
+    "kind": "ABSTB",
+    "amount": 125.0,
+    "issue": "2027-01-28",
+    "maturity": "2027-03-28",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "㈜신한은행",
+  "asset_manager": "㈜신한은행",
+  "supports": [
+   {
+    "company": "신한은행",
+    "detail": "유동화증권 매입보장약정서를 체결하는 ㈜신한은행의 신용도에 연계"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : ㈜대우건설)",
+  "obligor": null
+ },
+ "NICE:4ee3946e-6f40-4596-b610-abf923b269fb": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2026-07-30",
+    "maturity": "2026-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2027-01-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2027-04-28",
+    "maturity": "2027-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2027-07-28",
+    "maturity": "2027-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2027-10-28",
+    "maturity": "2028-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2028-01-28",
+    "maturity": "2028-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2028-04-28",
+    "maturity": "2028-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2028-07-28",
+    "maturity": "2028-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2028-10-28",
+    "maturity": "2029-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2029-01-28",
+    "maturity": "2029-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회",
+    "kind": "ABCP",
+    "amount": 200.0,
+    "issue": "2029-04-28",
+    "maturity": "2029-07-28",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "㈜우리은행",
+  "asset_manager": "㈜우리은행",
+  "supports": [
+   {
+    "company": "우리은행",
+    "detail": "㈜우리은행의 유동화기업어음 매입 및 신용공여 약정으로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : ㈜동양)",
+  "obligor": null
+ },
+ "NICE:ec16d1ec-6d0e-4b90-9fdb-a6a5d77fc9e5": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2025-04-28",
+    "maturity": "2025-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2025-07-28",
+    "maturity": "2025-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2025-10-28",
+    "maturity": "2026-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2026-01-28",
+    "maturity": "2026-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2026-04-28",
+    "maturity": "2026-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2026-07-28",
+    "maturity": "2026-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2027-01-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2027-04-28",
+    "maturity": "2027-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2027-07-28",
+    "maturity": "2027-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2027-10-28",
+    "maturity": "2028-01-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2028-01-31",
+    "maturity": "2028-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제13회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2028-04-28",
+    "maturity": "2028-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제14회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2028-07-28",
+    "maturity": "2028-10-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제15회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2028-10-30",
+    "maturity": "2029-01-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제16회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2029-01-29",
+    "maturity": "2029-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제17회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2029-04-30",
+    "maturity": "2029-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제18회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2029-07-30",
+    "maturity": "2029-10-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제19회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2029-10-29",
+    "maturity": "2030-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제20회",
+    "kind": "ABCP",
+    "amount": 1000.0,
+    "issue": "2030-01-28",
+    "maturity": "2030-04-29",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "㈜하나은행",
+  "asset_manager": "㈜하나은행",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "㈜하나은행의 신용공여 의무로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : ㈜이마트)",
+  "obligor": null
+ },
+ "한기평:TRDgFcF144GR6a3qhTFONJYCkTfHhW@KjUOG8amdRHI=": {
+  "schedule": [
+   {
+    "series": "제16회",
+    "kind": "ABCP",
+    "amount": 56.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-01-29",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국투자증권(주)",
+  "asset_manager": "한국투자증권(주)",
+  "supports": [],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권",
+  "obligor": "성본산업단지(주)"
+ },
+ "한기평:xQ2novOSoU5v7pmenDEjjyicJOvrIeg6IsjDFTn1pCA=": {
+  "schedule": [
+   {
+    "series": "제3-4회",
+    "kind": "ABCP",
+    "amount": 500.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제3-5회",
+    "kind": "ABCP",
+    "amount": 0.77,
+    "issue": "2026-10-28",
+    "maturity": "2027-10-15",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [],
+  "deal_type": "정기예금 유동화",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한기평:9vMbx7Skde@3flpQUC7UMxSd2m8RFtUWaWOyTfkbaIU=": {
+  "schedule": [
+   {
+    "series": "제3회",
+    "kind": "ABCP",
+    "amount": 1050.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-04-26",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한화투자증권(주)",
+  "asset_manager": "한화투자증권(주)",
+  "supports": [
+   {
+    "company": "현대건설",
+    "detail": "현대건설(주)의 자금보충(미이행시 채무인수) 의무"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권(자산유동화대출)",
+  "obligor": "에이티르노제삼차(주)"
+ },
+ "한기평:ZCgspRPNNmpaXEdWqFkJlbfTgCkm2p51nBTlbGOqO4Y=": {
+  "schedule": [
+   {
+    "series": "제8-1회",
+    "kind": "ABCP",
+    "amount": 150.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-02-26",
+    "grade": "A2+"
+   },
+   {
+    "series": "제8-2회",
+    "kind": "ABCP",
+    "amount": 80.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-02-26",
+    "grade": "A2+"
+   },
+   {
+    "series": "제8-3회",
+    "kind": "ABCP",
+    "amount": 308.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-02-26",
+    "grade": "A2+"
+   }
+  ],
+  "arranger": "한국투자증권(주)",
+  "asset_manager": "한국투자증권(주)",
+  "supports": [
+   {
+    "company": "한화",
+    "detail": "㈜한화의 연대보증"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권",
+  "obligor": "㈜감정4지구도시개발"
+ },
+ "한기평:vqmPVQQCB2IzpvjkV6F5uVfm9n8ooi@.TRvvxQAn2kA=": {
+  "schedule": [
+   {
+    "series": "제55-3회",
+    "kind": "ABSTB",
+    "amount": 900.0,
+    "issue": "2026-06-30",
+    "maturity": "2026-09-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [
+   {
+    "company": "현대카드",
+    "detail": "참가계약 거래상대방인 현대카드(주)의 신용도"
+   }
+  ],
+  "deal_type": "카드대금채권 유동화",
+  "asset": "카드대금채권 참가계약에 따른 권리",
+  "obligor": null
+ },
+ "한기평:BdMaO9ut0hTVTIKHjnka3rhxGzNBW7JQ0@@BJf1S.3Y=": {
+  "schedule": [
+   {
+    "series": "제37회",
+    "kind": "ABCP",
+    "amount": 208.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제38회",
+    "kind": "ABCP",
+    "amount": 259.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제39회",
+    "kind": "ABCP",
+    "amount": 1456.0,
+    "issue": "2026-11-02",
+    "maturity": "2027-04-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "DB증권(주)",
+  "asset_manager": "DB증권(주)",
+  "supports": [
+   {
+    "company": "현대카드",
+    "detail": "참가계약 거래상대방인 현대카드㈜의 신용도"
+   }
+  ],
+  "deal_type": "카드대금채권 유동화",
+  "asset": "카드대금채권 참가계약에 따른 참가권",
+  "obligor": null
+ },
+ "한기평:ghzQGV3RsopF9Z.W87V6hi2il5uQ5kAqd08RU32nt4U=": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2027-01-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2027-04-28",
+    "maturity": "2027-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2027-07-28",
+    "maturity": "2027-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2027-10-28",
+    "maturity": "2028-01-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2028-01-31",
+    "maturity": "2028-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2028-04-28",
+    "maturity": "2028-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2028-07-28",
+    "maturity": "2028-10-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2028-10-30",
+    "maturity": "2029-01-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2029-01-29",
+    "maturity": "2029-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2029-04-30",
+    "maturity": "2029-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2029-07-30",
+    "maturity": "2029-10-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제13회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2029-10-29",
+    "maturity": "2030-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제14회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-01-28",
+    "maturity": "2030-04-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제15회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-04-29",
+    "maturity": "2030-05-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제16회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-05-28",
+    "maturity": "2030-06-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제17회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-06-28",
+    "maturity": "2030-07-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제18회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-07-29",
+    "maturity": "2030-08-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제19회",
+    "kind": "ABSTB",
+    "amount": 390.0,
+    "issue": "2030-08-28",
+    "maturity": "2030-09-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국투자증권(주)",
+  "asset_manager": "한국투자증권(주)",
+  "supports": [
+   {
+    "company": "한국투자증권",
+    "detail": "한국투자증권㈜의 사모사채 인수 및 자금보충 의무"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권",
+  "obligor": "(주)에스피종합건설"
+ },
+ "한기평:hwUbMeCm@l66y.wVNeMtKYGrlhCcHj5IFp1xgTLPpQU=": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2027-01-28",
+    "maturity": "2027-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2027-04-28",
+    "maturity": "2027-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2027-07-28",
+    "maturity": "2027-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABCP",
+    "amount": 100.0,
+    "issue": "2027-10-28",
+    "maturity": "2028-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABCP",
+    "amount": 92.0,
+    "issue": "2028-01-28",
+    "maturity": "2028-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABCP",
+    "amount": 84.0,
+    "issue": "2028-04-28",
+    "maturity": "2028-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABCP",
+    "amount": 76.0,
+    "issue": "2028-07-28",
+    "maturity": "2028-10-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABCP",
+    "amount": 68.0,
+    "issue": "2028-10-28",
+    "maturity": "2029-01-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회",
+    "kind": "ABCP",
+    "amount": 60.0,
+    "issue": "2029-01-28",
+    "maturity": "2029-04-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회",
+    "kind": "ABCP",
+    "amount": 52.0,
+    "issue": "2029-04-28",
+    "maturity": "2029-07-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회",
+    "kind": "ABCP",
+    "amount": 44.0,
+    "issue": "2029-07-28",
+    "maturity": "2029-10-28",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국산업은행",
+  "asset_manager": "한국산업은행",
+  "supports": [
+   {
+    "company": "한국산업은행",
+    "detail": "한국산업은행의 ABCP 매입보장 및 신용공여"
+   }
+  ],
+  "deal_type": "대출채권 유동화",
+  "asset": "대출채권",
+  "obligor": "㈜중앙축산농업회사법인"
  }
 }

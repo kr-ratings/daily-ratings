@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-27 18:37",
+ "generated": "2026-10-28 12:41",
  "eval_window": [
-  "2026-06-29",
-  "2026-10-27"
+  "2026-06-30",
+  "2026-10-28"
  ],
  "issue_window": [
-  "2026-09-27",
-  "2026-10-27"
+  "2026-09-28",
+  "2026-10-28"
  ],
  "sources": {
   "ECOS": {
@@ -16,26 +16,26 @@
   },
   "NICE": {
    "ok": true,
-   "rows": 5749
+   "rows": 5624
   },
   "한신평": {
    "ok": true,
-   "rows": 887
+   "rows": 863
   },
   "한기평": {
    "ok": true,
-   "rows": 1420
+   "rows": 1365
   },
   "평가의견서": {
    "ok": true,
-   "docs": 1740,
+   "docs": 1703,
    "missing": 0,
    "kr_blocked": false
   },
   "KOFIA": {
    "ok": true,
    "errors": [],
-   "matched": 592
+   "matched": 579
   }
  }
 }
