@@ -11,8 +11,9 @@
  "sources": {
   "ECOS": {
    "ok": true,
-   "asof": "2026-10-28",
-   "key": "sample"
+   "asof": "2026-10-29",
+   "key": "sample",
+   "prelim": "2026-10-29"
   },
   "NICE": {
    "ok": true,
@@ -37,5 +38,6 @@
    "errors": [],
    "matched": 573
   }
- }
+ },
+ "rates_updated": "2026-10-29 16:39"
 }
