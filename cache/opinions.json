@@ -170863,5 +170863,1950 @@
   "deal_type": "대출채권 유동화",
   "asset": "대출채권",
   "obligor": "(주)코크렙제57호위탁관리부동산투자회사"
+ },
+ "한신평:rs20261029-25.pdf": {
+  "schedule": [
+   {
+    "series": "제1회차",
+    "kind": "ABCP",
+    "amount": 302.11,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-05",
+    "grade": "A2"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [
+   {
+    "company": "에스케이렌터카",
+    "detail": "에스케이렌터카(주)의 카드대금 지급 의무"
+   },
+   {
+    "company": "삼성카드",
+    "detail": "참가계약의 거래상대방으로서 삼성카드(주)가 부담하는 제반 의무"
+   }
+  ],
+  "deal_type": "매출채권 유동화",
+  "asset": "카드이용대금채권 등 참가계약에 따라 보유하는 제반 권리",
+  "obligor": null
+ },
+ "한신평:rs20261029-45.pdf": {
+  "schedule": [
+   {
+    "series": "제2-1회",
+    "kind": "ABCP",
+    "amount": 700.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-01-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제2-2회",
+    "kind": "ABCP",
+    "amount": 1.05,
+    "issue": "2026-10-29",
+    "maturity": "2027-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제2-3회",
+    "kind": "ABCP",
+    "amount": 3000.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제2-4회",
+    "kind": "ABCP",
+    "amount": 4.97,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-31",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "(주)하나은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한신평:rs20261029-23.pdf": {
+  "schedule": [
+   {
+    "series": "제1-1회",
+    "kind": "ABCP",
+    "amount": 2400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-2회",
+    "kind": "ABCP",
+    "amount": 400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-3회",
+    "kind": "ABCP",
+    "amount": 1200.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-02",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-4회",
+    "kind": "ABCP",
+    "amount": 4.65,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-5회",
+    "kind": "ABCP",
+    "amount": 3.2,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-05",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한양증권(주)",
+  "asset_manager": "한양증권(주)",
+  "supports": [
+   {
+    "company": "신한은행",
+    "detail": "(주)신한은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한신평:rs20261029-36.pdf": {
+  "schedule": [
+   {
+    "series": "제5회차",
+    "kind": "ABSTB",
+    "amount": 1150.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-29",
+    "grade": "A2-"
+   }
+  ],
+  "arranger": "한화투자증권(주)",
+  "asset_manager": "한화투자증권(주)",
+  "supports": [
+   {
+    "company": "케이씨씨건설",
+    "detail": "(주)케이씨씨건설의 자금보충 및 기초자산 채무인수 의무"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "ABL",
+  "obligor": null
+ },
+ "한신평:rs20261029-29.pdf": {
+  "schedule": [
+   {
+    "series": "제1회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2026-10-30",
+    "maturity": "2026-12-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2026-12-28",
+    "maturity": "2027-03-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-03-26",
+    "maturity": "2027-06-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-06-28",
+    "maturity": "2027-09-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-09-27",
+    "maturity": "2027-10-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-10-26",
+    "maturity": "2027-11-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-11-26",
+    "maturity": "2027-12-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-12-27",
+    "maturity": "2028-01-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-01-26",
+    "maturity": "2028-02-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-02-28",
+    "maturity": "2028-03-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-03-27",
+    "maturity": "2028-04-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-04-26",
+    "maturity": "2028-05-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제13회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-05-26",
+    "maturity": "2028-06-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제14회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-06-26",
+    "maturity": "2028-07-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제15회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-07-26",
+    "maturity": "2028-08-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제16회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-08-28",
+    "maturity": "2028-09-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제17회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-09-26",
+    "maturity": "2028-10-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제18회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-10-26",
+    "maturity": "2028-11-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제19회차",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-11-27",
+    "maturity": "2028-12-26",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "대신증권(주)",
+  "asset_manager": "대신증권(주)",
+  "supports": [
+   {
+    "company": "대신증권",
+    "detail": "대신증권(주)의 기초자산 매입, 자금보충 의무 및 사모사채 인수확약"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권 및 부수권리",
+  "obligor": null
+ },
+ "한신평:rs20261029-21.pdf": {
+  "schedule": [
+   {
+    "series": "제7회차",
+    "kind": "ABSTB",
+    "amount": 538.0,
+    "issue": "2026-10-30",
+    "maturity": "2026-11-30",
+    "grade": "A2"
+   }
+  ],
+  "arranger": "키움증권(주)",
+  "asset_manager": "키움증권(주)",
+  "supports": [
+   {
+    "company": "지에스건설",
+    "detail": "기초자산에 대한 지에스건설(주)의 연대보증"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "ABL",
+  "obligor": null
+ },
+ "한신평:rs20261029-9.pdf": {
+  "schedule": [
+   {
+    "series": "제4회차",
+    "kind": "ABSTB",
+    "amount": 540.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-01-29",
+    "grade": "A2-"
+   }
+  ],
+  "arranger": "한화투자증권(주)",
+  "asset_manager": "한화투자증권(주)",
+  "supports": [
+   {
+    "company": "케이씨씨건설",
+    "detail": "(주)케이씨씨건설의 자금보충 및 기초자산 채무인수 의무"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "ABL",
+  "obligor": null
+ },
+ "한신평:rs20261029-41.pdf": {
+  "schedule": [
+   {
+    "series": "제2회차",
+    "kind": "ABSTB",
+    "amount": 81.3,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-28",
+    "grade": "A2-"
+   }
+  ],
+  "arranger": "한화투자증권(주)",
+  "asset_manager": "한화투자증권(주)",
+  "supports": [
+   {
+    "company": "케이씨씨건설",
+    "detail": "(주)케이씨씨건설의 자금보충 및 기초자산 채무인수"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권",
+  "obligor": null
+ },
+ "한신평:rs20261029-13.pdf": {
+  "schedule": [
+   {
+    "series": "제124-1회차",
+    "kind": "ABCP",
+    "amount": 0.5,
+    "issue": "2026-10-30",
+    "maturity": "2027-06-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제118-1회차",
+    "kind": "ABCP",
+    "amount": 0.5,
+    "issue": "2026-04-30",
+    "maturity": "2026-12-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제119-1회차",
+    "kind": "ABCP",
+    "amount": 0.2,
+    "issue": "2026-05-29",
+    "maturity": "2026-12-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제120-1회차",
+    "kind": "ABCP",
+    "amount": 0.2,
+    "issue": "2026-06-29",
+    "maturity": "2026-12-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제121-1회차",
+    "kind": "ABCP",
+    "amount": 0.3,
+    "issue": "2026-07-31",
+    "maturity": "2027-03-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제122-1회차",
+    "kind": "ABCP",
+    "amount": 0.2,
+    "issue": "2026-08-31",
+    "maturity": "2027-03-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제123-1회차",
+    "kind": "ABCP",
+    "amount": 0.5,
+    "issue": "2026-09-30",
+    "maturity": "2027-03-31",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "SK증권(주)",
+  "asset_manager": "SK증권(주)",
+  "supports": [
+   {
+    "company": "SK텔레콤",
+    "detail": "SK텔레콤(주)의 단말기매매대금채권 양도대금 지급 의무"
+   }
+  ],
+  "deal_type": "매출채권 유동화",
+  "asset": "단말기매매대금채권의 양도대금채권",
+  "obligor": null
+ },
+ "한신평:rs20261029-24.pdf": {
+  "schedule": [
+   {
+    "series": "제4-1회",
+    "kind": "ABCP",
+    "amount": 2390.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제4-2회",
+    "kind": "ABCP",
+    "amount": 3.96,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제2-3회",
+    "kind": "ABCP",
+    "amount": 1650.0,
+    "issue": "2025-11-27",
+    "maturity": "2026-11-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제3-2회",
+    "kind": "ABCP",
+    "amount": 1.93,
+    "issue": "2026-07-20",
+    "maturity": "2027-03-05",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한양증권(주)",
+  "asset_manager": "한양증권(주)",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "(주)하나은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:da5b6f04-9305-4f59-8973-59fa7f19928d": {
+  "schedule": [
+   {
+    "series": "제6-1회",
+    "kind": "ABCP",
+    "amount": 1200.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-02",
+    "grade": "A1"
+   },
+   {
+    "series": "제6-2회",
+    "kind": "ABCP",
+    "amount": 1200.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제6-3회",
+    "kind": "ABCP",
+    "amount": 5.2,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-01",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "유진투자증권㈜",
+  "asset_manager": "유진투자증권㈜",
+  "supports": [
+   {
+    "company": "국민은행",
+    "detail": "정기예금 원리금 상환 의무자인 ㈜국민은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜국민은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:47cc6947-6e9b-4a9b-8a39-14c79e67fc49": {
+  "schedule": [
+   {
+    "series": "제3-1회",
+    "kind": "ABCP",
+    "amount": 2400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제3-2회",
+    "kind": "ABCP",
+    "amount": 3.97,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-06",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "㈜아이엠증권",
+  "asset_manager": "㈜아이엠증권",
+  "supports": [
+   {
+    "company": "국민은행",
+    "detail": "정기예금 원리금 상환 의무자인 ㈜국민은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜국민은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:9e0f5e20-dd2c-4460-b3e1-9ef8bdb10439": {
+  "schedule": [
+   {
+    "series": "제1-1회",
+    "kind": "ABCP",
+    "amount": 500.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-01-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-2회",
+    "kind": "ABCP",
+    "amount": 4040.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-3회",
+    "kind": "ABCP",
+    "amount": 400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-08",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-4회",
+    "kind": "ABCP",
+    "amount": 7.46,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-5회",
+    "kind": "ABCP",
+    "amount": 1.11,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-01",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "엔에이치투자증권㈜",
+  "asset_manager": "엔에이치투자증권㈜",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "정기예금 원리금 상환 의무자인 ㈜하나은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜하나은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:5a15a2b5-5d1f-4bb3-8ac8-616003d0eb06": {
+  "schedule": [
+   {
+    "series": "제1-1회",
+    "kind": "ABCP",
+    "amount": 250.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-01-21",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-2회",
+    "kind": "ABCP",
+    "amount": 800.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-3회",
+    "kind": "ABCP",
+    "amount": 1300.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-02",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-4회",
+    "kind": "ABCP",
+    "amount": 1.67,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-5회",
+    "kind": "ABCP",
+    "amount": 3.46,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-01",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "㈜BNK투자증권",
+  "asset_manager": "㈜BNK투자증권",
+  "supports": [
+   {
+    "company": "신한은행",
+    "detail": "정기예금 원리금 상환 의무자인 ㈜신한은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜신한은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:5f8c70c0-12c7-4a64-87bc-372ec38f2ebd": {
+  "schedule": [
+   {
+    "series": "제6-1회차",
+    "kind": "ABCP",
+    "amount": 2400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제6-2회차",
+    "kind": "ABCP",
+    "amount": 7.49,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-15",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권㈜",
+  "asset_manager": "부국증권㈜",
+  "supports": [
+   {
+    "company": "우리은행",
+    "detail": "정기예금 원리금 상환의무자인 ㈜우리은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜우리은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:a189a944-25e6-4297-951c-4d35bfb9ef1e": {
+  "schedule": [],
+  "arranger": "유진투자증권㈜",
+  "asset_manager": "유진투자증권㈜",
+  "supports": [
+   {
+    "company": "우리은행",
+    "detail": "정기예금 원리금 상환 의무자인 ㈜우리은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜우리은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:ff893c4f-eb05-4256-ba90-d27b16682b59": {
+  "schedule": [
+   {
+    "series": "제9-1회차",
+    "kind": "ABCP",
+    "amount": 4040.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제9-2회차",
+    "kind": "ABCP",
+    "amount": 6.69,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-12",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권㈜",
+  "asset_manager": "부국증권㈜",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "정기예금 원리금 상환의무자인 ㈜하나은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜하나은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:6479f16b-86b9-444f-9577-03d69480f66d": {
+  "schedule": [],
+  "arranger": "부국증권㈜",
+  "asset_manager": "부국증권㈜",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "정기예금 원리금 상환의무자인 ㈜하나은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜하나은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:61d31123-d8f8-4450-a058-354381106e41": {
+  "schedule": [],
+  "arranger": "유진투자증권㈜",
+  "asset_manager": "유진투자증권㈜",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "정기예금 원리금 상환 의무자인 ㈜하나은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜하나은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:9f1f2f8c-4997-47ab-999d-18f9541f1475": {
+  "schedule": [],
+  "arranger": "유진투자증권㈜",
+  "asset_manager": "유진투자증권㈜",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "정기예금 원리금 상환 의무자인 ㈜하나은행의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "정기예금 유동화(CDO)",
+  "asset": "㈜하나은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한신평:rs20261029-34.pdf": {
+  "schedule": [
+   {
+    "series": "제6-1회",
+    "kind": "ABCP",
+    "amount": 1200.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-02",
+    "grade": "A1"
+   },
+   {
+    "series": "제6-2회",
+    "kind": "ABCP",
+    "amount": 1200.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제6-3회",
+    "kind": "ABCP",
+    "amount": 5.2,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-01",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "유진투자증권(주)",
+  "asset_manager": "유진투자증권(주)",
+  "supports": [
+   {
+    "company": "국민은행",
+    "detail": "(주)국민은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한신평:rs20261029-40.pdf": {
+  "schedule": [
+   {
+    "series": "제12-2회차",
+    "kind": "ABSTB",
+    "amount": 447.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-01-29",
+    "grade": "A2"
+   },
+   {
+    "series": "제12-1회차",
+    "kind": "ABSTB",
+    "amount": 447.0,
+    "issue": "2026-07-29",
+    "maturity": "2026-10-29",
+    "grade": "A2"
+   },
+   {
+    "series": "제13-1회차",
+    "kind": "ABSTB",
+    "amount": 415.0,
+    "issue": "2026-08-28",
+    "maturity": "2026-11-27",
+    "grade": "A2"
+   },
+   {
+    "series": "제11-2회차",
+    "kind": "ABSTB",
+    "amount": 392.0,
+    "issue": "2026-09-29",
+    "maturity": "2026-12-29",
+    "grade": "A2"
+   }
+  ],
+  "arranger": "한양증권(주)",
+  "asset_manager": "한양증권(주)",
+  "supports": [
+   {
+    "company": "넥센타이어",
+    "detail": "넥센타이어(주)의 카드대금 지급 의무"
+   },
+   {
+    "company": "신한카드",
+    "detail": "참가계약의 거래상대방으로서 신한카드(주)가 부담하는 제반 의무"
+   }
+  ],
+  "deal_type": "매출채권 유동화",
+  "asset": "카드대금채권 등 참가계약에 따라 보유하는 제반 권리",
+  "obligor": null
+ },
+ "한신평:rs20261029-46.pdf": {
+  "schedule": [
+   {
+    "series": "제6-1회",
+    "kind": "ABCP",
+    "amount": 2400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제6-2회",
+    "kind": "ABCP",
+    "amount": 7.49,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-15",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [
+   {
+    "company": "우리은행",
+    "detail": "(주)우리은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한신평:rs20261029-33.pdf": {
+  "schedule": [
+   {
+    "series": "제3-1회",
+    "kind": "ABCP",
+    "amount": 600.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-06-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제3-2회",
+    "kind": "ABCP",
+    "amount": 1800.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제3-4회",
+    "kind": "ABCP",
+    "amount": 5.7,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-26",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "유진투자증권(주)",
+  "asset_manager": "유진투자증권(주)",
+  "supports": [
+   {
+    "company": "우리은행",
+    "detail": "(주)우리은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한신평:rs20261029-47.pdf": {
+  "schedule": [
+   {
+    "series": "제9-1회",
+    "kind": "ABCP",
+    "amount": 4040.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제9-2회",
+    "kind": "ABCP",
+    "amount": 6.69,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-12",
+    "grade": "A1"
+   },
+   {
+    "series": "제8-2회",
+    "kind": "ABCP",
+    "amount": 4.28,
+    "issue": "2026-04-03",
+    "maturity": "2027-02-17",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "(주)하나은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한신평:rs20261029-10.pdf": {
+  "schedule": [
+   {
+    "series": "제48회차",
+    "kind": "ABSTB",
+    "amount": 357.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-01-29",
+    "grade": "A2"
+   },
+   {
+    "series": "제46-2회차",
+    "kind": "ABSTB",
+    "amount": 468.2,
+    "issue": "2026-08-28",
+    "maturity": "2026-11-27",
+    "grade": "A2"
+   },
+   {
+    "series": "제47회차",
+    "kind": "ABSTB",
+    "amount": 384.0,
+    "issue": "2026-09-29",
+    "maturity": "2026-11-27",
+    "grade": "A2"
+   }
+  ],
+  "arranger": "한국투자증권(주)",
+  "asset_manager": "한국투자증권(주)",
+  "supports": [
+   {
+    "company": "넥센타이어",
+    "detail": "넥센타이어(주)의 카드대금 지급 의무"
+   },
+   {
+    "company": "신한카드",
+    "detail": "참가계약의 거래상대방으로서 신한카드(주)가 부담하는 제반 의무"
+   }
+  ],
+  "deal_type": "매출채권 유동화",
+  "asset": "카드대금채권 등 참가계약에 따라 보유하는 제반 권리",
+  "obligor": null
+ },
+ "한신평:rs20261029-43.pdf": {
+  "schedule": [
+   {
+    "series": "제2-1회",
+    "kind": "ABCP",
+    "amount": 2450.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-09-07",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "유진투자증권(주)",
+  "asset_manager": "유진투자증권(주)",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "(주)하나은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한신평:rs20261029-31.pdf": {
+  "schedule": [
+   {
+    "series": "제5-1회",
+    "kind": "ABCP",
+    "amount": 1050.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-09-07",
+    "grade": "A1"
+   },
+   {
+    "series": "제5-2회",
+    "kind": "ABCP",
+    "amount": 1350.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제5-4회",
+    "kind": "ABCP",
+    "amount": 2.3,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-04",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "유진투자증권(주)",
+  "asset_manager": "유진투자증권(주)",
+  "supports": [
+   {
+    "company": "하나은행",
+    "detail": "(주)하나은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한신평:rs20261028-28.pdf": {
+  "schedule": [
+   {
+    "series": "제1-1회",
+    "kind": "ABCP",
+    "amount": 1550.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-2회",
+    "kind": "ABCP",
+    "amount": 800.0,
+    "issue": "2026-10-28",
+    "maturity": "2027-04-09",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-3회",
+    "kind": "ABCP",
+    "amount": 2.6,
+    "issue": "2026-10-28",
+    "maturity": "2027-08-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-4회",
+    "kind": "ABCP",
+    "amount": 2.24,
+    "issue": "2026-10-28",
+    "maturity": "2027-10-01",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "엔에이치투자증권(주)",
+  "asset_manager": "엔에이치투자증권(주)",
+  "supports": [
+   {
+    "company": "국민은행",
+    "detail": "(주)국민은행의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한기평:eypCaS6r9m2ynnK.0WFiqLsjB@HFAq1M17.yx.sVA4A=": {
+  "schedule": [
+   {
+    "series": "제2-1회",
+    "kind": "ABCP",
+    "amount": 700.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-01-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제2-2회",
+    "kind": "ABCP",
+    "amount": 1.05,
+    "issue": "2026-10-29",
+    "maturity": "2027-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제2-3회",
+    "kind": "ABCP",
+    "amount": 3000.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제2-4회",
+    "kind": "ABCP",
+    "amount": 4.97,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-31",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [],
+  "deal_type": "정기예금 유동화",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한기평:XoXEgMWA.1YfGLt9deZ4@UwH7yxkHNA0NM2Gn4AXnHQ=": {
+  "schedule": [
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 132.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-25",
+    "grade": "A2+"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [
+   {
+    "company": "우리카드",
+    "detail": "참가계약 거래상대방인 (주)우리카드의 신용도"
+   }
+  ],
+  "deal_type": "카드대금채권 유동화",
+  "asset": "카드대금채권 참가계약에 따른 참가권",
+  "obligor": null
+ },
+ "한기평:M4ux6kTS03nERpBgkmOnOdLaN5X.lfzdlTf8@s.4H@c=": {
+  "schedule": [
+   {
+    "series": "제2-2회",
+    "kind": "ABSTB",
+    "amount": 1000.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-29",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [
+   {
+    "company": "우리카드",
+    "detail": "참가계약 거래상대방인 (주)우리카드의 신용도"
+   }
+  ],
+  "deal_type": "카드대금채권 유동화",
+  "asset": "카드대금채권 참가계약에 따른 권리",
+  "obligor": null
+ },
+ "한기평:rirxsSVtYdDd38CXQsHs@cj05RsgJsSf.i4R5cS@m0A=": {
+  "schedule": [
+   {
+    "series": "제1-1회",
+    "kind": "ABCP",
+    "amount": 2400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-2회",
+    "kind": "ABCP",
+    "amount": 400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-3회",
+    "kind": "ABCP",
+    "amount": 1200.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-02",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-4회",
+    "kind": "ABCP",
+    "amount": 4.65,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-5회",
+    "kind": "ABCP",
+    "amount": 3.2,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-05",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한양증권(주)",
+  "asset_manager": "한양증권(주)",
+  "supports": [],
+  "deal_type": "정기예금 유동화",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한기평:6YOo8NP9m15h2vpN2VrcJBbilp3LshR7cWj6jju.N.k=": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2027-01-30",
+    "maturity": "2027-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2027-04-30",
+    "maturity": "2027-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2027-07-30",
+    "maturity": "2027-10-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2027-10-30",
+    "maturity": "2028-01-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2028-01-30",
+    "maturity": "2028-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2028-04-30",
+    "maturity": "2028-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2028-07-30",
+    "maturity": "2028-10-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2028-10-30",
+    "maturity": "2029-01-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2029-01-30",
+    "maturity": "2029-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2029-04-30",
+    "maturity": "2029-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회",
+    "kind": "ABSTB",
+    "amount": 315.0,
+    "issue": "2029-07-30",
+    "maturity": "2029-10-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국투자증권(주)",
+  "asset_manager": "한국투자증권(주)",
+  "supports": [
+   {
+    "company": "한국투자증권",
+    "detail": "한국투자증권㈜의 사모사채인수 및 자금보충 의무"
+   }
+  ],
+  "deal_type": "주식 유동화",
+  "asset": "상환전환우선주식(RCPS)",
+  "obligor": null
+ },
+ "한기평:hAdWYHC85RT3fj02qPGj2RAd1LidT6Mxa2AlTl8Jm4E=": {
+  "schedule": [],
+  "arranger": "(주)신한은행",
+  "asset_manager": "(주)신한은행",
+  "supports": [
+   {
+    "company": "신한은행",
+    "detail": "㈜신한은행의 신용공여성 유동화증권 매입보장"
+   }
+  ],
+  "deal_type": "카드대금채권 유동화",
+  "asset": "카드대금채권 참가계약에 따른 권리",
+  "obligor": null
+ },
+ "한기평:6zTLZJO0.iXDdPWAIXGmCGkq9wB@IMikjwfxHQjvUA4=": {
+  "schedule": [
+   {
+    "series": "제29회",
+    "kind": "ABSTB",
+    "amount": 21.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제30회",
+    "kind": "ABSTB",
+    "amount": 21.0,
+    "issue": "2027-01-29",
+    "maturity": "2027-03-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제31회",
+    "kind": "ABSTB",
+    "amount": 21.0,
+    "issue": "2027-03-29",
+    "maturity": "2027-04-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "키움증권(주)",
+  "asset_manager": "키움증권(주)",
+  "supports": [
+   {
+    "company": "키움증권",
+    "detail": "키움증권㈜의 대출채권 매입, 자금보충 및 사모사채 인수 의무"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권",
+  "obligor": "㈜티엘"
+ },
+ "한기평:RkqCj6HNj6bzmmSqfU5jkyj3Mwdjz7E1E8QWZFpeBBg=": {
+  "schedule": [
+   {
+    "series": "제4-1회",
+    "kind": "ABCP",
+    "amount": 2390.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제4-2회",
+    "kind": "ABCP",
+    "amount": 3.96,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-05",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한양증권(주)",
+  "asset_manager": "한양증권(주)",
+  "supports": [],
+  "deal_type": "정기예금 유동화",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한기평:CH9MEGHp8VBkEGbikiDCRNceky1OT6fB2ORH0.l3feM=": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2026-10-30",
+    "maturity": "2026-12-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2026-12-28",
+    "maturity": "2027-03-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-03-26",
+    "maturity": "2027-06-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-06-28",
+    "maturity": "2027-09-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-09-27",
+    "maturity": "2027-10-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-10-26",
+    "maturity": "2027-11-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-11-26",
+    "maturity": "2027-12-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-12-27",
+    "maturity": "2028-01-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-01-26",
+    "maturity": "2028-02-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-02-28",
+    "maturity": "2028-03-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-03-27",
+    "maturity": "2028-04-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-04-26",
+    "maturity": "2028-05-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제13회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-05-26",
+    "maturity": "2028-06-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제14회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-06-26",
+    "maturity": "2028-07-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제15회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-07-26",
+    "maturity": "2028-08-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제16회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-08-28",
+    "maturity": "2028-09-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제17회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-09-26",
+    "maturity": "2028-10-26",
+    "grade": "A1"
+   },
+   {
+    "series": "제18회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-10-26",
+    "maturity": "2028-11-27",
+    "grade": "A1"
+   },
+   {
+    "series": "제19회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-11-27",
+    "maturity": "2028-12-26",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "대신증권(주)",
+  "asset_manager": "대신증권(주)",
+  "supports": [
+   {
+    "company": "대신증권",
+    "detail": "대신증권㈜의 대출채권 매입, 자금보충 및 사모사채 인수 의무"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권",
+  "obligor": "헌인타운개발(주)"
+ },
+ "한기평:wIYZTWMqBzVeh48t9w2Srhf8Kc.xU2cVauzCUVrqET4=": {
+  "schedule": [
+   {
+    "series": "제48회",
+    "kind": "ABSTB",
+    "amount": 99.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-29",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [
+   {
+    "company": "삼성카드",
+    "detail": "참가계약 거래상대방인 삼성카드㈜의 신용도"
+   }
+  ],
+  "deal_type": "카드대금채권 유동화",
+  "asset": "카드대금채권 참가계약에 따른 권리",
+  "obligor": null
+ },
+ "한기평:s0EFQSLMq6CzPZkhpohiJQfXjjCKeS6tRyeciTXJWRY=": {
+  "schedule": [
+   {
+    "series": "제7회",
+    "kind": "ABSTB",
+    "amount": 538.0,
+    "issue": "2026-10-30",
+    "maturity": "2026-11-30",
+    "grade": "A2"
+   }
+  ],
+  "arranger": "키움증권(주)",
+  "asset_manager": "키움증권(주)",
+  "supports": [
+   {
+    "company": "지에스건설",
+    "detail": "지에스건설㈜의 연대보증"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권(자산유동화대출)",
+  "obligor": "지케이송현(주)"
+ },
+ "한기평:nYi0cv5bJEk0oxJRT9UtcEBBD7d3cQID1acm0UJ2NbY=": {
+  "schedule": [
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 81.3,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-28",
+    "grade": "A2-"
+   }
+  ],
+  "arranger": "한화투자증권(주)",
+  "asset_manager": "한화투자증권(주)",
+  "supports": [
+   {
+    "company": "케이씨씨건설",
+    "detail": "(주)케이씨씨건설의 자금보충(미이행시 채무인수) 의무"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권",
+  "obligor": "(주)마이다스씨엠"
+ },
+ "한기평:eHsCXE5y8ydnUmT@r0MmWYhs5yQMeY1ZaPYqCCoW75o=": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2027-01-30",
+    "maturity": "2027-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2027-04-30",
+    "maturity": "2027-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2027-07-30",
+    "maturity": "2027-10-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2027-10-30",
+    "maturity": "2028-01-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2028-01-30",
+    "maturity": "2028-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2028-04-30",
+    "maturity": "2028-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2028-07-30",
+    "maturity": "2028-10-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2028-10-30",
+    "maturity": "2029-01-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2029-01-30",
+    "maturity": "2029-04-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2029-04-30",
+    "maturity": "2029-07-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회",
+    "kind": "ABSTB",
+    "amount": 206.0,
+    "issue": "2029-07-30",
+    "maturity": "2029-10-30",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "(주)BNK투자증권",
+  "asset_manager": "(주)BNK투자증권",
+  "supports": [
+   {
+    "company": "BNK투자증권",
+    "detail": "㈜BNK투자증권의 사모사채 인수확약"
+   }
+  ],
+  "deal_type": "회사채 유동화",
+  "asset": "회사채",
+  "obligor": null
+ },
+ "한기평:xVJShCSrF05h9AoUfo7.jgu7isZemko9b1iBgLYuDec=": {
+  "schedule": [
+   {
+    "series": "제5회",
+    "kind": "ABSTB",
+    "amount": 1150.0,
+    "issue": "2026-10-30",
+    "maturity": "2027-01-29",
+    "grade": "A2-"
+   }
+  ],
+  "arranger": "한화투자증권(주)",
+  "asset_manager": "한화투자증권(주)",
+  "supports": [
+   {
+    "company": "케이씨씨건설",
+    "detail": "(주)케이씨씨건설의 자금보충(미이행시 채무인수) 의무"
+   }
+  ],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권(자산유동화대출)",
+  "obligor": "에코와이제일차(주)"
+ },
+ "한기평:disc4J7.@T32h@j06ra7P6rAH4YoRV2KZPR1ms7z83M=": {
+  "schedule": [
+   {
+    "series": "제1-5회",
+    "kind": "ABCP",
+    "amount": 500.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-01-11",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-6회",
+    "kind": "ABCP",
+    "amount": 700.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-7회",
+    "kind": "ABCP",
+    "amount": 450.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-04-02",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-8회",
+    "kind": "ABCP",
+    "amount": 400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-06-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-9회",
+    "kind": "ABCP",
+    "amount": 500.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-09-07",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-10회",
+    "kind": "ABCP",
+    "amount": 1.77,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-15",
+    "grade": "A1"
+   },
+   {
+    "series": "제1-11회",
+    "kind": "ABCP",
+    "amount": 1.21,
+    "issue": "2026-10-29",
+    "maturity": "2027-10-15",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [],
+  "deal_type": "정기예금 유동화",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한기평:IAVssHqx@Y98a7MnTWlTn@YYBaSHlrKnALtkCjs2Ios=": {
+  "schedule": [
+   {
+    "series": "제3-1회",
+    "kind": "ABCP",
+    "amount": 2400.0,
+    "issue": "2026-10-29",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제3-2회",
+    "kind": "ABCP",
+    "amount": 3.97,
+    "issue": "2026-10-29",
+    "maturity": "2027-08-06",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "(주)아이엠증권",
+  "asset_manager": "(주)아이엠증권",
+  "supports": [],
+  "deal_type": "정기예금 유동화",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
  }
 }
