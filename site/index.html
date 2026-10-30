@@ -282,7 +282,7 @@ footer .ct{white-space:nowrap}
 
 
   <footer>
-    <p>이 화면은 신용평가사 공시, 금융투자협회 채권정보센터, 한국은행 경제통계시스템에 공개된 자료를 자동으로 모아 정리한 개인 참고용 자료입니다. 수집과 가공 과정에서 지연·누락·오기가 생길 수 있고 원문과 다를 수 있습니다.</p>
+    <p>이 화면은 신용평가사 공시, 금융투자협회 채권정보센터, 한국은행 경제통계시스템에 공개된 자료를 자동으로 모아 정리한 개인 참고용 자료입니다. 수집과 가공 과정에서 누락·오기가 생길 수 있고 원문과 다를 수 있습니다.</p>
     <p>거래금리는 장외 거래 공시값일 뿐 실제 발행조건이나 조달비용을 뜻하지 않습니다. 이 화면의 어떤 내용도 투자 권유나 의사결정의 근거가 아니며, 이를 이용해 생긴 결과에 대해 작성자는 책임지지 않습니다. 정확한 내용은 각 기관의 원문 공시에서 확인하시기 바랍니다.</p>
       <p>함께 운영하는 대시보드: <a href="https://cons.namepf.com/" target="_blank" rel="noopener">시공사 시공능력평가 · 신용등급 현황</a> · <a href="https://apt.namepf.com/" target="_blank" rel="noopener">아파트 수급 · 분양시장 현황</a> · <a href="https://dc.namepf.com/" target="_blank" rel="noopener">데이터센터 개발 현황</a></p>
       <p class="contact">기획 · 운영: 한국투자증권 PF그룹 부동산금융1부 최이름 차장 <a class="sister" href="https://namepf.com/" target="_blank" rel="noopener" style="display:inline-block;margin:0 4px;text-decoration:none;white-space:nowrap"><span class="sl">바로가기:</span> → 주요 딜 수행 실적</a> <span class="ct">(<a href="mailto:name@koreainvestment.com">name@koreainvestment.com</a>, <a href="tel:02-3276-6012">02-3276-6012</a>)</span></p>
@@ -389,7 +389,7 @@ function renderStatus(S){
   if(!S||!S.sources){ $("#status").innerHTML=""; return; }
   const names={ECOS:"한국은행(ECOS)",NICE:"NICE",한신평:"한신평",한기평:"한기평",KOFIA:"KOFIA",평가의견서:"평가서"};
   $("#status").innerHTML=Object.entries(S.sources).map(([k,v])=>
-    `<span class="src ${v.ok?"":"bad"}" title="${esc(v.ok?"정상":v.error||(v.missing?`${v.missing}건 다음 수집 때 이어서 받음`:"오류"))}"><span class="dot"></span>${esc(names[k]||k)}${v.ok?"":(v.missing?` ${v.missing}건 대기`:" 미수집")}</span>`).join("");
+    `<span class="src ${v.ok?"":"bad"}" title="${v.ok?"정상":v.missing?`${v.missing}건 다음 수집 때 이어서 받음`:"직전 값 표시"}"><span class="dot"></span>${esc(names[k]||k)}</span>`).join("");
 }
 
 // ---------------- 등급공시 표 ----------------
@@ -533,7 +533,7 @@ async function downloadXLSX(){
     const d=new Date(Date.now()+9*3600e3).toISOString().slice(0,10).replace(/-/g,"");
     XLSX.writeFile(wb,`daily-ratings_${d}.xlsx`);
   }catch(e){
-    console.error(e); btn.lastChild.textContent="다운로드 실패 · 다시 시도"; setTimeout(()=>{btn.lastChild.textContent=label;},2500); btn.disabled=false; return;
+    console.error(e); btn.lastChild.textContent="다시 시도해 주세요"; setTimeout(()=>{btn.lastChild.textContent=label;},2500); btn.disabled=false; return;
   }
   btn.disabled=false; btn.lastChild.textContent=label;
 }
