@@ -1,6 +1,27 @@
 [
  {
   "agency": "한신평",
+  "spc": "비케이프로제십차",
+  "kind": "ABSTB",
+  "eval_type": "본",
+  "grade": "A2-",
+  "eval_date": "2026-11-02",
+  "series": "7",
+  "issue_date": null,
+  "maturity": null,
+  "amount": 78.0,
+  "ref": null,
+  "doc": {
+   "agency": "한신평",
+   "id": "rs20261102-1.pdf",
+   "menuCd": "R8",
+   "gubun": "2",
+   "title": "비케이프로제십차",
+   "writedate": "20261102"
+  }
+ },
+ {
+  "agency": "한신평",
   "spc": "국민행복제15차",
   "kind": "ABCP",
   "eval_type": "본",
@@ -164,27 +185,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "에쓰지씨에이아이제일차",
-   "writedate": "20261030"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "엠신천제일차",
-  "kind": "ABSTB",
-  "eval_type": "수시",
-  "grade": "A1",
-  "eval_date": "2026-10-30",
-  "series": "5",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 784.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20261030-29.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "엠신천제일차",
    "writedate": "20261030"
   }
  },
@@ -3114,7 +3114,7 @@
   "eval_type": "정기",
   "grade": "A1",
   "eval_date": "2026-10-19",
-  "series": "9",
+  "series": "13",
   "issue_date": null,
   "maturity": null,
   "amount": 100.0,
@@ -6931,27 +6931,6 @@
  },
  {
   "agency": "한신평",
-  "spc": "트로피에셋제사차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2-",
-  "eval_date": "2026-09-29",
-  "series": "1",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 81.3,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260929-17.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "트로피에셋제사차",
-   "writedate": "20260929"
-  }
- },
- {
-  "agency": "한신평",
   "spc": "퓨처소사이어티제일차",
   "kind": "ABSTB",
   "eval_type": "본",
@@ -8060,27 +8039,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "케이비응봉제일차",
-   "writedate": "20260921"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "티앤케이용화제일차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2",
-  "eval_date": "2026-09-21",
-  "series": "4",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 575.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260922-2.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "티앤케이용화제일차",
    "writedate": "20260921"
   }
  },
@@ -12018,7 +11976,7 @@
   "eval_type": "정기",
   "grade": "A1",
   "eval_date": "2026-08-28",
-  "series": "09",
+  "series": "017",
   "issue_date": null,
   "maturity": null,
   "amount": 600.0,
@@ -15898,48 +15856,6 @@
  },
  {
   "agency": "한신평",
-  "spc": "비케이씨에스제이십이차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A1",
-  "eval_date": "2026-07-30",
-  "series": "38",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 129.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260731-7.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "비케이씨에스제이십이차",
-   "writedate": "20260730"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "비케이프로제십차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2-",
-  "eval_date": "2026-07-30",
-  "series": "4",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 87.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260731-4.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "비케이프로제십차",
-   "writedate": "20260730"
-  }
- },
- {
-  "agency": "한신평",
   "spc": "비케이프로제칠차",
   "kind": "ABCP",
   "eval_type": "본",
@@ -15977,27 +15893,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "시그니처제오차",
-   "writedate": "20260730"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "에스씨제이차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2+",
-  "eval_date": "2026-07-30",
-  "series": "1",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 190.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260731-1.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "에스씨제이차",
    "writedate": "20260730"
   }
  },
@@ -16319,27 +16214,6 @@
  {
   "agency": "한신평",
   "spc": "글로리세운제일차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A1",
-  "eval_date": "2026-07-29",
-  "series": "2-1",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 206.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260729-22.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "글로리세운제일차",
-   "writedate": "20260729"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "글로리세운제일차",
   "kind": "ABCP",
   "eval_type": "본",
   "grade": "A1",
@@ -16355,27 +16229,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "글로리세운제일차",
-   "writedate": "20260729"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "리빌딩제일차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A3+",
-  "eval_date": "2026-07-29",
-  "series": "5",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 200.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260729-7.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "리빌딩제일차",
    "writedate": "20260729"
   }
  },
@@ -16460,90 +16313,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "비에스엔제일차",
-   "writedate": "20260729"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "에스디비제십차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A1",
-  "eval_date": "2026-07-29",
-  "series": "20",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 780.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260729-26.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "에스디비제십차",
-   "writedate": "20260729"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "제이에이스토리제사차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2-",
-  "eval_date": "2026-07-29",
-  "series": "8",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 41.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260729-33.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "제이에이스토리제사차",
-   "writedate": "20260729"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "케이피송현제오차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2",
-  "eval_date": "2026-07-29",
-  "series": "6",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 546.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260729-16.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "케이피송현제오차",
-   "writedate": "20260729"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "티에스디제일차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2",
-  "eval_date": "2026-07-29",
-  "series": "1",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 82.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260730-1.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "티에스디제일차",
    "writedate": "20260729"
   }
  },
@@ -16649,27 +16418,6 @@
    "menuCd": "R8",
    "gubun": "2",
    "title": "신한희망제1차",
-   "writedate": "20260728"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "에코와이제이차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A2-",
-  "eval_date": "2026-07-28",
-  "series": "4",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 1150.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260728-4.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "에코와이제이차",
    "writedate": "20260728"
   }
  },
@@ -18813,153 +18561,6 @@
    "gubun": "2",
    "title": "케이비에이치하우징제일차",
    "writedate": "20260706"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "제일하모니제4차",
-  "kind": "ABCP",
-  "eval_type": "본",
-  "grade": "A1",
-  "eval_date": "2026-07-03",
-  "series": "1-2",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 700.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260703-16.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "제일하모니제4차",
-   "writedate": "20260703"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "골드비전제일차",
-  "kind": "ABSTB",
-  "eval_type": "본",
-  "grade": "A1",
-  "eval_date": "2026-07-02",
-  "series": "9",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 200.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260702-11.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "골드비전제일차",
-   "writedate": "20260702"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "농협사랑제8차",
-  "kind": "ABCP",
-  "eval_type": "본",
-  "grade": "A1",
-  "eval_date": "2026-07-02",
-  "series": "4-4",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 0.75,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260702-12.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "농협사랑제8차",
-   "writedate": "20260702"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "드림비엔김포",
-  "kind": "ABSTB",
-  "eval_type": "정기",
-  "grade": "A1",
-  "eval_date": "2026-07-02",
-  "series": "2-13",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 54.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260702-8.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "드림비엔김포",
-   "writedate": "20260702"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "드림빅프로젝트제일차",
-  "kind": "ABSTB",
-  "eval_type": "정기",
-  "grade": "A1",
-  "eval_date": "2026-07-02",
-  "series": "13",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 60.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260702-10.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "드림빅프로젝트제일차",
-   "writedate": "20260702"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "에스와이디비제일차",
-  "kind": "ABSTB",
-  "eval_type": "정기",
-  "grade": "A1",
-  "eval_date": "2026-07-02",
-  "series": "60",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 100.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260702-9.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "에스와이디비제일차",
-   "writedate": "20260702"
-  }
- },
- {
-  "agency": "한신평",
-  "spc": "케이더블평제일차",
-  "kind": "ABSTB",
-  "eval_type": "정기",
-  "grade": "A1",
-  "eval_date": "2026-07-02",
-  "series": "23",
-  "issue_date": null,
-  "maturity": null,
-  "amount": 200.0,
-  "ref": null,
-  "doc": {
-   "agency": "한신평",
-   "id": "rs20260702-4.pdf",
-   "menuCd": "R8",
-   "gubun": "2",
-   "title": "케이더블평제일차",
-   "writedate": "20260702"
   }
  }
 ]
