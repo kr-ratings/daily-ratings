@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02 12:53",
+ "generated": "2026-11-02 18:59",
  "eval_window": [
   "2026-07-05",
   "2026-11-02"
@@ -9,6 +9,222 @@
   "2026-11-02"
  ],
  "rows": [
+  {
+   "spc": "한솔제사십구차",
+   "kind": "ABCP",
+   "series": "제7-4회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-10-05",
+   "days": 337,
+   "amount": 2.93,
+   "arranger": "한양증권",
+   "asset_manager": "한양증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "(주)신한은행의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=7yaSNsBlOy8W.JZBfuXTvlEME002EXMK4ucd3N8n0Co%3D&encSvcSeqNo=LKV7qawPG%40R8pa1Dbk0Ang%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=231977&compNm=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-5.pdf&fileTitle=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.25,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "한솔제사십구차",
+   "kind": "ABCP",
+   "series": "제7-3회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-06-25",
+   "days": 235,
+   "amount": 400.0,
+   "arranger": "한양증권",
+   "asset_manager": "한양증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "(주)신한은행의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=7yaSNsBlOy8W.JZBfuXTvlEME002EXMK4ucd3N8n0Co%3D&encSvcSeqNo=LKV7qawPG%40R8pa1Dbk0Ang%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=231977&compNm=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-5.pdf&fileTitle=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.25,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "한솔제사십구차",
+   "kind": "ABCP",
+   "series": "제7-2회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-06-08",
+   "days": 218,
+   "amount": 900.0,
+   "arranger": "한양증권",
+   "asset_manager": "한양증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "(주)신한은행의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=7yaSNsBlOy8W.JZBfuXTvlEME002EXMK4ucd3N8n0Co%3D&encSvcSeqNo=LKV7qawPG%40R8pa1Dbk0Ang%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=231977&compNm=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-5.pdf&fileTitle=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.25,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "한솔제사십구차",
+   "kind": "ABCP",
+   "series": "제7-1회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-04-06",
+   "days": 155,
+   "amount": 1100.0,
+   "arranger": "한양증권",
+   "asset_manager": "한양증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "(주)신한은행의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=7yaSNsBlOy8W.JZBfuXTvlEME002EXMK4ucd3N8n0Co%3D&encSvcSeqNo=LKV7qawPG%40R8pa1Dbk0Ang%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=231977&compNm=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-5.pdf&fileTitle=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.25,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
   {
    "spc": "프라임이글제사차",
    "kind": "ABSTB",
@@ -100,15 +316,22 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 4.4,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
    "spc": "케이피방배제오차",
    "kind": "ABSTB",
-   "series": "제3회차",
+   "series": "제3회",
    "grade": "A2",
    "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A2",
+     "eval_date": "2026-11-02"
+    },
     {
      "agency": "한신평",
      "grade": "A2",
@@ -116,6 +339,7 @@
     }
    ],
    "agencies": [
+    "한기평",
     "한신평"
    ],
    "issue_date": "2026-11-02",
@@ -128,21 +352,27 @@
     {
      "company": "지에스건설",
      "summary": "연대보증",
-     "detail": "기초자산에 대한 지에스건설(주)의 연대보증"
+     "detail": "지에스건설㈜의 연대보증"
     }
    ],
    "pf": "PF",
    "deal_type": "PF Loan 유동화",
-   "asset": "ABL",
-   "detail_source": "한신평",
+   "asset": "대출채권(자산유동화대출)",
+   "detail_source": "한기평",
    "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=7l%40IgmwIoJOcGLyJxjiMFaHs4O%40c%40EEAoWVoq7aQO6Y%3D&encSvcSeqNo=GB8HoSB3Y4xPJpVotGBatw%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=239803&compNm=%EC%BC%80%EC%9D%B4%ED%94%BC%EB%B0%A9%EB%B0%B0%EC%A0%9C%EC%98%A4%EC%B0%A8%28%EC%A3%BC%29"
+    },
     {
      "agency": "한신평",
      "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261030-45.pdf&fileTitle=%EC%BC%80%EC%9D%B4%ED%94%BC%EB%B0%A9%EB%B0%B0%EC%A0%9C%EC%98%A4%EC%B0%A8&writedate=20261030"
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 4.4,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
@@ -188,6 +418,100 @@
    }
   },
   {
+   "spc": "지아이비알비제이차",
+   "kind": "ABCP",
+   "series": "시리즈기업어음",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "NICE",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "NICE"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2028-01-31",
+   "days": 455,
+   "amount": 400.0,
+   "arranger": "신한은행",
+   "asset_manager": "신한은행",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "매입보장",
+     "detail": "㈜신한은행과 체결한 유동화증권 매입보장약정을 통해 통제 방위험"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "기업매출채권 유동화",
+   "asset": "참가계약에 따라 신한카드㈜로부터 참가대상자산에 대한 회수금원을 지급받을 권리",
+   "detail_source": "NICE",
+   "reports": [
+    {
+     "agency": "NICE",
+     "url": "https://www.nicerating.com/common/fileDown.do?docId=f98d6f7d-d7ef-4b85-bfff-ea4cd63b1337"
+    }
+   ],
+   "kofia": {
+    "status": "pending"
+   }
+  },
+  {
+   "spc": "유토피아레드",
+   "kind": "ABSTB",
+   "series": "13회차",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "NICE",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-10-30"
+    }
+   ],
+   "agencies": [
+    "NICE",
+    "한기평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-01-31",
+   "days": 90,
+   "amount": 140.0,
+   "arranger": "키움증권",
+   "asset_manager": "키움증권",
+   "supports": [
+    {
+     "company": "키움증권",
+     "summary": "사모사채 인수확약·매입확약·자금보충",
+     "detail": "키움증권㈜의 대출채권 매입, 사모사채 인수 및 자금보충 의무로 통제"
+    }
+   ],
+   "pf": "PF",
+   "deal_type": "대출채권 유동화(CDO)",
+   "asset": "대출채권 (차주 : 여수육이이피에프브이㈜)",
+   "detail_source": "NICE",
+   "reports": [
+    {
+     "agency": "NICE",
+     "url": "https://www.nicerating.com/common/fileDown.do?docId=0dc46dd3-88b8-4457-a940-fc3ffe5f3b4a"
+    },
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=lDZ99qpXpZbjvQfW7V2t96Qb%40dPvfLF%40cq5gIbMfeDI%3D&encSvcSeqNo=3aOdcIr%40OjuTa1SPj8Ka7A%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=235084&compNm=%EC%9C%A0%ED%86%A0%ED%94%BC%EC%95%84%EB%A0%88%EB%93%9C%28%EC%A3%BC%29"
+    }
+   ],
+   "kofia": {
+    "status": "pending"
+   }
+  },
+  {
    "spc": "우리유진제일차",
    "kind": "ABCP",
    "series": "제11회차",
@@ -226,7 +550,63 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 3.99,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "우리사랑제20차",
+   "kind": "ABCP",
+   "series": "제4회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-05-06",
+   "days": 185,
+   "amount": 2450.0,
+   "arranger": "부국증권",
+   "asset_manager": "부국증권",
+   "supports": [
+    {
+     "company": "우리은행",
+     "summary": "정기예금",
+     "detail": "(주)우리은행의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=GUYi1ekmGEhBGRpbZ142xaLv3AAV5mC.McCX1mYJo8w%3D&encSvcSeqNo=fjeDJjSQIIlQoYe.LFN2Kg%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=227829&compNm=%EC%9A%B0%EB%A6%AC%EC%82%AC%EB%9E%91%EC%A0%9C20%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-15.pdf&fileTitle=%EC%9A%B0%EB%A6%AC%EC%82%AC%EB%9E%91%EC%A0%9C20%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.034,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
    }
   },
   {
@@ -283,7 +663,9 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 4.0,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
@@ -377,7 +759,9 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 5.606,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
@@ -420,6 +804,266 @@
    ],
    "kofia": {
     "status": "pending"
+   }
+  },
+  {
+   "spc": "아이스뉴빌리지",
+   "kind": "ABSTB",
+   "series": "제1회차",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "NICE",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "NICE"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2026-11-03",
+   "days": 1,
+   "amount": 100.0,
+   "arranger": "하나증권",
+   "asset_manager": null,
+   "supports": [
+    {
+     "company": "삼성증권",
+     "summary": "RP 환매",
+     "detail": "환매조건부채권 매도자인 삼성증권㈜의 신용도, 환매조건부채권 운용기간 등을 고려할 때 신용위험은 평가등급에 상응하는 수준"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO",
+   "asset": "환매조건부채권",
+   "detail_source": "NICE",
+   "reports": [
+    {
+     "agency": "NICE",
+     "url": "https://www.nicerating.com/common/fileDown.do?docId=64779a74-1116-4b3f-b400-da6efed10c5e"
+    }
+   ],
+   "kofia": {
+    "rate": 3.3,
+    "trade_date": "2026-11-02",
+    "source": "매출"
+   }
+  },
+  {
+   "spc": "신한챔피온제이차",
+   "kind": "ABCP",
+   "series": "제4-5회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "NICE",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "NICE",
+    "한기평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-10-01",
+   "days": 333,
+   "amount": 5.0,
+   "arranger": "유진투자증권",
+   "asset_manager": "유진투자증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "정기예금 원리금 상환 의무자인 ㈜신한은행의 신용도 수준으로 통제"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "정기예금 유동화(CDO)",
+   "asset": "㈜신한은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+   "detail_source": "NICE",
+   "reports": [
+    {
+     "agency": "NICE",
+     "url": "https://www.nicerating.com/common/fileDown.do?docId=84023cd9-8766-4a0f-9904-dc03840d2932"
+    },
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=kWR2gtFd1OSjpPMdTWQJdegtB7RUWvMRv87rKhe80Oo%3D&encSvcSeqNo=68G1m19BcYOa21LwwtXfbw%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=214421&compNm=%EC%8B%A0%ED%95%9C%EC%B1%94%ED%94%BC%EC%98%A8%EC%A0%9C%EC%9D%B4%EC%B0%A8%28%EC%A3%BC%29"
+    }
+   ],
+   "kofia": {
+    "rate": 4.5,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "신한챔피온제이차",
+   "kind": "ABCP",
+   "series": "제4-3회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "NICE",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "NICE",
+    "한기평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-02-11",
+   "days": 101,
+   "amount": 800.0,
+   "arranger": "유진투자증권",
+   "asset_manager": "유진투자증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "정기예금 원리금 상환 의무자인 ㈜신한은행의 신용도 수준으로 통제"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "정기예금 유동화(CDO)",
+   "asset": "㈜신한은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+   "detail_source": "NICE",
+   "reports": [
+    {
+     "agency": "NICE",
+     "url": "https://www.nicerating.com/common/fileDown.do?docId=84023cd9-8766-4a0f-9904-dc03840d2932"
+    },
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=kWR2gtFd1OSjpPMdTWQJdegtB7RUWvMRv87rKhe80Oo%3D&encSvcSeqNo=68G1m19BcYOa21LwwtXfbw%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=214421&compNm=%EC%8B%A0%ED%95%9C%EC%B1%94%ED%94%BC%EC%98%A8%EC%A0%9C%EC%9D%B4%EC%B0%A8%28%EC%A3%BC%29"
+    }
+   ],
+   "kofia": {
+    "rate": 4.5,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "신한챔피온제이차",
+   "kind": "ABCP",
+   "series": "제4-2회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "NICE",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "NICE",
+    "한기평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-04-02",
+   "days": 151,
+   "amount": 1400.0,
+   "arranger": "유진투자증권",
+   "asset_manager": "유진투자증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "정기예금 원리금 상환 의무자인 ㈜신한은행의 신용도 수준으로 통제"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "정기예금 유동화(CDO)",
+   "asset": "㈜신한은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+   "detail_source": "NICE",
+   "reports": [
+    {
+     "agency": "NICE",
+     "url": "https://www.nicerating.com/common/fileDown.do?docId=84023cd9-8766-4a0f-9904-dc03840d2932"
+    },
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=kWR2gtFd1OSjpPMdTWQJdegtB7RUWvMRv87rKhe80Oo%3D&encSvcSeqNo=68G1m19BcYOa21LwwtXfbw%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=214421&compNm=%EC%8B%A0%ED%95%9C%EC%B1%94%ED%94%BC%EC%98%A8%EC%A0%9C%EC%9D%B4%EC%B0%A8%28%EC%A3%BC%29"
+    }
+   ],
+   "kofia": {
+    "rate": 4.5,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "신한챔피온제이차",
+   "kind": "ABCP",
+   "series": "제4-1회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "NICE",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "NICE",
+    "한기평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-06-03",
+   "days": 213,
+   "amount": 200.0,
+   "arranger": "유진투자증권",
+   "asset_manager": "유진투자증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "정기예금 원리금 상환 의무자인 ㈜신한은행의 신용도 수준으로 통제"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "정기예금 유동화(CDO)",
+   "asset": "㈜신한은행의 정기예금으로 운용되는 특정금전신탁 수익권",
+   "detail_source": "NICE",
+   "reports": [
+    {
+     "agency": "NICE",
+     "url": "https://www.nicerating.com/common/fileDown.do?docId=84023cd9-8766-4a0f-9904-dc03840d2932"
+    },
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=kWR2gtFd1OSjpPMdTWQJdegtB7RUWvMRv87rKhe80Oo%3D&encSvcSeqNo=68G1m19BcYOa21LwwtXfbw%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=214421&compNm=%EC%8B%A0%ED%95%9C%EC%B1%94%ED%94%BC%EC%98%A8%EC%A0%9C%EC%9D%B4%EC%B0%A8%28%EC%A3%BC%29"
+    }
+   ],
+   "kofia": {
+    "rate": 4.5,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
    }
   },
   {
@@ -528,7 +1172,9 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 4.7,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
@@ -570,7 +1216,225 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 3.65,
+    "trade_date": "2026-11-02",
+    "source": "매출"
+   }
+  },
+  {
+   "spc": "레티스제오차",
+   "kind": "ABCP",
+   "series": "제1-4회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-10-29",
+   "days": 361,
+   "amount": 2.67,
+   "arranger": "부국증권",
+   "asset_manager": "부국증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "(주)신한은행의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=GlUsLQRxd3QCoTyLZ.43WZdSi1rP5tXk6V81bmaeYEU%3D&encSvcSeqNo=LJBKMoNQFB7v2vEWqzTHQQ%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=240564&compNm=%EB%A0%88%ED%8B%B0%EC%8A%A4%EC%A0%9C%EC%98%A4%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-17.pdf&fileTitle=%EB%A0%88%ED%8B%B0%EC%8A%A4%EC%A0%9C%EC%98%A4%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.3,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "레티스제오차",
+   "kind": "ABCP",
+   "series": "제1-3회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-04-06",
+   "days": 155,
+   "amount": 1000.0,
+   "arranger": "부국증권",
+   "asset_manager": "부국증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "(주)신한은행의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=GlUsLQRxd3QCoTyLZ.43WZdSi1rP5tXk6V81bmaeYEU%3D&encSvcSeqNo=LJBKMoNQFB7v2vEWqzTHQQ%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=240564&compNm=%EB%A0%88%ED%8B%B0%EC%8A%A4%EC%A0%9C%EC%98%A4%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-17.pdf&fileTitle=%EB%A0%88%ED%8B%B0%EC%8A%A4%EC%A0%9C%EC%98%A4%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.3,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "레티스제오차",
+   "kind": "ABCP",
+   "series": "제1-2회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-07-30",
+   "days": 270,
+   "amount": 0.73,
+   "arranger": "부국증권",
+   "asset_manager": "부국증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "(주)신한은행의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=GlUsLQRxd3QCoTyLZ.43WZdSi1rP5tXk6V81bmaeYEU%3D&encSvcSeqNo=LJBKMoNQFB7v2vEWqzTHQQ%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=240564&compNm=%EB%A0%88%ED%8B%B0%EC%8A%A4%EC%A0%9C%EC%98%A4%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-17.pdf&fileTitle=%EB%A0%88%ED%8B%B0%EC%8A%A4%EC%A0%9C%EC%98%A4%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.3,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "레티스제오차",
+   "kind": "ABCP",
+   "series": "제1-1회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-01-29",
+   "days": 88,
+   "amount": 500.0,
+   "arranger": "부국증권",
+   "asset_manager": "부국증권",
+   "supports": [
+    {
+     "company": "신한은행",
+     "summary": "정기예금",
+     "detail": "(주)신한은행의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=GlUsLQRxd3QCoTyLZ.43WZdSi1rP5tXk6V81bmaeYEU%3D&encSvcSeqNo=LJBKMoNQFB7v2vEWqzTHQQ%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=240564&compNm=%EB%A0%88%ED%8B%B0%EC%8A%A4%EC%A0%9C%EC%98%A4%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-17.pdf&fileTitle=%EB%A0%88%ED%8B%B0%EC%8A%A4%EC%A0%9C%EC%98%A4%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.3,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
    }
   },
   {
@@ -612,7 +1476,9 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 5.7,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
@@ -674,7 +1540,9 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 4.22,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
    }
   },
   {
@@ -726,7 +1594,9 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 3.7,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
@@ -768,7 +1638,9 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 4.4,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
@@ -810,7 +1682,225 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 4.4,
+    "trade_date": "2026-11-02",
+    "source": "매출"
+   }
+  },
+  {
+   "spc": "농협사랑제3차",
+   "kind": "ABCP",
+   "series": "제5-3회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-09-03",
+   "days": 305,
+   "amount": 400.0,
+   "arranger": "부국증권",
+   "asset_manager": "부국증권",
+   "supports": [
+    {
+     "company": "농협은행",
+     "summary": "정기예금",
+     "detail": "농협은행(주)의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=HJS2jrJH5XTLM4smIwdPNEGak%40mCMp4DXcFepDD.49U%3D&encSvcSeqNo=lMUZ8%40blRDGFy%40zLUIui9g%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=222631&compNm=%EB%86%8D%ED%98%91%EC%82%AC%EB%9E%91%EC%A0%9C3%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-14.pdf&fileTitle=%EB%86%8D%ED%98%91%EC%82%AC%EB%9E%91%EC%A0%9C3%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.103,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "농협사랑제3차",
+   "kind": "ABCP",
+   "series": "제5-2회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-06-03",
+   "days": 213,
+   "amount": 800.0,
+   "arranger": "부국증권",
+   "asset_manager": "부국증권",
+   "supports": [
+    {
+     "company": "농협은행",
+     "summary": "정기예금",
+     "detail": "농협은행(주)의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=HJS2jrJH5XTLM4smIwdPNEGak%40mCMp4DXcFepDD.49U%3D&encSvcSeqNo=lMUZ8%40blRDGFy%40zLUIui9g%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=222631&compNm=%EB%86%8D%ED%98%91%EC%82%AC%EB%9E%91%EC%A0%9C3%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-14.pdf&fileTitle=%EB%86%8D%ED%98%91%EC%82%AC%EB%9E%91%EC%A0%9C3%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.103,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "농협사랑제3차",
+   "kind": "ABCP",
+   "series": "제5-1회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2027-05-06",
+   "days": 185,
+   "amount": 1250.0,
+   "arranger": "부국증권",
+   "asset_manager": "부국증권",
+   "supports": [
+    {
+     "company": "농협은행",
+     "summary": "정기예금",
+     "detail": "농협은행(주)의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=HJS2jrJH5XTLM4smIwdPNEGak%40mCMp4DXcFepDD.49U%3D&encSvcSeqNo=lMUZ8%40blRDGFy%40zLUIui9g%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=222631&compNm=%EB%86%8D%ED%98%91%EC%82%AC%EB%9E%91%EC%A0%9C3%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-14.pdf&fileTitle=%EB%86%8D%ED%98%91%EC%82%AC%EB%9E%91%EC%A0%9C3%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.103,
+    "trade_date": "2026-11-02",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "농협사랑제3차",
+   "kind": "ABSTB",
+   "series": "제2회",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한기평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    },
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한기평",
+    "한신평"
+   ],
+   "issue_date": "2026-11-02",
+   "maturity": "2026-11-03",
+   "days": 1,
+   "amount": 600.0,
+   "arranger": "부국증권",
+   "asset_manager": "부국증권",
+   "supports": [
+    {
+     "company": "농협은행",
+     "summary": "정기예금",
+     "detail": "농협은행(주)의 정기예금 원리금 지급의무"
+    }
+   ],
+   "pf": "일반",
+   "deal_type": "CDO(정기예금 유동화)",
+   "asset": "특정금전신탁 수익권",
+   "detail_source": "한기평",
+   "reports": [
+    {
+     "agency": "한기평",
+     "url": "https://www.korearatings.com/ajaxa/fileCpnt/reportFileDown.do?encFileNm=HJS2jrJH5XTLM4smIwdPNEGak%40mCMp4DXcFepDD.49U%3D&encSvcSeqNo=lMUZ8%40blRDGFy%40zLUIui9g%3D%3D&evalNo=1&rptNo=03&fileName=&compCd=222631&compNm=%EB%86%8D%ED%98%91%EC%82%AC%EB%9E%91%EC%A0%9C3%EC%B0%A8%28%EC%A3%BC%29"
+    },
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-14.pdf&fileTitle=%EB%86%8D%ED%98%91%EC%82%AC%EB%9E%91%EC%A0%9C3%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 3.1,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
@@ -1123,7 +2213,9 @@
     }
    ],
    "kofia": {
-    "status": "pending"
+    "rate": 3.75,
+    "trade_date": "2026-11-02",
+    "source": "매출"
    }
   },
   {
@@ -7874,6 +8966,82 @@
     "rate": 4.0,
     "trade_date": "2026-10-29",
     "source": "매출"
+   }
+  },
+  {
+   "spc": "엘이피제사차",
+   "kind": "ABCP",
+   "series": "제2-23회차",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한신평"
+   ],
+   "issue_date": "2026-10-29",
+   "maturity": "2027-01-29",
+   "days": 92,
+   "amount": 280.0,
+   "arranger": "신한은행",
+   "asset_manager": "신한은행",
+   "supports": [],
+   "pf": "일반",
+   "deal_type": "CDO",
+   "asset": "집합투자기구 수익증권",
+   "detail_source": "한신평",
+   "reports": [
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-9.pdf&fileTitle=%EC%97%98%EC%9D%B4%ED%94%BC%EC%A0%9C%EC%82%AC%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.07,
+    "trade_date": "2026-10-29",
+    "source": "직접매입(할인)"
+   }
+  },
+  {
+   "spc": "엘이피제사차",
+   "kind": "ABCP",
+   "series": "제1-23회차",
+   "grade": "A1",
+   "ratings": [
+    {
+     "agency": "한신평",
+     "grade": "A1",
+     "eval_date": "2026-11-02"
+    }
+   ],
+   "agencies": [
+    "한신평"
+   ],
+   "issue_date": "2026-10-29",
+   "maturity": "2027-01-29",
+   "days": 92,
+   "amount": 450.0,
+   "arranger": "신한은행",
+   "asset_manager": "신한은행",
+   "supports": [],
+   "pf": "일반",
+   "deal_type": "CDO",
+   "asset": "집합투자기구 수익증권",
+   "detail_source": "한신평",
+   "reports": [
+    {
+     "agency": "한신평",
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-9.pdf&fileTitle=%EC%97%98%EC%9D%B4%ED%94%BC%EC%A0%9C%EC%82%AC%EC%B0%A8&writedate=20261102"
+    }
+   ],
+   "kofia": {
+    "rate": 4.07,
+    "trade_date": "2026-10-29",
+    "source": "직접매입(할인)"
    }
   },
   {
@@ -15514,7 +16682,7 @@
    "reports": [
     {
      "agency": "NICE",
-     "url": "https://www.nicerating.com/common/fileDown.do?docId=1ea739c8-ccac-4636-a51f-0a4ae8f2a978"
+     "url": "https://www.nicerating.com/common/fileDown.do?docId=c9b77546-7fcf-4313-ba23-eaee1e64cd6d"
     }
    ],
    "kofia": {
@@ -17831,7 +18999,7 @@
    "reports": [
     {
      "agency": "NICE",
-     "url": "https://www.nicerating.com/common/fileDown.do?docId=1ea739c8-ccac-4636-a51f-0a4ae8f2a978"
+     "url": "https://www.nicerating.com/common/fileDown.do?docId=c9b77546-7fcf-4313-ba23-eaee1e64cd6d"
     },
     {
      "agency": "한기평",
@@ -20887,11 +22055,11 @@
    "spc": "글로벌랜드마크제일차",
    "kind": "ABSTB",
    "series": "제1-21회",
-   "grade": "A2-",
+   "grade": "취소",
    "ratings": [
     {
      "agency": "NICE",
-     "grade": "A2-",
+     "grade": "취소",
      "eval_date": "2026-10-22"
     }
    ],
@@ -20899,9 +22067,9 @@
     "NICE"
    ],
    "issue_date": "2026-10-23",
-   "maturity": "2027-01-22",
-   "days": 91,
-   "amount": 440.0,
+   "maturity": "2026-12-02",
+   "days": 40,
+   "amount": 437.0,
    "arranger": "다올투자증권",
    "asset_manager": "다올투자증권",
    "supports": [
@@ -45956,7 +47124,7 @@
     {
      "agency": "한신평",
      "grade": "A1",
-     "eval_date": "2026-10-07"
+     "eval_date": "2026-11-02"
     }
    ],
    "agencies": [
@@ -45987,7 +47155,7 @@
     },
     {
      "agency": "한신평",
-     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261007-22.pdf&fileTitle=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8&writedate=20261007"
+     "url": "https://www.kisrating.com/fileDown.do?menuCd=R8&gubun=2&fileName=rs20261102-5.pdf&fileTitle=%ED%95%9C%EC%86%94%EC%A0%9C%EC%82%AC%EC%8B%AD%EA%B5%AC%EC%B0%A8&writedate=20261102"
     }
    ],
    "kofia": {
