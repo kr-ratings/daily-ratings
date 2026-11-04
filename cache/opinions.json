@@ -182090,5 +182090,251 @@
   "deal_type": "MMT수익권 유동화",
   "asset": "MMT수익권",
   "obligor": null
+ },
+ "한신평:rs20261102-13.pdf": {
+  "schedule": [
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 600.0,
+    "issue": "2026-11-02",
+    "maturity": "2026-11-03",
+    "grade": "A1"
+   },
+   {
+    "series": "제5-1회",
+    "kind": "ABCP",
+    "amount": 1250.0,
+    "issue": "2026-11-02",
+    "maturity": "2027-05-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제5-2회",
+    "kind": "ABCP",
+    "amount": 800.0,
+    "issue": "2026-11-02",
+    "maturity": "2027-06-03",
+    "grade": "A1"
+   },
+   {
+    "series": "제5-3회",
+    "kind": "ABCP",
+    "amount": 400.0,
+    "issue": "2026-11-02",
+    "maturity": "2027-09-03",
+    "grade": "A1"
+   },
+   {
+    "series": "제4-1회",
+    "kind": "ABCP",
+    "amount": 2450.0,
+    "issue": "2026-03-06",
+    "maturity": "2026-12-15",
+    "grade": "A1"
+   },
+   {
+    "series": "제4-2회",
+    "kind": "ABCP",
+    "amount": 500.0,
+    "issue": "2026-03-10",
+    "maturity": "2026-12-15",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [
+   {
+    "company": "농협은행",
+    "detail": "농협은행(주)의 정기예금 원리금 지급의무"
+   }
+  ],
+  "deal_type": "CDO(정기예금 유동화)",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "NICE:d88e5f0f-cd7c-49f7-8843-828814986407": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABSTB",
+    "amount": 1000.0,
+    "issue": "2026-11-04",
+    "maturity": "2027-02-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 1000.0,
+    "issue": "2027-02-04",
+    "maturity": "2027-05-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABSTB",
+    "amount": 1000.0,
+    "issue": "2027-05-04",
+    "maturity": "2027-08-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABSTB",
+    "amount": 1000.0,
+    "issue": "2027-08-04",
+    "maturity": "2027-11-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABSTB",
+    "amount": 1000.0,
+    "issue": "2027-11-04",
+    "maturity": "2028-02-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABSTB",
+    "amount": 1000.0,
+    "issue": "2028-02-04",
+    "maturity": "2028-05-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABSTB",
+    "amount": 1000.0,
+    "issue": "2028-05-04",
+    "maturity": "2028-08-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABSTB",
+    "amount": 1000.0,
+    "issue": "2028-08-04",
+    "maturity": "2028-11-03",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "엔에이치투자증권㈜",
+  "asset_manager": "엔에이치투자증권㈜",
+  "supports": [
+   {
+    "company": "롯데카드",
+    "detail": "대출원리금 상환의무를 부담하는 롯데카드㈜의 신용도 수준으로 통제"
+   },
+   {
+    "company": "엔에이치투자증권",
+    "detail": "엔에이치투자증권㈜의 유동화증권 매입보장의무로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : 롯데카드㈜)",
+  "obligor": null
+ },
+ "NICE:24890605-f757-43a4-94dc-bba09505a41c": {
+  "schedule": [
+   {
+    "series": "제1회차",
+    "kind": "ABSTB",
+    "amount": 360.0,
+    "issue": "2026-11-04",
+    "maturity": "2026-12-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회차",
+    "kind": "ABSTB",
+    "amount": 360.0,
+    "issue": "2026-12-04",
+    "maturity": "2027-02-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회차",
+    "kind": "ABSTB",
+    "amount": 360.0,
+    "issue": "2027-02-04",
+    "maturity": "2027-05-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회차",
+    "kind": "ABSTB",
+    "amount": 360.0,
+    "issue": "2027-05-04",
+    "maturity": "2027-08-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회차",
+    "kind": "ABSTB",
+    "amount": 360.0,
+    "issue": "2027-08-04",
+    "maturity": "2027-11-04",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "메리츠증권㈜",
+  "asset_manager": "메리츠증권㈜",
+  "supports": [
+   {
+    "company": "메리츠증권",
+    "detail": "메리츠증권㈜의 사모사채 인수 확약으로 통제"
+   }
+  ],
+  "deal_type": "Project Finance 유동화",
+  "asset": "PF대출채권 및 부수담보권 (차주 : ㈜디케이마포홀딩스)",
+  "obligor": null
+ },
+ "한기평:Y38kaVlL41TTGLBt5m8SRW.Yn7PkUpRdJCoZN9DknMw=": {
+  "schedule": [
+   {
+    "series": "제9-3회",
+    "kind": "ABCP",
+    "amount": 1500.0,
+    "issue": "2026-11-04",
+    "maturity": "2027-06-15",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권(주)",
+  "asset_manager": "부국증권(주)",
+  "supports": [],
+  "deal_type": "정기예금 유동화",
+  "asset": "특정금전신탁 수익권",
+  "obligor": null
+ },
+ "한기평:8KRUQeugeH@9s1c4AAi01WTXAl2sdmUM5XTEEOPvyVY=": {
+  "schedule": [
+   {
+    "series": "제17회",
+    "kind": "ABSTB",
+    "amount": 732.0,
+    "issue": "2026-11-04",
+    "maturity": "2027-02-24",
+    "grade": "A2"
+   }
+  ],
+  "arranger": "한국투자증권(주)",
+  "asset_manager": "한국투자증권(주)",
+  "supports": [
+   {
+    "company": "현대카드",
+    "detail": "참가계약 거래상대방인 현대카드㈜ 및 롯데카드㈜의 신용도"
+   },
+   {
+    "company": "롯데카드",
+    "detail": "참가계약 거래상대방인 현대카드㈜ 및 롯데카드㈜의 신용도"
+   }
+  ],
+  "deal_type": "카드대금채권 유동화",
+  "asset": "카드대금채권 참가계약에 따른 참가권",
+  "obligor": null
  }
 }
