@@ -297,6 +297,8 @@ def main() -> int:
         manager = p.get("asset_manager")
         asset = p.get("asset") or nd.get("기초자산")
         supports = p.get("supports") or ([{"company": nd["신용공여기관"], "detail": "신용공여기관"}] if nd.get("신용공여기관") else [])
+        # 예전 파싱 결과(캐시)에 남은 오인식 회사명(예: '(주) 자금보충'의 '자금보충')은 현재 규칙으로 다시 걸러낸다
+        supports = [s for s in supports if s.get("detail") == "신용공여기관" or s["company"] in op.companies(s.get("detail", ""))]
         pf = is_pf(p.get("deal_type"), asset) or bool(km.get("pf"))
         issue, mat = parse_date(m["issue"]), parse_date(m["maturity"])
         agencies = sorted(m["ratings"], key=AGENCY_PRIORITY.index)
