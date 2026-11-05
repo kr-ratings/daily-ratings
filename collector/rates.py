@@ -21,6 +21,7 @@ ITEMS = {
     "CP91": ("010503000", "CP 91일", "A1 기준"),
     "CD91": ("010502000", "CD 91일", "AAA 은행"),
     "KTB3": ("010200000", "국고채 3년", "지표물"),
+    "AA3": ("010300000", "회사채 3년", "무보증 AA-"),
 }
 BASE = "https://ecos.bok.or.kr/api/StatisticSearch"
 
@@ -55,7 +56,8 @@ def _fetch_item(sess, key: str, code: str, start: str, end: str) -> list[dict]:
 # 먼저 채운다. 응답 열 구성이 문서화돼 있지 않아, ECOS에 이미 있는 최근 2영업일 값과 정확히
 # 일치하는 열을 찾아 그 열을 '15:30 최종호가'로 쓴다(맞는 열이 없으면 보강하지 않음).
 KOFIA_URL = "https://www.kofiabond.or.kr/proframeWeb/XMLSERVICES/"
-KOFIA_NAMES = {"KTB3": re.compile(r"국고채?권?\(?3년"), "CD91": re.compile(r"CD(수익률)?\(?91일"), "CP91": re.compile(r"CP\(?91일")}
+KOFIA_NAMES = {"KTB3": re.compile(r"국고채?권?\(?3년"), "CD91": re.compile(r"CD(수익률)?\(?91일"), "CP91": re.compile(r"CP\(?91일"),
+               "AA3": re.compile(r"회사채\(?무보증3년\)?AA-")}
 _ROW = re.compile(r"<BISComDspDatDTO>(.*?)</BISComDspDatDTO>", re.S)
 _VAL = re.compile(r"<(val\d+)>([^<]*)</\1>")
 
@@ -170,19 +172,30 @@ def collect(days: int = 40, base: dict | None = None) -> dict:
     end = today_kst()
     keep_from = (end - dt.timedelta(days=HIST_DAYS)).isoformat()
     old = (base or {}).get("series") or {}
-    full = any(not old.get(k, {}).get("points") or old[k]["points"][0]["d"] > (end - dt.timedelta(days=HIST_DAYS - 40)).isoformat()
-               for k in ITEMS)
-    start = end - dt.timedelta(days=HIST_DAYS if full else days)
+    thin = (end - dt.timedelta(days=HIST_DAYS - 40)).isoformat()
     series = {}
     for k, (code, name, tag) in ITEMS.items():
-        fresh = _fetch_item(sess, key, code, start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
+        prev = old.get(k, {}).get("points") or []
+        full = not prev or prev[0]["d"] > thin  # 이 금리만 10년치가 모자라면 10년치를 받는다
+        start = end - dt.timedelta(days=HIST_DAYS if full else days)
+        try:
+            fresh = _fetch_item(sess, key, code, start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
+        except Exception as e:  # noqa: BLE001  한 금리 실패가 나머지를 막지 않게
+            log(f"ECOS {k} 실패: {e}")
+            if not prev:
+                continue
+            fresh = []
         merged = {}
-        if fresh and not full:
+        if not full or not fresh:
             # 직전 파일의 값 중 이번 ECOS 최신일 이후분(지난번 KOFIA 보강분)은 버리고 다시 판단한다
-            merged = {p["d"]: p["v"] for p in old.get(k, {}).get("points", []) if p["d"] <= fresh[-1]["d"]}
+            last = fresh[-1]["d"] if fresh else max(p["d"] for p in prev)
+            merged = {p["d"]: p["v"] for p in prev if p["d"] <= last}
         merged.update({p["d"]: p["v"] for p in fresh})
         pts = [{"d": d, "v": v} for d, v in sorted(merged.items()) if d >= keep_from]
-        series[k] = {"name": name, "tag": tag, "points": pts}
+        if pts:
+            series[k] = {"name": name, "tag": tag, "points": pts}
+    if not series:
+        raise RuntimeError("ECOS 금리를 하나도 받지 못함")
     prelim = None
     try:
         prelim = kofia_topup(sess, series, end)
