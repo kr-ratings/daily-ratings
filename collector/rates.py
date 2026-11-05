@@ -178,6 +178,9 @@ def collect(days: int = 40, base: dict | None = None) -> dict:
         prev = old.get(k, {}).get("points") or []
         full = not prev or prev[0]["d"] > thin  # 이 금리만 10년치가 모자라면 10년치를 받는다
         start = end - dt.timedelta(days=HIST_DAYS if full else days)
+        if prev and not full:
+            # 지난번 수집이 중간에 끊겨 최근분이 비어 있으면 마지막 날짜부터 이어 받는다
+            start = min(start, dt.date.fromisoformat(prev[-1]["d"]))
         try:
             fresh = _fetch_item(sess, key, code, start.strftime("%Y%m%d"), end.strftime("%Y%m%d"))
         except Exception as e:  # noqa: BLE001  한 금리 실패가 나머지를 막지 않게
