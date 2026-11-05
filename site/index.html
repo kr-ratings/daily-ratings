@@ -65,6 +65,9 @@ h2{font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--muted);marg
 .sec-head .note{font-size:.78rem;color:var(--muted)}
 .rhead{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;justify-content:flex-end}
 .seg.sm button{padding:4px 10px;font-size:.78rem}
+.rrange{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;color:var(--muted)}
+.rrange input{font:inherit;font-family:var(--f-mono);font-size:.76rem;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:3px 6px;color-scheme:light dark}
+.rrange input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .pchg{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);font-variant-numeric:tabular-nums}
 
 .rates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border:1px solid var(--line);border-radius:10px}
@@ -237,6 +240,9 @@ footer .ct{white-space:nowrap}
           <button type="button" data-v="60" aria-pressed="false">5년</button>
           <button type="button" data-v="120" aria-pressed="false">10년</button>
         </div>
+        <div class="rrange" role="group" aria-label="금리 조회기간 직접 지정">
+          <input type="date" id="rp-from" aria-label="시작일"><span>~</span><input type="date" id="rp-to" aria-label="종료일">
+        </div>
       </div>
     </div>
     <div class="rates" id="rates"><div class="placeholder">금리 불러오는 중…</div></div>
@@ -308,11 +314,17 @@ const getJSON = async p => { try { const r = await fetch(p, {cache:"no-store"});
 
 // ---------------- 시장금리 ----------------
 const SER={};
-let RP=12, RDATA=null;  // 금리 조회기간(개월), 기본 1년
+// 금리 조회기간: 버튼(RP개월, 기본 1년) 또는 시작·종료일 직접 지정(RP=null, RS~RE)
+let RP=12, RS=null, RE=null, RDATA=null;
 document.querySelectorAll("#seg-rp button").forEach(b=>b.addEventListener("click",()=>{
-  document.querySelectorAll("#seg-rp button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
-  RP=+b.dataset.v; if(RDATA) renderRates(RDATA);
+  RP=+b.dataset.v; RS=RE=null; if(RDATA) renderRates(RDATA);
 }));
+["rp-from","rp-to"].forEach(id=>$("#"+id).addEventListener("change",()=>{
+  let a=$("#rp-from").value, b=$("#rp-to").value; if(!a||!b) return;
+  if(a>b) [a,b]=[b,a];
+  RP=null; RS=a; RE=b; if(RDATA) renderRates(RDATA);
+}));
+const isoShift=(d,m)=>{ const x=new Date(d+"T00:00:00Z"); x.setUTCMonth(x.getUTCMonth()-m); return x.toISOString().slice(0,10); };
 const SW=240, SH=96, SP=5;  // spark()의 W·H·p와 같게
 function sparkAt(box, i){
   const s=SER[box.dataset.k]; if(!s) return;
@@ -364,20 +376,28 @@ function renderRates(R){
   $("#rates-note").textContent=R.prelim&&R.prelim.date===R.asof
     ?"한국은행(ECOS) 시장금리(일별) · 당일분은 금융투자협회 최종호가(15:30)"
     :"한국은행(ECOS) 시장금리(일별)";
-  const RPL={1:"1개월",3:"3개월",6:"6개월",12:"1년",36:"3년",60:"5년",120:"10년"}[RP]||`${RP}개월`;
+  // 조회 구간 [from, to]: 버튼이면 마지막 자료일 기준 RP개월, 직접 지정이면 RS~RE
+  const allD=Object.values(R.series).flatMap(s=>s.points.length?[s.points[0].d,s.points[s.points.length-1].d]:[]);
+  const minD=allD.reduce((a,b)=>a<b?a:b), maxD=allD.reduce((a,b)=>a>b?a:b);
+  const from=RP?isoShift(maxD,RP):RS, to=RP?maxD:RE;
+  const RPL=RP?({1:"1개월",3:"3개월",6:"6개월",12:"1년",36:"3년",60:"5년",120:"10년"}[RP]||`${RP}개월`):"기간";
+  document.querySelectorAll("#seg-rp button").forEach(x=>x.setAttribute("aria-pressed",String(+x.dataset.v===RP)));
+  const fi=$("#rp-from"), ti=$("#rp-to");
+  fi.min=ti.min=minD; fi.max=ti.max=maxD; fi.value=from<minD?minD:from; ti.value=to;
   const order=["CP91","CD91","KTB3","AA3"], dp={CP91:2,CD91:2,KTB3:3,AA3:3}, last={};
   el.innerHTML="";
   for(const k of order){
     const s=R.series[k]; if(!s||!s.points.length) continue;
-    // 선택한 기간(마지막 자료일 기준 달력 RP개월)
-    const c0=new Date(s.points[s.points.length-1].d+"T00:00:00Z"); c0.setUTCMonth(c0.getUTCMonth()-RP);
-    const cut=c0.toISOString().slice(0,10);
-    const pts=s.points.filter(p=>p.d>=cut), vals=pts.map(p=>p.v), n=vals.length;
+    let pts=s.points.filter(p=>p.d>=from&&p.d<=to);
+    if(pts.length<2){ // 구간 안에 자료가 거의 없으면 종료일 직전 2개라도 보여준다
+      const upto=s.points.filter(p=>p.d<=to); pts=upto.slice(-2); if(!pts.length) pts=s.points.slice(0,2);
+    }
+    const vals=pts.map(p=>p.v), n=vals.length;
     const pbp=Math.round((vals[n-1]-vals[0])*1000)/10;
     const cur=vals[n-1], prev=n>1?vals[n-2]:cur, bp=Math.round((cur-prev)*1000)/10;
     last[k]=cur; SER[k]={pts,vals,dp:dp[k]};
     const cls=bp>0?"up":bp<0?"down":"flat", sign=bp>0?"▲ +":bp<0?"▼ ":"– ";
-    const md=d=>RP>=12?"'"+d.slice(2).replace(/-/g,"."):d.slice(5).replace("-","/");
+    const md=d=>RP&&RP<12?d.slice(5).replace("-","/"):"'"+d.slice(2).replace(/-/g,".");  // 직접 지정은 연도까지
     el.insertAdjacentHTML("beforeend",`<div class="rate">
       <div class="name"><b>${esc(s.name)}</b><span>${esc(s.tag)}</span></div>
       <div class="val"><span class="num">${cur.toFixed(dp[k])}<small>%</small></span>
