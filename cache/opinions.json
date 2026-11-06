@@ -185780,5 +185780,808 @@
   "deal_type": "ABL 유동화",
   "asset": null,
   "obligor": "화이트비버㈜"
+ },
+ "한신평:rs20261105-32.pdf": {
+  "schedule": [
+   {
+    "series": "제19회차",
+    "kind": "ABSTB",
+    "amount": 370.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-02-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제20회차",
+    "kind": "ABSTB",
+    "amount": 370.0,
+    "issue": "2027-02-06",
+    "maturity": "2027-05-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제21회차",
+    "kind": "ABSTB",
+    "amount": 370.0,
+    "issue": "2027-05-06",
+    "maturity": "2027-08-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제22회차",
+    "kind": "ABSTB",
+    "amount": 370.0,
+    "issue": "2027-08-06",
+    "maturity": "2027-11-06",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국투자증권(주)",
+  "asset_manager": "한국투자증권(주)",
+  "supports": [
+   {
+    "company": "한국투자증권",
+    "detail": "한국투자증권(주)의 대출채권 매입확약, 사모사채 인수 및 자금보충 의무"
+   }
+  ],
+  "deal_type": "대출채권 유동화",
+  "asset": "대출채권",
+  "obligor": null
+ },
+ "NICE:ae470dde-c57d-4a64-a7b1-00e9aa3ff36c": {
+  "schedule": [
+   {
+    "series": "제13회차",
+    "kind": "ABCP",
+    "amount": 345.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-04-06",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "교보증권㈜",
+  "asset_manager": "교보증권㈜",
+  "supports": [],
+  "deal_type": "Project Finance 유동화",
+  "asset": "PF대출채권 및 부수담보권 (차주 : 음성용산일반산업단지㈜)",
+  "obligor": null
+ },
+ "NICE:0914a304-3d3d-4f9e-bfdd-b0e9c64fcd69": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2026-11-06",
+    "maturity": "2026-11-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2026-11-30",
+    "maturity": "2027-02-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-02-28",
+    "maturity": "2027-05-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-05-31",
+    "maturity": "2027-08-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-08-31",
+    "maturity": "2027-11-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제6회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2027-11-30",
+    "maturity": "2028-02-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-02-29",
+    "maturity": "2028-05-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-05-31",
+    "maturity": "2028-08-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-08-31",
+    "maturity": "2028-11-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제10회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2028-11-30",
+    "maturity": "2029-02-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제11회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2029-02-28",
+    "maturity": "2029-05-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제12회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2029-05-31",
+    "maturity": "2029-08-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제13회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2029-08-31",
+    "maturity": "2029-11-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제14회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2029-11-30",
+    "maturity": "2030-02-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제15회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2030-02-28",
+    "maturity": "2030-05-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제16회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2030-05-31",
+    "maturity": "2030-08-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제17회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2030-08-31",
+    "maturity": "2030-11-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제18회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2030-11-30",
+    "maturity": "2031-02-28",
+    "grade": "A1"
+   },
+   {
+    "series": "제19회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2031-02-28",
+    "maturity": "2031-05-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제20회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2031-05-31",
+    "maturity": "2031-08-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제21회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2031-08-31",
+    "maturity": "2031-11-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제22회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2031-11-30",
+    "maturity": "2032-02-29",
+    "grade": "A1"
+   },
+   {
+    "series": "제23회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2032-02-29",
+    "maturity": "2032-05-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제24회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2032-05-31",
+    "maturity": "2032-08-02",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "㈜BNK투자증권",
+  "asset_manager": "㈜BNK투자증권",
+  "supports": [
+   {
+    "company": "BNK투자증권",
+    "detail": "㈜BNK투자증권의 사모사채 인수의무로 통제"
+   }
+  ],
+  "deal_type": "Project Finance 유동화",
+  "asset": "PF대출채권 및 부수담보권 (차주 : 신우개발㈜)",
+  "obligor": null
+ },
+ "NICE:ff1726a7-bdd1-4c6c-a735-67eb4d69fd8a": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABCP",
+    "amount": 835.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-11-05",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "키움증권㈜",
+  "asset_manager": "키움증권㈜",
+  "supports": [
+   {
+    "company": "호텔롯데",
+    "detail": "㈜호텔롯데의 자금보충 의무로 통제"
+   },
+   {
+    "company": "키움증권",
+    "detail": "키움증권㈜와 체결하는 외환스왑계약으로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : POSCO INTERNATIONAL GLOBAL DEVELOPMENT PTE. LTD.)",
+  "obligor": null
+ },
+ "NICE:458d169a-ff21-4668-9079-f539f5d073fe": {
+  "schedule": [],
+  "arranger": "한양증권㈜",
+  "asset_manager": "한양증권㈜",
+  "supports": [
+   {
+    "company": "키움캐피탈",
+    "detail": "사채 원리금 상환의무를 부담하는 키움캐피탈㈜의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "CDO",
+  "asset": "Straight bond (발행인 : 키움캐피탈㈜)",
+  "obligor": null
+ },
+ "NICE:7388261b-f6b7-4596-9d1b-86b742eaa793": {
+  "schedule": [
+   {
+    "series": "제335회",
+    "kind": "ABSTB",
+    "amount": 1469.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-01-05",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "부국증권㈜",
+  "asset_manager": "부국증권㈜",
+  "supports": [
+   {
+    "company": "에스케이에너지",
+    "detail": "카드이용대금 및 수수료 지급의무를 부담하는 에스케이에너지㈜의 신용도, 참가대상자산 에 관하여 하자담보책임을 부담하는 현대카드㈜의 신용도 수준으로 통제"
+   },
+   {
+    "company": "현대카드",
+    "detail": "카드이용대금 및 수수료 지급의무를 부담하는 에스케이에너지㈜의 신용도, 참가대상자산 에 관하여 하자담보책임을 부담하는 현대카드㈜의 신용도 수준으로 통제"
+   },
+   {
+    "company": "카드",
+    "detail": "참가계약에 따라 기초자산의 회수 및 회수금원의 지급 등을 수행하는 거래상대방인 현대 카드㈜의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "기업매출채권 유동화",
+  "asset": "현대카드㈜와의 참가계약에 따라 카드이용대금채권 관련 회수금원을 지급받을 권리",
+  "obligor": null
+ },
+ "NICE:c6c5d45f-7d60-4abd-9033-c598f1aaa71b": {
+  "schedule": [
+   {
+    "series": "제1회차",
+    "kind": "ABSTB",
+    "amount": 45.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-01-08",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회차",
+    "kind": "ABSTB",
+    "amount": 45.0,
+    "issue": "2027-01-08",
+    "maturity": "2027-03-31",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회차",
+    "kind": "ABSTB",
+    "amount": 45.0,
+    "issue": "2027-03-31",
+    "maturity": "2027-06-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회차",
+    "kind": "ABSTB",
+    "amount": 45.0,
+    "issue": "2027-06-30",
+    "maturity": "2027-09-30",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회차",
+    "kind": "ABSTB",
+    "amount": 45.0,
+    "issue": "2027-09-30",
+    "maturity": "2027-11-09",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "하나증권㈜",
+  "asset_manager": "하나증권㈜",
+  "supports": [
+   {
+    "company": "하나증권",
+    "detail": "하나증권㈜의 수익증권 매입, 자금보충 및 사모사채 인수 의무로 통제"
+   }
+  ],
+  "deal_type": "수익증권 유동화",
+  "asset": "수익증권 (발행인 : KB 와이즈 스타 일반 사모 부동산 투자신탁 제21-3호)",
+  "obligor": null
+ },
+ "NICE:8ae723a8-71ef-4ff4-95f3-0e7e45289659": {
+  "schedule": [
+   {
+    "series": "제67-1회",
+    "kind": "ABSTB",
+    "amount": 410.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-02-05",
+    "grade": "A2+"
+   }
+  ],
+  "arranger": "DB증권㈜",
+  "asset_manager": "DB증권㈜",
+  "supports": [
+   {
+    "company": "효성티앤씨",
+    "detail": "카드이용대금 및 수수료 지급의무를 부담하는 효성티앤씨㈜의 신용도, 참가대상자산에 관하여 하자담보책임을 부담하는 현대카드㈜의 신용도 수준으로 통제"
+   },
+   {
+    "company": "현대카드",
+    "detail": "카드이용대금 및 수수료 지급의무를 부담하는 효성티앤씨㈜의 신용도, 참가대상자산에 관하여 하자담보책임을 부담하는 현대카드㈜의 신용도 수준으로 통제"
+   }
+  ],
+  "deal_type": "기업매출채권 유동화",
+  "asset": "현대카드㈜와의 참가계약에 따라 카드이용대금채권 관련 회수금원을 지급받을 권리",
+  "obligor": null
+ },
+ "NICE:8af1bf67-ec1b-41ab-a67b-656ad4fcda06": {
+  "schedule": [
+   {
+    "series": "제2회",
+    "kind": "ABSTB",
+    "amount": 1500.0,
+    "issue": "2026-11-06",
+    "maturity": "2026-12-29",
+    "grade": "A3"
+   }
+  ],
+  "arranger": "키움증권㈜, 한국투자증권㈜, 부국증권㈜",
+  "asset_manager": "키움증권㈜, 한국투자증권㈜, 부국증권㈜",
+  "supports": [
+   {
+    "company": "아시아나항공",
+    "detail": "기초자산 채무자인 아시아나항공㈜의 신용도로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : 아시아나항공㈜)",
+  "obligor": null
+ },
+ "NICE:aa93087d-469c-4725-9ec6-bce45b4536d5": {
+  "schedule": [
+   {
+    "series": "제6회차",
+    "kind": "ABSTB",
+    "amount": 28.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회차",
+    "kind": "ABSTB",
+    "amount": 28.0,
+    "issue": "2027-02-05",
+    "maturity": "2027-05-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회차",
+    "kind": "ABSTB",
+    "amount": 28.0,
+    "issue": "2027-05-04",
+    "maturity": "2027-05-07",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한화투자증권㈜",
+  "asset_manager": "한화투자증권㈜",
+  "supports": [
+   {
+    "company": "한화투자증권",
+    "detail": "한화투자증권㈜의 사모사채 인수 및 자금보충 의무로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : 이앤에이치홀딩스㈜)",
+  "obligor": null
+ },
+ "NICE:b29b5add-7136-469e-8a4b-1d1128e71763": {
+  "schedule": [
+   {
+    "series": "제6회차",
+    "kind": "ABSTB",
+    "amount": 282.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제7회차",
+    "kind": "ABSTB",
+    "amount": 282.0,
+    "issue": "2027-02-05",
+    "maturity": "2027-05-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제8회차",
+    "kind": "ABSTB",
+    "amount": 282.0,
+    "issue": "2027-05-04",
+    "maturity": "2027-08-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제9회차",
+    "kind": "ABSTB",
+    "amount": 282.0,
+    "issue": "2027-08-04",
+    "maturity": "2027-11-04",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한화투자증권㈜",
+  "asset_manager": "한화투자증권㈜",
+  "supports": [
+   {
+    "company": "한화투자증권",
+    "detail": "한화투자증권㈜의 사모사채 인수 및 자금보충 의무로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주 : 이앤에이치홀딩스㈜)",
+  "obligor": null
+ },
+ "NICE:81703a62-9345-4f3a-aa7d-a6e90da4d172": {
+  "schedule": [
+   {
+    "series": "제1회차",
+    "kind": "ABSTB",
+    "amount": 437.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-01-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제2회차",
+    "kind": "ABSTB",
+    "amount": 437.0,
+    "issue": "2027-01-06",
+    "maturity": "2027-02-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제3회차",
+    "kind": "ABSTB",
+    "amount": 437.0,
+    "issue": "2027-02-06",
+    "maturity": "2027-05-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제4회차",
+    "kind": "ABSTB",
+    "amount": 437.0,
+    "issue": "2027-05-06",
+    "maturity": "2027-08-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제5회차",
+    "kind": "ABSTB",
+    "amount": 437.0,
+    "issue": "2027-08-06",
+    "maturity": "2027-11-06",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "메리츠증권㈜",
+  "asset_manager": "메리츠증권㈜",
+  "supports": [
+   {
+    "company": "메리츠증권",
+    "detail": "메리츠증권㈜의 사모사채 인수 확약으로 통제"
+   }
+  ],
+  "deal_type": "Project Finance 유동화",
+  "asset": "PF대출채권 및 부수담보권 (차주 : ㈜마포케이알홀딩스)",
+  "obligor": null
+ },
+ "NICE:e6b34435-114e-4204-b074-9c96b24c55e4": {
+  "schedule": [
+   {
+    "series": "제36회차",
+    "kind": "ABSTB",
+    "amount": 44.0,
+    "issue": "2026-08-06",
+    "maturity": "2026-11-06",
+    "grade": "A1"
+   },
+   {
+    "series": "제37회차",
+    "kind": "ABSTB",
+    "amount": 44.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   },
+   {
+    "series": "제38회차",
+    "kind": "ABSTB",
+    "amount": 44.0,
+    "issue": "2027-02-05",
+    "maturity": "2027-05-04",
+    "grade": "A1"
+   },
+   {
+    "series": "제39회차",
+    "kind": "ABSTB",
+    "amount": 44.0,
+    "issue": "2027-05-04",
+    "maturity": "2027-08-03",
+    "grade": "A1"
+   },
+   {
+    "series": "제40회차",
+    "kind": "ABSTB",
+    "amount": 44.0,
+    "issue": "2027-08-03",
+    "maturity": "2027-11-02",
+    "grade": "A1"
+   },
+   {
+    "series": "제41회차",
+    "kind": "ABSTB",
+    "amount": 44.0,
+    "issue": "2027-11-02",
+    "maturity": "2028-02-01",
+    "grade": "A1"
+   },
+   {
+    "series": "제42회차",
+    "kind": "ABSTB",
+    "amount": 44.0,
+    "issue": "2028-02-01",
+    "maturity": "2028-05-01",
+    "grade": "A1"
+   },
+   {
+    "series": "제43회차",
+    "kind": "ABSTB",
+    "amount": 44.0,
+    "issue": "2028-05-01",
+    "maturity": "2028-08-01",
+    "grade": "A1"
+   },
+   {
+    "series": "제44회차",
+    "kind": "ABSTB",
+    "amount": 44.0,
+    "issue": "2028-08-01",
+    "maturity": "2028-08-23",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "신한투자증권㈜",
+  "asset_manager": "신한투자증권㈜",
+  "supports": [
+   {
+    "company": "신한투자증권",
+    "detail": "신한투자증권㈜의 자금보충으로 통제"
+   }
+  ],
+  "deal_type": "대출채권 유동화(CDO)",
+  "asset": "대출채권 (차주: OPTIV PARENT INC.)",
+  "obligor": null
+ },
+ "한기평:nf7JRIt0an06@OScwAybgaVu9dQhS@iz30BM0JcEE08=": {
+  "schedule": [
+   {
+    "series": "제13회",
+    "kind": "ABSTB",
+    "amount": 10.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-02-05",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "한국투자증권(주)",
+  "asset_manager": "한국투자증권(주)",
+  "supports": [
+   {
+    "company": "한국투자증권",
+    "detail": "한국투자증권㈜의 사모사채 인수 및 자금보충 의무"
+   }
+  ],
+  "deal_type": "수익증권 유동화",
+  "asset": "수익증권",
+  "obligor": null
+ },
+ "한기평:x16KEh6H6HxVK1q8Khehfqyg5hf7BPDWZHLCzqvLEiE=": {
+  "schedule": [
+   {
+    "series": "제10회",
+    "kind": "ABSTB",
+    "amount": 1192.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-02-04",
+    "grade": "A2+"
+   }
+  ],
+  "arranger": "(주)아이엠증권",
+  "asset_manager": "(주)아이엠증권",
+  "supports": [
+   {
+    "company": "롯데카드",
+    "detail": "참가계약 거래상대방인 롯데카드㈜의 신용도"
+   }
+  ],
+  "deal_type": "카드대금채권 유동화",
+  "asset": "카드대금채권 참가계약에 따른 참가권",
+  "obligor": null
+ },
+ "한기평:hJAJZFqX6yf2FUPQiXb12L6rzMaCJO.657I3ZNqDWgY=": {
+  "schedule": [
+   {
+    "series": "제1회",
+    "kind": "ABCP",
+    "amount": 835.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-11-05",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "키움증권(주)",
+  "asset_manager": "키움증권(주)",
+  "supports": [
+   {
+    "company": "키움증권",
+    "detail": "키움증권(주)와의 외환스왑계약"
+   }
+  ],
+  "deal_type": "대출채권 유동화",
+  "asset": "대출채권",
+  "obligor": null
+ },
+ "한기평:VPKXvPfGw7mGsPmHShEn3a@.MxGSZcpkXHoXx6s9aWw=": {
+  "schedule": [
+   {
+    "series": "제13회",
+    "kind": "ABCP",
+    "amount": 345.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-04-06",
+    "grade": "A1"
+   }
+  ],
+  "arranger": "교보증권(주)",
+  "asset_manager": "교보증권(주)",
+  "supports": [],
+  "deal_type": "PF Loan 유동화",
+  "asset": "대출채권",
+  "obligor": "음성용산일반산업단지(주)"
+ },
+ "한기평:cDZ70TbLJ6IXIGUJAFn3FTi8HqDw7F6xgYv40gref7M=": {
+  "schedule": [
+   {
+    "series": "제13-1회",
+    "kind": "ABSTB",
+    "amount": 300.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-02-05",
+    "grade": "A2"
+   },
+   {
+    "series": "제13-2회",
+    "kind": "ABSTB",
+    "amount": 200.0,
+    "issue": "2026-11-06",
+    "maturity": "2027-02-06",
+    "grade": "A2"
+   },
+   {
+    "series": "제13회",
+    "kind": "ABCP",
+    "amount": 1.1,
+    "issue": "2026-11-06",
+    "maturity": "2027-05-06",
+    "grade": "A2"
+   }
+  ],
+  "arranger": "한양증권(주)",
+  "asset_manager": "한양증권(주)",
+  "supports": [
+   {
+    "company": "키움캐피탈",
+    "detail": "유동화자산 발행회사인 키움캐피탈㈜의 신용도"
+   }
+  ],
+  "deal_type": "회사채 유동화",
+  "asset": "사모사채 2건",
+  "obligor": null
  }
 }
