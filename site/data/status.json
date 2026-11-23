@@ -1,42 +1,42 @@
 {
- "generated": "2026-11-20 20:18",
+ "generated": "2026-11-23 21:12",
  "eval_window": [
-  "2026-07-23",
-  "2026-11-20"
+  "2026-07-26",
+  "2026-11-23"
  ],
  "issue_window": [
-  "2026-10-21",
-  "2026-11-20"
+  "2026-10-24",
+  "2026-11-23"
  ],
  "sources": {
   "ECOS": {
    "ok": true,
-   "asof": "2026-11-20",
+   "asof": "2026-11-23",
    "key": "sample"
   },
   "NICE": {
    "ok": false,
-   "error": "HTTPError: 400 Client Error: Bad Request for url: https://www.nicerating.com/disclosure/dayRatingNews.do?today=2026-11-20&secuTyp=ABS&strDate=2026-07-23&endDate=2026-11-20",
+   "error": "HTTPError: 400 Client Error: Bad Request for url: https://www.nicerating.com/disclosure/dayRatingNews.do?today=2026-11-23&secuTyp=ABS&strDate=2026-07-26&endDate=2026-11-23",
    "fallback_rows": 6089
   },
   "한신평": {
    "ok": true,
-   "rows": 958
+   "rows": 941
   },
   "한기평": {
    "ok": true,
-   "rows": 1450
+   "rows": 1435
   },
   "평가의견서": {
    "ok": false,
-   "docs": 1805,
-   "missing": 7,
+   "docs": 1736,
+   "missing": 10,
    "kr_blocked": false
   },
   "KOFIA": {
    "ok": true,
    "errors": [],
-   "matched": 613
+   "matched": 572
   }
  }
 }
