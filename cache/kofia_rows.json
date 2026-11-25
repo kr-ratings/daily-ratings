@@ -121,10 +121,6 @@
   "status": "none",
   "pf": false
  },
- "ABSTB|베스트에프제오차|2026-10-25": {
-  "status": "none",
-  "pf": false
- },
  "ABSTB|에코에이치제일차|2026-10-26": {
   "status": "matched",
   "rate": 3.95,
@@ -180,9 +176,6 @@
   "trade_date": "2026-10-26",
   "source": "매출",
   "pf": false
- },
- "ABCP|모다인천제이차|2026-10-25": {
-  "status": "none"
  },
  "ABSTB|티아이애월|2026-10-26": {
   "status": "matched",
@@ -326,19 +319,6 @@
  "ABCP|케이비상인천제일차|2026-10-27": {
   "status": "matched",
   "rate": 3.84,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
- "ABSTB|에이치신촌제일차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.0,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": true
- },
- "ABCP|우리디디피제일차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.94,
   "trade_date": "2026-10-27",
   "source": "직접매입(할인)"
  },
@@ -3682,11 +3662,11 @@
   "pf": false
  },
  "ABSTB|스마트오산제일차|2026-11-19": {
-  "status": "pending",
+  "status": "none",
   "pf": true
  },
  "ABSTB|에스엘티연산제일차|2026-11-19": {
-  "status": "pending",
+  "status": "none",
   "pf": false
  },
  "ABSTB|에이치세교제일차|2026-11-19": {
@@ -4131,8 +4111,11 @@
   "pf": true
  },
  "ABSTB|디엔블루컨설팅|2026-11-23": {
-  "status": "pending",
-  "pf": false
+  "status": "matched",
+  "rate": 3.7,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": true
  },
  "ABSTB|아델라제십오차|2026-11-23": {
   "status": "matched",
@@ -4499,5 +4482,170 @@
   "rate": 4.5,
   "trade_date": "2026-11-24",
   "source": "직접매입(할인)"
+ },
+ "ABSTB|아이스워터빌리지|2026-11-25": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|지아이비신사|2026-11-25": {
+  "status": "pending"
+ },
+ "ABCP|케이비이글스제이차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.03,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABSTB|베스트에프제오차|2026-11-25": {
+  "status": "matched",
+  "rate": 3.75,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": false
+ },
+ "ABSTB|센티넬지엠제이십삼차|2026-11-25": {
+  "status": "matched",
+  "rate": 3.99,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": true
+ },
+ "ABSTB|에이치씨디제삼차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.08,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": false
+ },
+ "ABSTB|디알제십팔차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.3,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": false
+ },
+ "ABCP|우리대신제일차|2026-11-25": {
+  "status": "matched",
+  "rate": 3.84,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABSTB|디이에프베타제일차|2026-11-25": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|에스프로젝트이노브이|2026-11-25": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|케이뉴스타트제21차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.4,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABCP|전북희망제1차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.08,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABSTB|봉개동제사차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.45,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": false
+ },
+ "ABCP|봉개동제사차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.68,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABCP|하나희망제1차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.35,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABCP|농협베스트제3차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.05,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABSTB|라온씨에프제일차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.052,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": false
+ },
+ "ABCP|리브에어제일차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.03,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABSTB|에프엔글부제이차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.05,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": false
+ },
+ "ABSTB|에프엔수서|2026-11-25": {
+  "status": "matched",
+  "rate": 3.7,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": false
+ },
+ "ABCP|드래곤즈제십이차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.5,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABSTB|목동랜드마크제이차|2026-10-27": {
+  "status": "matched",
+  "rate": 3.75,
+  "trade_date": "2026-10-27",
+  "source": "매출",
+  "pf": true
+ },
+ "ABSTB|비케이제이투|2026-11-25": {
+  "status": "matched",
+  "rate": 5.62,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": true
+ },
+ "ABCP|윈드포스제일차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.5,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABSTB|케이더블유투금제십삼차|2026-10-27": {
+  "status": "matched",
+  "rate": 4.06,
+  "trade_date": "2026-10-27",
+  "source": "매출",
+  "pf": true
+ },
+ "ABCP|케이에스엔제일차|2026-11-25": {
+  "status": "matched",
+  "rate": 4.6,
+  "trade_date": "2026-11-25",
+  "source": "직접매입(할인)"
+ },
+ "ABSTB|코모레비제팔차|2026-11-25": {
+  "status": "matched",
+  "rate": 3.3,
+  "trade_date": "2026-11-25",
+  "source": "매출",
+  "pf": false
  }
 }
