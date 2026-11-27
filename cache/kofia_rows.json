@@ -1,142 +1,4 @@
 {
- "ABSTB|베리타스디비제십차|2026-10-27": {
-  "status": "none",
-  "pf": false
- },
- "ABSTB|센트라이즈|2026-10-27": {
-  "status": "none",
-  "pf": false
- },
- "ABSTB|뉴에스에프제육차|2026-10-27": {
-  "status": "none",
-  "pf": false
- },
- "ABSTB|제이이에이치제일차|2026-10-27": {
-  "status": "none",
-  "pf": false
- },
- "ABSTB|골든펄제일차|2026-10-27": {
-  "status": "none",
-  "pf": true
- },
- "ABSTB|아산동산제일차|2026-10-27": {
-  "status": "none",
-  "pf": false
- },
- "ABSTB|에이투동산제오차|2026-10-27": {
-  "status": "none",
-  "pf": false
- },
- "ABCP|리치게이트남서울|2026-10-27": {
-  "status": "matched",
-  "rate": 3.95,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
- "ABCP|케이비그랑스타제이차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.96,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
- "ABSTB|에이치엠시화제일차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.25,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": true
- },
- "ABSTB|엘씨에이치제일차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.25,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": false
- },
- "ABSTB|에스디비제오차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.98,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": false
- },
- "ABSTB|에스에프티제일차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.58,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": false
- },
- "ABSTB|에이치씨디제삼차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.08,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": false
- },
- "ABCP|케이비상인천제일차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.84,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
- "ABSTB|에스와이에이치제일차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.49,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": false
- },
- "ABCP|올리브원큐제일차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.81,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
- "ABCP|드래곤라이트제십일차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.5,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
- "ABCP|신한챔피온제오차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.5,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
- "ABSTB|우리사랑제2차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.05,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": false
- },
- "ABCP|우리사랑제2차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.4,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
- "ABSTB|세븐스타즈알이에프제삼차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.95,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": true
- },
- "ABCP|농협타임제팔차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.2,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
- "ABCP|한솔제육십일차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.25,
-  "trade_date": "2026-10-27",
-  "source": "직접매입(할인)"
- },
  "ABSTB|베스트수정제삼차|2026-10-28": {
   "status": "matched",
   "rate": 3.6,
@@ -2743,13 +2605,6 @@
   "source": "매출",
   "pf": true
  },
- "ABSTB|하나용두제일차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.75,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": true
- },
  "ABCP|에이치지제일차|2026-11-13": {
   "status": "matched",
   "rate": 4.11,
@@ -3806,12 +3661,12 @@
   "pf": false
  },
  "ABSTB|엠에스제이지제이차|2026-11-23": {
-  "status": "pending",
+  "status": "none",
   "pf": false
  },
  "ABSTB|하나파크문|2026-11-23": {
-  "status": "pending",
-  "pf": true
+  "status": "none",
+  "pf": false
  },
  "ABSTB|프라임클로버|2026-11-23": {
   "status": "matched",
@@ -3898,7 +3753,7 @@
   "pf": false
  },
  "ABSTB|마이에스일등봉|2026-11-23": {
-  "status": "pending",
+  "status": "none",
   "pf": false
  },
  "ABSTB|키스온제십이차|2026-11-21": {
@@ -4029,7 +3884,7 @@
   "source": "직접매입(할인)"
  },
  "ABSTB|와이케이에이치제이차|2026-11-23": {
-  "status": "pending",
+  "status": "none",
   "pf": false
  },
  "ABCP|우리챔피온제십이차|2026-11-23": {
@@ -4237,7 +4092,7 @@
   "pf": false
  },
  "ABCP|지아이비신사|2026-11-25": {
-  "status": "pending"
+  "status": "none"
  },
  "ABCP|케이비이글스제이차|2026-11-25": {
   "status": "matched",
@@ -4357,13 +4212,6 @@
   "trade_date": "2026-11-25",
   "source": "직접매입(할인)"
  },
- "ABSTB|목동랜드마크제이차|2026-10-27": {
-  "status": "matched",
-  "rate": 3.75,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": true
- },
  "ABSTB|비케이제이투|2026-11-25": {
   "status": "matched",
   "rate": 5.62,
@@ -4377,25 +4225,11 @@
   "trade_date": "2026-11-25",
   "source": "직접매입(할인)"
  },
- "ABSTB|케이더블유투금제십삼차|2026-10-27": {
-  "status": "matched",
-  "rate": 4.06,
-  "trade_date": "2026-10-27",
-  "source": "매출",
-  "pf": true
- },
  "ABCP|케이에스엔제일차|2026-11-25": {
   "status": "matched",
   "rate": 4.6,
   "trade_date": "2026-11-25",
   "source": "직접매입(할인)"
- },
- "ABSTB|코모레비제팔차|2026-11-25": {
-  "status": "matched",
-  "rate": 3.3,
-  "trade_date": "2026-11-25",
-  "source": "매출",
-  "pf": false
  },
  "ABCP|케이파이브제십일차|2026-11-26": {
   "status": "matched",
@@ -4660,5 +4494,230 @@
   "rate": 4.6,
   "trade_date": "2026-11-26",
   "source": "직접매입(할인)"
+ },
+ "ABSTB|하남드림풍산제이차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|베리타스디비제십차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|센트라이즈|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|엑스티어하나제이차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|키스에스에프제사십차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|에이치에스어드밴스드제일차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|지오인베스트먼트제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|제이이에이치제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|트루캐슬제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|아산동산제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|에이투동산제오차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|인피니티비전제이차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|비케이북수원|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|에이치에스상동제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|리치게이트남서울|2026-11-27": {
+  "status": "pending"
+ },
+ "ABCP|케이비상인천제일차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABCP|위비트러플제이차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|케이아이에스안심제육차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|에프엔온수제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|보일러제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|웜워터제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|뉴스타온수제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|트루프렌드구래제이차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|돈암포르투나제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|부금일물류세컨드|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|하나에이아이씨제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|이비지에스와이제삼차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|이비지에스와이제삼차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|디비엔케이제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|세븐스타즈알이에프제삼차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|제이와이씨제육차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|냉수제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|디비엠비피제십차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABCP|뉴스타팰리스제사차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|비티비상동제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|에이블원제일차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABCP|리치맨제팔차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABCP|전북희망제2차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABCP|에코파인트리제삼차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABCP|디알제이십이차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|에스유제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|온새미로제십차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|올리브원큐제일차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|파라다이스블루|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|위드지엠제삼십이차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|모니모용산제이차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|아이스포레스트|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|와이앤디제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|목동랜드마크제이차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|제이에이스토리제사차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|넥스트레벨제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|디알제이십삼차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|루아나제삼차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|루아나제이차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABSTB|세인트알파제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|신디제십오차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|아이비투게더제이차|2026-11-27": {
+  "status": "pending",
+  "pf": false
+ },
+ "ABCP|에스프로젝트블로썸|2026-11-27": {
+  "status": "pending"
+ },
+ "ABCP|우리블라썸제이차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABCP|임팩트제이차|2026-11-27": {
+  "status": "pending"
+ },
+ "ABSTB|키스비케이제일차|2026-11-27": {
+  "status": "pending",
+  "pf": false
  }
 }
